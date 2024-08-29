@@ -4,6 +4,9 @@ import Navbar from "./Component/Navbar"
 import Home from "./Component/Home";
 import Featured from "./Component/Featured";
 import Offer from "./Component/Offer";
+import Booking from "./Component/Booking";
+import Testimonials from "./Component/Testimonials";
+import Footer from "./Component/Footer";
 
 function App() {
  
@@ -15,6 +18,9 @@ function App() {
       <Home/>
       <Featured/>
       <Offer/>
+      <Booking/>
+      <Testimonials/>
+      <Footer/>
       </Router>
     </>
   )
