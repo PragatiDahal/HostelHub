@@ -1,8 +1,9 @@
-import React from 'react';
-import HostelCard from './HostelCard';
-import h2 from "../assets/h2.png";
-import h3 from "../assets/h3.png";
-import h4 from "../assets/h4.png";
+import React from "react";
+import HostelCard from "./HostelCard"; 
+import h2 from "../../assets/h2.png"; 
+import h3 from "../../assets/h3.png";
+import h4 from "../../assets/h4.png";
+
 
 const Featured = () => {
   const hostels = [

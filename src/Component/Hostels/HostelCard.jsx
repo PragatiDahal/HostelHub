@@ -18,9 +18,12 @@ const HostelCard = ({ hostel }) => {
               <span className="text-[#E67E22]">{hostel.ratings}</span>
             </div>
           </div>
+          <div className="mt-4">
+          <button className="bg-[#1ABC9C] text-white py-2 px-4 rounded-md w-full font-[poppins] hover:bg-[#16a085] duration-200">View Hostel</button>
+        </div>
         </div>
       </div>
     );
   };
 
-export default HostelCard
+export default HostelCard;
