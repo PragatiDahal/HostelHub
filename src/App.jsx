@@ -1,12 +1,12 @@
 import React from "react"
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router,Route,Routes,Navigate } from 'react-router-dom';
 import Navbar from "./Component/Navbar"
 import Home from "./Component/Home";
-import Featured from "./Component/Hostels/Featured";
-import Offer from "./Component/Offer";
-import Booking from "./Component/Booking";
-import Testimonials from "./Component/Testimonials";
+import About from"./Component/About";
+import Contact from "./Component/Contact";
 import Footer from "./Component/Footer";
+import Hostel1 from"./Component/Hostels/Hostel1";
+import LogIn from"./Component/LogIn";
 
 function App() {
  
@@ -15,11 +15,13 @@ function App() {
     <>
     <Router>
       <Navbar/>
-      <Home/>
-      <Featured/>
-      <Offer/>
-      <Booking/>
-      <Testimonials/>
+      <Routes>
+      <Route path="*" element={<Navigate to='home'/>} />
+      <Route path="home" element={<Home />} />
+      <Route path="login"  element={<LogIn />} />
+      <Route path="about" element={<About />} />
+      <Route path="contact" element={<Contact />}/>
+      </Routes>
       <Footer/>
       </Router>
     </>

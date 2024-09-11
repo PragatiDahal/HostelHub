@@ -1,8 +1,13 @@
 import React from "react";
 import image from "../assets/hostelhub.png";
+import Featured from "./Hostels/Featured";
+import Offer from "./Offer";
+import Booking from "./Booking";
+import Testimonials from "./Testimonials";
 
 const Home = () => {
   return (
+    <>
     <div className="w-full min-h-screen bg-[#E8F8F5] flex flex-col justify-center items-center">
       <div className="flex flex-col md:flex-row justify-between items-center w-full px-4 md:px-8">
         {/* Left Content Section */}
@@ -33,6 +38,14 @@ const Home = () => {
         </div>
       </div>
     </div>
+    <Featured/>
+    
+    <Offer/>
+
+    <Booking/>
+
+    <Testimonials/>
+    </>
   );
 };
 
