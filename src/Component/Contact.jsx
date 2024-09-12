@@ -1,76 +1,75 @@
-import React from 'react'
+import React from "react";
 
 const Contact = () => {
   return (
     <>
-   <div className="w-full h-screen bg-[#E8F8F5] flex items-center justify-center p-4">
-        <div className="w-full max-w-4xl h-auto bg-[#a7e8dc] flex flex-col md:flex-row items-center mx-auto rounded-lg">
-        <div className="w-full md:w-1/2 p-8">
-            <h2 className="text-3xl font-bold mb-4 text-center text-[#2C3E50] font-[poppins]">Create an account</h2>
-            <form className="space-y-4">
-              <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
-                <input 
-                  type="text" 
-                  placeholder="First Name" 
-                  className="w-full md:w-1/2 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#2C3E50] font-[poppins]" 
-                />
-                <input 
-                  type="text" 
-                  placeholder="Last Name" 
-                  className="w-full md:w-1/2 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#2C3E50] font-[poppins]" 
-                />
-              </div>
-              <input 
-                type="email" 
-                placeholder="Email" 
-                className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#2C3E50] font-[poppins]" 
-              />
-              <input 
-                type="password" 
-                placeholder="Password" 
-                className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#2C3E50] font-[poppins]" 
-              />
-              <input 
-                type="password" 
-                placeholder="Confirm Password" 
-                className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#2C3E50] font-[poppins]" 
-              />
-              <button 
-                type="submit" 
-                className="w-full bg-[#2C3E50] text-white font-[poppins] py-2 rounded-md hover:bg-[#1A2D41] transition duration-200"
-              >
-                Signup
-              </button>
-            </form>
-            <div className="mt-6 text-center">
-              <p className="text-[#2C3E50] font-[poppins]">Or Signup with</p>
-              <div className="flex justify-center mt-4 space-x-4">
-                <button className="flex items-center justify-center bg-white border border-gray-700 px-4 py-2 rounded-md shadow-sm hover:bg-gray-300">
-                  <img 
-                    src="https://img.icons8.com/color/16/000000/google-logo.png" 
-                    alt="Google" 
-                    className="w-5 h-5"
-                  />
-                  <span className="ml-2 text-[#2C3E50] font-[poppins]">Google</span>
-                </button>
-                <button className="flex items-center justify-center bg-white border border-gray-700 px-4 py-2 rounded-md shadow-sm hover:bg-gray-300">
-                  <img 
-                    src="https://img.icons8.com/color/16/000000/facebook.png" 
-                    alt="Facebook" 
-                    className="w-5 h-5"
-                  />
-                  <span className="ml-2 text-[#2C3E50] font-[poppins]">Facebook</span>
-                </button>
-              </div>
-              <p className="mt-4 text-sm text-[#2C3E50] font-[poppins]">
-                Already have an account? <a href="#" className="text-[#E67E22] hover:underline font-[poppins]">Signin</a>
-              </p>
+      <div className="flex flex-col items-center justify-center py-10 bg-[#E8F8F5]">
+        <div className="text-center pt-20">
+          <h2 className="text-3xl font-bold mb-4">Get in touch with us</h2>
+          <div className="flex justify-center space-x-4 mb-6">
+            <div className="flex items-center space-x-2 p-4 bg-gray-800 text-white rounded-lg">
+              <span role="img" aria-label="phone">
+              </span>
+              <p>9801234567</p>
+            </div>
+            <div className="flex items-center space-x-2 p-4 bg-gray-800 text-white rounded-lg">
+              <span role="img" aria-label="email">
+                ✉️
+              </span>
+              <p>hostelhub@gmail.com</p>
+            </div>
+            <div className="flex items-center space-x-2 p-4 bg-gray-800 text-white rounded-lg">
+              <span role="img" aria-label="website">
+                🌐
+              </span>
+              <p>hostelhub.com</p>
             </div>
           </div>
-          </div>
-          </div>
-   </>
-  )
-}
+        </div>
 
-export default Contact
+        <form className="w-full max-w-5xl bg-white pt-16 px-8 pb-8 rounded-lg shadow-md">
+          <div className="mb-4">
+            <input
+              className="w-1/2 px-4 py-2 border-2 border-orange-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              type="text"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div className="mb-4">
+            <input
+              className="w-1/2 px-4 py-2 border-2 border-orange-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              type="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div className="mb-4">
+            <input
+              className="w-1/2 px-4 py-2  border-2 border-orange-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              type="text"
+              placeholder="Subject"
+              required
+            />
+          </div>
+          <div className="w-1/2">
+            <textarea
+              className="w-full h-40 p-4 py-2 border-2 border-orange-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              placeholder="Message"
+              required
+            ></textarea>
+          </div>
+
+          <button
+            className="w-1/4 bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-[#1ABC9C] transition-colors"
+            type="submit"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </>
+  );
+};
+
+export default Contact;
