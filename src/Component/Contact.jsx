@@ -1,72 +1,93 @@
 import React from "react";
+import { FaPhone, FaGlobe } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 const Contact = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center py-10 bg-[#E8F8F5]">
-        <div className="text-center pt-20">
-          <h2 className="text-3xl font-bold mb-4">Get in touch with us</h2>
-          <div className="flex justify-center space-x-4 mb-6">
-            <div className="flex items-center space-x-2 p-4 bg-gray-800 text-white rounded-lg">
-              <span role="img" aria-label="phone">
+      <div className="min-h-screen bg-[#E8F8F5] flex items-center justify-center p-6">
+        <div className="w-full max-w-lg mx-auto space-y-6">
+          <header className="text-center">
+            <h2 className="text-3xl font-bold text-[#2C3E50] font-[poppins]">
+              Get in touch with us
+            </h2>
+          </header>
+
+          {/* Contact Information */}
+          <div className="flex flex-col md:flex-row md:justify-around space-y-4 md:space-y-0 px-4">
+            <div className="flex items-center space-x-2 bg-[#2C3E50] text-white p-3 rounded-md justify-center ">
+              <span className="text-orange-500">
+                {/* Telephone */}
+                <FaPhone />
               </span>
-              <p>9801234567</p>
+              <span className="font-[poppins]">9801234567</span>
             </div>
-            <div className="flex items-center space-x-2 p-4 bg-gray-800 text-white rounded-lg">
-              <span role="img" aria-label="email">
-                ✉️
+
+            <div className="flex items-center space-x-2 bg-[#2C3E50] text-white p-3 rounded-md justify-center">
+              <span className="text-orange-500">
+                {/* Email */}
+                <MdEmail />
               </span>
-              <p>hostelhub@gmail.com</p>
+              <span className="font-[poppins]">hostelhub@gmail.com</span>
             </div>
-            <div className="flex items-center space-x-2 p-4 bg-gray-800 text-white rounded-lg">
-              <span role="img" aria-label="website">
-                🌐
+
+            <div className="flex items-center space-x-2 bg-[#2C3E50] text-white p-3 rounded-md justify-center">
+              <span className="text-orange-500">
+                {/* Website */}
+                <FaGlobe />
               </span>
-              <p>hostelhub.com</p>
+              <span className="font-[poppins]">hostelhub.com</span>
             </div>
+          </div>
+
+          {/* Contact Form */}
+          <div className="bg-white shadow-md rounded-lg p-8 px-10">
+            <form action="#">
+              <div className="mb-4">
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-[#E8F8F5]"
+                  required
+                />
+              </div>
+
+              <div className="mb-4">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-[#E8F8F5]"
+                  required
+                />
+              </div>
+
+              <div className="mb-4">
+                <input
+                  type="text"
+                  placeholder="Subject"
+                  className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-[#E8F8F5]"
+                />
+              </div>
+
+              <div className="mb-4">
+                <textarea
+                  placeholder="Message"
+                  className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 h-32 bg-[#E8F8F5]"
+                  required
+                ></textarea>
+              </div>
+
+              <div className="text-center">
+                <button
+                  type="submit"
+                  className="bg-[#1ABC9C] text-white font-[poppins] px-6 py-3 rounded-lg hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-600"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
           </div>
         </div>
-
-        <form className="w-full max-w-5xl bg-white pt-16 px-8 pb-8 rounded-lg shadow-md">
-          <div className="mb-4">
-            <input
-              className="w-1/2 px-4 py-2 border-2 border-orange-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-              type="text"
-              placeholder="Enter your name"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <input
-              className="w-1/2 px-4 py-2 border-2 border-orange-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-              type="email"
-              placeholder="Enter your email"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <input
-              className="w-1/2 px-4 py-2  border-2 border-orange-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-              type="text"
-              placeholder="Subject"
-              required
-            />
-          </div>
-          <div className="w-1/2">
-            <textarea
-              className="w-full h-40 p-4 py-2 border-2 border-orange-300  rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-              placeholder="Message"
-              required
-            ></textarea>
-          </div>
-
-          <button
-            className="w-1/4 bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-[#1ABC9C] transition-colors"
-            type="submit"
-          >
-            Submit
-          </button>
-        </form>
       </div>
     </>
   );

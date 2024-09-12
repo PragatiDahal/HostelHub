@@ -1,5 +1,6 @@
 import React from 'react'
 import h5 from "../assets/h5.png"
+import { Link } from 'react-router-dom'
 
 const Booking = () => {
  
@@ -13,9 +14,11 @@ const Booking = () => {
     <p className="text-lg text-[#2C3E50] mb-6">
       Highlight tailored options here. It could be budget-friendly accommodations, hostels in prime locations, or gender-specific stays designed just for you. Give your unique preferences the spotlight they deserve.
     </p>
+    <Link to="/SignIn">
     <button className="bg-[#1ABC9C] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#16A085] transition duration-300">
       Book now
     </button>
+    </Link>
   </div>
 
   {/* Right Section - Image */}

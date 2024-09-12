@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import image from "../assets/hostelhub.png";
 import Featured from "./Hostels/Featured";
 import Offer from "./Offer";
@@ -23,9 +24,11 @@ const Home = () => {
             help you find your <br />
             best Hostels
           </h2>
+          <Link to="/Contact">
           <button className="mt-6 md:mt-8 px-6 py-2 text-white text-lg font-semibold rounded-lg bg-[#1ABC9C] hover:bg-[#16a085] transition duration-300 ease-in-out">
             Contact Us
           </button>
+          </Link>
         </div>
 
         {/* Right Image Section */}

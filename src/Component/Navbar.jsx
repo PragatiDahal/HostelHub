@@ -9,7 +9,7 @@ const Navbar = () => {
     { id: 2, link: "hostels" },
     { id: 3, link: "about" },
     { id: 4, link: "contact" },
-    { id: 5, link: "login", icon: <FaUser size={20} /> },
+    { id: 5, link: "signin", icon: <FaUser size={20} /> },
   ];
 
   return (
