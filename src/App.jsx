@@ -6,9 +6,11 @@ import About from"./Component/About";
 import Contact from "./Component/Contact";
 import Footer from "./Component/Footer";
 import Hostel1 from"./Component/Hostels/Hostel1";
-import SignUp from "./Component/SignUp";
-import Hostels from "./Component/Hostels";
-import SignIn from "./Component/SignIn";
+import Hostels from"./Component/Hostels";
+import UserSignUp from "./Component/Login/UserSignUp";
+import UserSignIn from "./Component/Login/UserSignIn";
+import AdminSignIn from "./Component/Login/AdminSignIn";
+import HostelRegister from "./Component/Login/HostelRegister";
 function App() {
  
 
@@ -19,8 +21,10 @@ function App() {
       <Routes>
       <Route path="*" element={<Navigate to='/'/>} />
       <Route path="/" element={<Home />} />
-      <Route path="signin"  element={<SignIn />} />
-      <Route path="signup"  element={<SignUp />} />
+      <Route path="usersignin"  element={<UserSignIn />} />
+      <Route path="usersignup"  element={<UserSignUp />} />
+      <Route path="adminsignin"  element={<AdminSignIn />} />
+      <Route path="hostelregister"  element={<HostelRegister />} />
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />}/>
       <Route path="hostels" element={<Hostels />} />
