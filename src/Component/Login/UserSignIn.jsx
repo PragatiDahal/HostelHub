@@ -22,7 +22,7 @@ const UserSignIn = () => {
       console.log("User signed in:", userCredential.user);
 
       // Redirect to a different page after successful login
-      navigate("/dashboard");
+      navigate("/home");
     } catch (error) {
       setError("Failed to sign in. Please check your email and password.");
       console.error("Sign-in error:", error);
