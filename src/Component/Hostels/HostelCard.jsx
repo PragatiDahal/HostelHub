@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom';
 const HostelCard = ({ hostel }) => {
     return (
       <div className="bg-white rounded-lg shadow-md p-4">
@@ -19,7 +19,9 @@ const HostelCard = ({ hostel }) => {
             </div>
           </div>
           <div className="mt-4">
+            <Link to ="/hostel1">
           <button className="bg-[#1ABC9C] text-white py-2 px-4 rounded-md w-full font-[poppins] hover:bg-[#16a085] duration-200">View Hostel</button>
+          </Link>
         </div>
         </div>
       </div>

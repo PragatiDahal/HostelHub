@@ -3,7 +3,7 @@ import HostelCard from "./HostelCard";
 import h2 from "../../assets/h2.png"; 
 import h3 from "../../assets/h3.png";
 import h4 from "../../assets/h4.png";
-
+import { Link } from "react-router-dom";
 
 const Featured = () => {
   const hostels = [
