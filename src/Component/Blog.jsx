@@ -9,7 +9,7 @@ const Blog = () => {
       content:
         "Discover the best hostels in Kathmandu with top-notch facilities and friendly environments. From budget options to luxury stays, find your ideal accommodation.",
       image:
-        "https://i.pinimg.com/564x/d5/62/11/d5621180b555a1ec920021b6228e8416.jpg",
+        "https://i.pinimg.com/564x/b0/d6/cf/b0d6cfe638844dec78ffc4ba4a35f393.jpg",
     },
     {
       id: 2,
@@ -18,7 +18,7 @@ const Blog = () => {
       content:
         "Explore hostels perfect for solo travelers, offering social environments and secure accommodations to make your trip memorable.",
       image:
-        "https://i.pinimg.com/564x/8c/6f/a2/8c6fa204c303f39f72971185ed251dac.jpg",
+        "https://i.pinimg.com/564x/dd/d5/d8/ddd5d8cd545ef9300a0adca05eac42f0.jpg",
     },
     {
       id: 3,
@@ -27,7 +27,7 @@ const Blog = () => {
       content:
         "Choosing the right hostel can be daunting. Here are some tips on what to look for when booking your next stay.",
       image:
-        "https://i.pinimg.com/564x/99/2f/6a/992f6ad2245f0587c396a4e0c03767b7.jpg",
+        "https://i.pinimg.com/564x/41/68/d4/4168d427125803c0bcf0318507b5a68d.jpg",
     },
   ];
 

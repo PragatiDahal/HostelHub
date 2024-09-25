@@ -1,5 +1,5 @@
 import React from 'react'
-import image from "../../assets/preview.webp";
+
 
 
 const HostelRegister = () => {
@@ -10,7 +10,7 @@ const HostelRegister = () => {
           {/* Left content section */}
           <div className="flex justify-center items-center w-full md:w-1/2 h-full p-4">
             <img
-              src={image}
+              src="https://i.pinimg.com/564x/39/72/41/397241b7a954983c13e5504203513ecf.jpg"
               className="w-auto h-auto max-w-full max-h-full rounded-lg"
               alt="login"
             />

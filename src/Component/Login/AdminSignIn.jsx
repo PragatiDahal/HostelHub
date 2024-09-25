@@ -8,7 +8,7 @@ const AdminSignIn = () => {
           {/* Left content section */}
           <div className="flex justify-center items-center w-full md:w-1/2 h-full p-4">
             <img 
-              src="https://i.pinimg.com/564x/d1/54/66/d154660a6ae3104de2b0a314667a5ab6.jpg" 
+              src="https://i.pinimg.com/564x/41/35/80/4135802515db3c9e692e6c65596629e2.jpg" 
               className="w-auto h-auto max-w-full max-h-full rounded-lg" 
               alt="login" 
             />

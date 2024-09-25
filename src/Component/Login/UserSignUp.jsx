@@ -118,7 +118,7 @@ const UserSignUp = () => {
           {/* Left content section */}
           <div className="flex justify-center items-center w-full md:w-1/2 h-full p-4">
             <img
-              src="https://knowledgemission.kerala.gov.in/img/official-login.jpg"
+              src="https://i.pinimg.com/564x/41/35/80/4135802515db3c9e692e6c65596629e2.jpg"
               className="w-auto h-auto max-w-full max-h-full rounded-lg"
               alt="login"
             />

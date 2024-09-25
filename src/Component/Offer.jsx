@@ -1,33 +1,33 @@
 import React from 'react';
-import { FaSearch, FaStar } from 'react-icons/fa';
-import { FaLocationDot } from 'react-icons/fa6';
+import { FaShoppingCart, FaWifi,FaCar } from 'react-icons/fa';
+import { GiWashingMachine } from "react-icons/gi";
 import { MdCancel } from 'react-icons/md';
 
 const Offer = () => {
   const features = [
     {
       id: 1,
-      title: 'Search and Booking',
-      description: 'lorem Epsum lorem Epsum Akrith lorem',
-      icon: <FaSearch size={40} />,
+      title: '20% off groceries',
+      description: 'Get 20% off your grocery shopping from popular stores like Big Mart, ensuring you have everything you need at unbeatable prices.',
+      icon: <FaShoppingCart size={40} />,
     },
     {
       id: 2,
-      title: 'Review and Ratings',
-      description: 'lorem Epsum lorem Epsum Akrith lorem',
-      icon: <FaStar size={40} />,
+      title: '25% off high-speed internet',
+      description: 'Stay online effortlessly with a 25% discount on high-speed internet from World Link, perfect for work, study, or entertainment.',
+      icon: <FaWifi size={40} />,
     },
     {
       id: 3,
-      title: 'Map Integration',
-      description: 'lorem Epsum lorem Epsum Akrith lorem',
-      icon: <FaLocationDot size={40} />,
+      title: '15% off laundry services',
+      description: 'Save 15% on laundry services, so you can focus on enjoying your stay without worrying about laundry chores.',
+      icon: <GiWashingMachine size={40} />,
     },
     {
       id: 4,
-      title: 'Cancellation Policy',
-      description: 'lorem Epsum lorem Epsum Akrith lorem',
-      icon: <MdCancel size={40} />,
+      title: '10% off transportation deals',
+      description: 'Get around easily with a 10% discount on rides from Indrive. Whether you’re commuting or exploring the city, we’ve got your transport covered!',
+      icon: <FaCar size={40} />,
     },
   ];
 

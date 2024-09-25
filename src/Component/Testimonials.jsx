@@ -9,50 +9,36 @@ const Testimonials = () => {
       id: 1,
       icon: <FaQuoteLeft size={30} />,
       description:
-        "Finding the perfect hostel was so easy with Hostel Hub! The filters helped me narrow down options that fit my budget and preferences. I found a great place in no time!",
-      title: "Sophia K.",
+        "Partnering with Hostel Hub has been a win-win. Their users enjoy great discounts, and we’ve seen a significant increase in customers taking advantage of our offers.",
+      title: "Big Mart",
     },
     {
       id: 2,
       icon: <FaQuoteLeft size={30} />,
       description:
-        "Hostel Hub made my search stress-free. The recommendations were spot-on, and the reviews really helped me choose a hostel that matched what I was looking for.",
-      title: "Aarogya P.",
+        "Hostel Hub helps us reach a wider audience by providing affordable, high-speed internet services to students and travelers, making their stay even more comfortable.",
+      title: "World Link",
     },
     {
       id: 3,
       icon: <FaQuoteLeft size={30} />,
       description:
-        "Thanks to Hostel Hub, I found an affordable and clean hostel in the heart of the city. The filtering options were super helpful and saved me so much time.",
-      title: "Unaati S.",
+        "Through Hostel Hub, we’re able to provide reliable and discounted transportation options, helping travelers explore the city easily and affordably.",
+      title: "Indrive",
     },
     {
         id: 4,
         icon: <FaQuoteLeft size={30} />,
         description:
-          "Finding the perfect hostel was so easy with Hostel Hub! The filters helped me narrow down options that fit my budget and preferences. I found a great place in no time!",
-        title: "Pragati D.",
-      },
-      {
-        id: 5,
-        icon: <FaQuoteLeft size={30} />,
-        description:
-          "Finding the perfect hostel was so easy with Hostel Hub! The filters helped me narrow down options that fit my budget and preferences. I found a great place in no time!",
-        title: "Pooja K.",
-      },
-      {
-        id: 6,
-        icon: <FaQuoteLeft size={30} />,
-        description:
-          "Finding the perfect hostel was so easy with Hostel Hub! The filters helped me narrow down options that fit my budget and preferences. I found a great place in no time!",
-        title: "Hritika B.",
+          "Hostel Hub has transformed how we reach potential guests. Their platform simplifies the process for students and the general public to discover and book our hostels, significantly increasing our visibility and bookings",
+        title: "Hostel owner",
       },
   ];
 
   return (
     <div className="bg-[#EAF4F4] px-4 md:px-12 pb-12">
       <div className="text-3xl md:text-4xl font-[poppins] text-center text-[#2C3E50] font-bold mb-8">
-        What our clients say about us?
+        What our partners say about us?
       </div>
 
       {/* Swiper Container */}

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import roomImage from "../../assets/hostel1.png";
-import hostelPhoto1 from "../../assets/h1.png"; // Add your hostel photos here
+import hostelPhoto1 from "../../assets/h4.png"; // Hostel photos
 import hostelPhoto2 from "../../assets/h5.png"; 
-import reviewImage from "../../assets/h3.png"; // Add review section image or content
+import hostelPhoto3 from "../../assets/h2.png";
+import hostelPhoto4 from "../../assets/h3.png";
+import reviewImage from "../../assets/bug2.png"; // Review section image
 
 const Hostel1 = () => {
   // Define the formData state to hold the form input values
@@ -14,7 +16,7 @@ const Hostel1 = () => {
   });
 
   // State for controlling tabs (photos, reviews, etc.)
-  const [activeTab, setActiveTab] = useState('gallery'); // Set default to 'photos'
+  const [activeTab, setActiveTab] = useState('gallery'); // Set default to 'gallery'
 
   // Handle form input changes
   const handleChange = (e) => {
@@ -50,7 +52,7 @@ const Hostel1 = () => {
           <form onSubmit={handleSubmit} className="space-y-4">
             {/* Location */}
             <div>
-              <label className="block text-lg font-semibold">Location</label>
+              <label className="block text-lg font-semibold text-[#2C3E50]">Location</label>
               <input
                 type="text"
                 name="location"
@@ -62,7 +64,7 @@ const Hostel1 = () => {
 
             {/* Bedroom */}
             <div>
-              <label className="block text-lg font-semibold">Bedroom</label>
+              <label className="block text-lg font-semibold text-[#2C3E50]">Bedroom</label>
               <input
                 type="text"
                 name="bedroom"
@@ -74,7 +76,7 @@ const Hostel1 = () => {
 
             {/* Laundry */}
             <div>
-              <label className="block text-lg font-semibold">Laundry</label>
+              <label className="block text-lg font-semibold text-[#2C3E50]">Laundry</label>
               <input
                 type="text"
                 name="laundry"
@@ -86,7 +88,7 @@ const Hostel1 = () => {
 
             {/* Pricing */}
             <div>
-              <label className="block text-lg font-semibold">Pricing per month</label>
+              <label className="block text-lg font-semibold text-[#2C3E50]">Pricing per month</label>
               <input
                 type="text"
                 name="pricing"
@@ -109,12 +111,11 @@ const Hostel1 = () => {
 
       {/* About Section */}
       <div className="w-full my-10 bg-[#E8F9F3] p-6 rounded-lg shadow-lg">
-        <h2 className="text-2xl font-bold mb-4">About</h2>
-        <p className="text-gray-700 leading-relaxed text-justify">
+        <h2 className="text-2xl font-bold mb-4 text-[#2C3E50]">About</h2>
+        <p className="text-[#2C3E50] leading-relaxed text-justify">
           ABC is located in the heart of Koteshwor. It is the perfect choice for those seeking comfort and harmony in their living environment.
           Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay.
-          Conveniently situated within 2 km of colleges, schools, and libraries, ABC hostel provides easy access to essential services.
-          ABC is located in the heart of Koteshwor. It is the perfect choice for those seeking comfort and harmony in their living environment.
+          Conveniently situated within 2 km of colleges, schools, and libraries, ABC hostel provides easy access to essential services.ABC is located in the heart of Koteshwor. It is the perfect choice for those seeking comfort and harmony in their living environment.
           Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay.
           Conveniently situated within 2 km of colleges, schools, and libraries, ABC hostel provides easy access to essential services.
         </p>
@@ -125,60 +126,88 @@ const Hostel1 = () => {
         {/* Tab Buttons */}
         <div className="flex justify-around border-b-2 border-gray-200">
           <button
-            className={`py-4 w-1/3 text-center ${activeTab === 'gallery' ? 'border-b-4 border-[#1ABC9C] font-bold' : ''}`}
+            className={`py-4 w-1/3 text-center text-[#2C3E50] ${activeTab === 'gallery' ? 'border-b-4 border-[#1ABC9C] font-bold' : ''}`}
             onClick={() => setActiveTab('gallery')}
           >
             Gallery
           </button>
           <button
-            className={`py-4 w-1/3 text-center ${activeTab === 'reviews' ? 'border-b-4 border-[#1ABC9C] font-bold' : ''}`}
+            className={`py-4 w-1/3 text-center text-[#2C3E50] ${activeTab === 'reviews' ? 'border-b-4 border-[#1ABC9C] font-bold' : ''}`}
             onClick={() => setActiveTab('reviews')}
           >
             Reviews
           </button>
-
           <button
-            className={`py-4 w-1/3 text-center ${activeTab === 'facilities' ? 'border-b-4 border-[#1ABC9C] font-bold' : ''}`}
+            className={`py-4 w-1/3 text-center text-[#2C3E50] ${activeTab === 'facilities' ? 'border-b-4 border-[#1ABC9C] font-bold' : ''}`}
             onClick={() => setActiveTab('facilities')}
           >
             Facilities
           </button>
-
           <button
-            className={`py-4 w-1/3 text-center ${activeTab === 'events' ? 'border-b-4 border-[#1ABC9C] font-bold' : ''}`}
+            className={`py-4 w-1/3 text-center text-[#2C3E50] ${activeTab === 'events' ? 'border-b-4 border-[#1ABC9C] font-bold' : ''}`}
             onClick={() => setActiveTab('events')}
           >
             Events
           </button>
         </div>
+
         {/* Tab Content */}
         <div className="p-6">
+          {/* Gallery Tab */}
           {activeTab === 'gallery' && (
             <div className="grid grid-cols-2 gap-4">
               <img src={hostelPhoto1} alt="Hostel 1" className="w-full h-auto rounded-md" />
               <img src={hostelPhoto2} alt="Hostel 2" className="w-full h-auto rounded-md" />
+              <img src={hostelPhoto3} alt="Hostel 2" className="w-full h-auto rounded-md" />
+              <img src={hostelPhoto4} alt="Hostel 2" className="w-full h-auto rounded-md" />
               {/* Add more images as needed */}
             </div>
           )}
 
+          {/* Reviews Tab */}
           {activeTab === 'reviews' && (
             <div className="space-y-4">
               <div className="flex items-start space-x-4">
                 <img src={reviewImage} alt="Reviewer" className="w-12 h-12 rounded-full" />
                 <div>
-                  <h3 className="font-semibold">John Doe</h3>
-                  <p className="text-gray-600">"This hostel is fantastic! Clean, friendly staff, and the location is perfect!"</p>
+                  <h3 className="font-semibold text-[#2C3E50]">Shreya Sapkota</h3>
+                  <p className="text-[#2C3E50]">"This hostel is fantastic! Clean, friendly staff, and the location is perfect!"</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
                 <img src={reviewImage} alt="Reviewer" className="w-12 h-12 rounded-full" />
                 <div>
-                  <h3 className="font-semibold">John Doe</h3>
-                  <p className="text-gray-600">"This hostel is fantastic! Clean, friendly staff, and the location is perfect!"</p>
+                  <h3 className="font-semibold text-[#2C3E50]">Unnati Neupane</h3>
+                  <p className="text-[#2C3E50]">"I had a wonderful stay here. The rooms are cozy, and the facilities are great!"</p>
                 </div>
               </div>
-
               {/* Add more reviews as needed */}
+            </div>
+          )}
+
+          {/* Facilities Tab */}
+          {activeTab === 'facilities' && (
+            <div className="space-y-4">
+              <h3 className="font-bold text-lg text-[#2C3E50]">Facilities</h3>
+              <ul className="list-disc pl-5 text-[#2C3E50]">
+                <li>Free Wi-Fi</li>
+                <li>24/7 Security</li>
+                <li>Shared Kitchen</li>
+                <li>Laundry Service</li>
+                <li>Common Lounge</li>
+              </ul>
+            </div>
+          )}
+
+          {/* Events Tab */}
+          {activeTab === 'events' && (
+            <div className="space-y-4">
+              <h3 className="font-bold text-lg text-[#2C3E50]">Upcoming Events</h3>
+              <ul className="list-disc pl-5 text-[#2C3E50]">
+                <li>Hostel Game Night - Friday, 8 PM</li>
+                <li>Cooking Workshop - Saturday, 10 AM</li>
+                <li>Cultural Exchange Meetup - Sunday, 6 PM</li>
+              </ul>
             </div>
           )}
         </div>
