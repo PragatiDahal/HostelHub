@@ -65,11 +65,11 @@ const Blog = () => {
               </div>
             </div>
           ))}
-          {/* <div className="flex justify-center items-center mt-8">
-            <button className="bg-[#1ABC9C] text-white px-6 py-2 rounded-full font-[poppins]">
-              Upload your blog
-            </button>
-          </div> */}
+        </div>
+        <div className="flex justify-center pb-6 pt-12">
+          <button className="bg-[#1ABC9C] text-white text-xl px-6 py-2  rounded-full font-[poppins]">
+            Upload your blog
+          </button>
         </div>
       </div>
     </>

@@ -14,6 +14,10 @@ const Navbar = () => {
     { id: 5, link: "blog" },
   ];
 
+  const handleSigninClick = () => {
+    setDropdown(!dropdown); // Toggle the dropdown on click
+  };
+
   return (
     <div className="bg-[#2C3E50] text-white flex justify-between items-center w-full h-16 fixed top-0 left-0">
       <h1 className="text-3xl font-bold font-[poppins] px-4 mx-4">
@@ -34,8 +38,7 @@ const Navbar = () => {
         {/* Dropdown for Signin */}
         <li
           className="relative px-4 cursor-pointer capitalize font-medium text-white hover:scale-105 hover:text-[#1ABC9C] duration-200 font-[poppins]"
-          onMouseEnter={() => setDropdown(true)}
-          onMouseLeave={() => setDropdown(false)} 
+          onClick={handleSigninClick} // Toggle dropdown on click
         >
           <div className="flex items-center space-x-2">
             <FaUser size={20} />
@@ -46,13 +49,13 @@ const Navbar = () => {
           {dropdown && (
             <ul className="absolute top-10 left-0 w-40 bg-[#1ABC9C] text-white rounded-lg shadow-lg">
               <li className="px-4 py-2 hover:bg-[#2C3E50]">
-                <Link to="/usersignin">User Login</Link>
+                <Link to="/usersignin" onClick={() => setDropdown(false)}>User Login</Link>
               </li>
               <li className="px-4 py-2 hover:bg-[#2C3E50]">
-                <Link to="/hostelregister">Hostel Register</Link>
+                <Link to="/hostelregister" onClick={() => setDropdown(false)}>Hostel Register</Link>
               </li>
               <li className="px-4 py-2 hover:bg-[#2C3E50]">
-                <Link to="/adminsignin">Admin Login</Link>
+                <Link to="/adminsignin" onClick={() => setDropdown(false)}>Admin Login</Link>
               </li>
             </ul>
           )}
@@ -84,7 +87,7 @@ const Navbar = () => {
           {/* Signin Dropdown for Mobile */}
           <li
             className="px-4 cursor-pointer capitalize py-6 text-4xl hover:text-[#1ABC9C] font-[poppins]"
-            onClick={() => setDropdown(!dropdown)}
+            onClick={handleSigninClick} // Toggle dropdown on click
           >
             <div className="flex items-center justify-center space-x-1">
               <FaUser size={30} />
@@ -94,17 +97,17 @@ const Navbar = () => {
             {dropdown && (
               <ul className="w-full mt-4 text-center">
                 <li className="px-4 py-2 hover:text-[#1ABC9C]">
-                  <Link to="/usersignin" onClick={() => setNav(false)}>
+                  <Link to="/usersignin" onClick={() => { setNav(false); setDropdown(false); }}>
                     User Login
                   </Link>
                 </li>
                 <li className="px-4 py-2 hover:text-[#1ABC9C]">
-                  <Link to="/hostelregister" onClick={() => setNav(false)}>
+                  <Link to="/hostelregister" onClick={() => { setNav(false); setDropdown(false); }}>
                     Hostel Register
                   </Link>
                 </li>
                 <li className="px-4 py-2 hover:text-[#1ABC9C]">
-                  <Link to="/adminsignin" onClick={() => setNav(false)}>
+                  <Link to="/adminsignin" onClick={() => { setNav(false); setDropdown(false); }}>
                     Admin Login
                   </Link>
                 </li>

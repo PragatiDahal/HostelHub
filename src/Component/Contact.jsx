@@ -7,8 +7,8 @@ const Contact = () => {
     <>
       <div className="min-h-screen bg-[#E8F8F5] flex items-center justify-center p-6">
         <div className="w-full max-w-lg mx-auto space-y-6">
-          <header className="text-center">
-            <h2 className="text-3xl font-bold text-[#2C3E50] font-[poppins]">
+          <header className="text-center pt-10">
+            <h2 className="text-3xl font-bold text-[#2C3E50] font-[poppins] ">
               Get in touch with us
             </h2>
           </header>
