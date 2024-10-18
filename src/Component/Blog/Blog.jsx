@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Blog = () => {
   const blogPosts = [
@@ -32,25 +33,22 @@ const Blog = () => {
   ];
 
   return (
-    <>
-      <div className="container mx-auto p-6 bg-[#E8F8F5]">
-        {/* Blog Title */}
-        <div className="text-center mb-10 pt-10">
-          <h1 className="text-4xl font-bold font-[poppins] text-[#2C3E50] mb-4">
-            From the Blog
-          </h1>
-          <p className="text-gray-600">
-            Explore our latest articles on hostels, travel tips, and more.
-          </p>
-        </div>
+    <div className="container mx-auto p-6 bg-[#E8F8F5]">
+      {/* Blog Title */}
+      <div className="text-center mb-10 pt-10">
+        <h1 className="text-4xl font-bold font-[poppins] text-[#2C3E50] mb-4">
+          From the Blog
+        </h1>
+        <p className="text-gray-600">
+          Explore our latest articles on hostels, travel tips, and more.
+        </p>
+      </div>
 
-        {/* Blog Posts Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post) => (
-            <div
-              key={post.id}
-              className="blog-post bg-white rounded-lg overflow-hidden shadow-lg hover:bg-gray-200 duration-500 ease-in-out "
-            >
+      {/* Blog Posts Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {blogPosts.map((post) => (
+          <Link to={`/blog/${post.id}`} key={post.id}>
+            <div className="blog-post bg-white rounded-lg overflow-hidden shadow-lg hover:bg-gray-200 duration-500 ease-in-out">
               <img
                 src={post.image}
                 alt={post.title}
@@ -61,18 +59,24 @@ const Blog = () => {
                   {post.title}
                 </h2>
                 <p className="text-sm text-gray-500 mb-4">{post.date}</p>
-                <p className="text-gray-700">{post.content}</p>
+                <p className="text-gray-700">
+                  {post.content.substring(0, 100)}...
+                </p>
               </div>
             </div>
-          ))}
-        </div>
-        <div className="flex justify-center pb-6 pt-12">
-          <button className="bg-[#1ABC9C] text-white text-xl px-6 py-2  rounded-full font-[poppins]">
+          </Link>
+        ))}
+      </div>
+
+      {/* Upload Your Blog Button */}
+      <div className="flex justify-center pb-6 pt-12">
+        <Link to="/uploadblog">
+          <button className="bg-[#1ABC9C] text-white text-xl px-6 py-2 rounded-full font-[poppins]">
             Upload your blog
           </button>
-        </div>
+        </Link>
       </div>
-    </>
+    </div>
   );
 };
 

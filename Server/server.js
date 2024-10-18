@@ -39,39 +39,40 @@ app.get("/api/hostels", async (req, res) => {
   try {
     const { location, gender, minPrice, maxPrice } = req.query;
 
-    // Build the custom query object
+    // Log query parameters to verify input
+    console.log("Query params:", req.query);
+
     const cusQuery = {};
 
-    // Apply filters based on location, gender, minPrice, and maxPrice
     if (location) {
-      query.location = { $regex: location, $options: "i" }; // Case-insensitive location filter
+      cusQuery.location = { $regex: location, $options: "i" };
     }
 
     if (gender) {
-      query.gender = { $regex: gender, $options: "i" }; // Case-insensitive gender filter
+      cusQuery.gender = { $regex: gender, $options: "i" };
     }
 
-    if (minPrice) {
-      cusQuery.price = { ...cusQuery.price, $gte: parseInt(minPrice) }; // Minimum price filter
+    if (minPrice || maxPrice) {
+      cusQuery.price = {};
+      if (minPrice) cusQuery.price.$gte = parseInt(minPrice);
+      if (maxPrice) cusQuery.price.$lte = parseInt(maxPrice);
     }
 
-    if (maxPrice) {
-      cusQuery.price = { ...cusQuery.price, $lte: parseInt(maxPrice) }; // Maximum price filter
-    }
-
-    // Fetch filtered hostels using cusQuery
     const hostels = await Hostel.find(cusQuery);
-
-    res.json(hostels); // Send filtered hostels to the frontend
+    res.json(hostels);
   } catch (error) {
-    console.error("Error fetching hostels:", error);
-    res.status(500).json({ message: "Error fetching hostels", error });
+    if (error.response) {
+      console.error("Error fetching hostels:", error.response.data);
+    } else {
+      console.error("Error:", error.message);
+    }
   }
 });
 
 // Start the server
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
+  let cusQuery = {}; // Ensure cusQuery is defined
+  console.log("Constructed query:", cusQuery);
   console.log(`Server is running on port ${port}`);
 });
-

@@ -11,7 +11,9 @@ import About from "./Component/About";
 import Contact from "./Component/Contact";
 import Footer from "./Component/Footer";
 import Hostel1 from "./Component/Hostels/Hostel1";
-import Blog from "./Component/Blog";
+import Blog from "./Component/Blog/Blog";
+import BlogDetail from "./Component/Blog/BlogDeatail";
+import UploadBlog from "./Component/Blog/UploadBlog";
 import Hostels from "./Component/Hostels";
 import UserSignUp from "./Component/Login/UserSignUp";
 import UserSignIn from "./Component/Login/UserSignIn";
@@ -33,6 +35,8 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="hostels" element={<Hostels />} />
           <Route path="blog" element={<Blog />} />
+          <Route path="blog/:id" element={<BlogDetail />} />
+          <Route path="uploadblog" element={<UploadBlog />} />
           <Route path="hostel1" element={<Hostel1 />} />
         </Routes>
         <Footer />

@@ -42,6 +42,7 @@ const Featured = () => {
       [name]: name.includes("Price") ? Number(value) : value, // Convert price values to numbers
     });
   };
+
   // Handle search form submission
   const handleSearch = (e) => {
     e.preventDefault();

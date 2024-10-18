@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Offer from './Offer';
 import Testimonials from './Testimonials';
 
@@ -32,9 +33,11 @@ const About = () => {
             hostel search hassle-free, offering a seamless booking experience with accurate, reliable, and up-to-date
             information, ensuring you find a place that feels like home.
           </p>
+          <Link to="/hostels">
           <button className="bg-[#1ABC9C] hover:bg-green-700 text-white font-bold py-3 px-6 rounded-md transition duration-300">
-            Book now
+            Explore
           </button>
+          </Link>
         </div>
       </div>
 
