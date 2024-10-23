@@ -37,7 +37,8 @@ function App() {
           <Route path="blog" element={<Blog />} />
           <Route path="blog/:id" element={<BlogDetail />} />
           <Route path="uploadblog" element={<UploadBlog />} />
-          <Route path="hostel1" element={<Hostel1 />} />
+           {/* Hostel1 route to include the listing and dynamic details */}
+           <Route path="hostels/*" element={<Hostel1 />} />
         </Routes>
         <Footer />
       </Router>
