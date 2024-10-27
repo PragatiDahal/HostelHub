@@ -1,7 +1,7 @@
 [
   {
     "name": "Laxmi Girls Hostel",
-    "image": "laxmi.jpeg",
+    "image": "laxmi.jpg",
     "location": "Radheradhe, Bhaktapur",
     "price": 8000,
     "gender": "girl",
@@ -33,98 +33,232 @@
   },
 
   {
-    "name": "The Blessing Hostel",
-    "image": "blessing.jpg",
-    "location": "kamaladi, Kathmandu",
-    "price": 7000,
-    "gender": "girl",
-    "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
-    "description": "The Blessing Hostel provides a safe, secure environment for female students and professionals.",
-    "rating": "★★★★"
-  },
-
-  {
-    "name": "Pearl Girls Hostel",
-    "image": "pearl.webp",
-    "location": "NewBaneshwor, Kathmandu",
+    "name": "Sanvi Girls Hostel",
+    "image": "sanvi.jpg",
+    "location": "Harshachowk, Bhaktapur",
     "price": 8000,
     "gender": "girl",
     "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
-    "description": "Pearl Girls Hostel provides a safe, secure environment for female students and professionals.",
+    "description": "Sanvi Girls Hostel provides a safe, secure environment for female students and professionals.",
+    "rating": "★★★★☆"
+  },
+
+  {
+    "name": "Birat Girls Hostel",
+    "image": "birat.jpg",
+    "location": "Thimi, Bhaktapur",
+    "price": 8000,
+    "gender": "girl",
+    "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
+    "description": "Birat Girls Hostel provides a safe, secure environment for female students and professionals.",
+    "rating": "★★★★☆"
+  },
+
+  {
+    "name": "College Girls Hostel",
+    "image": "collegegirls.jpg",
+    "location": "Garud Kunda Road, Bhaktapur",
+    "price": 8000,
+    "gender": "girl",
+    "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
+    "description": "College Girls Hostel provides a safe, secure environment for female students and professionals.",
+    "rating": "★★★★☆"
+  },
+
+  {
+    "name": "Radiant Girls Hostel",
+    "image": "radiant.jpg",
+    "location": "Putalisadak, Kathmandu",
+    "price": 7000,
+    "gender": "girl",
+    "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
+    "description": "Radiant Girls Hostel provides a safe, secure environment for female students and professionals.",
     "rating": "★★★★"
   },
 
   {
-    "name": "Blossom House",
-    "image": "blossom.jpg",
-    "location": "Anamnagar, Kathmandu",
+    "name": "Peaceful Girls Hostel",
+    "image": "peaceful.jpg",
+    "location": "Rudra Mati Marg, Kathmandu",
+    "price": 8000,
+    "gender": "girl",
+    "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
+    "description": "Peaceful Girls Hostel provides a safe, secure environment for female students and professionals.",
+    "rating": "★★★★"
+  },
+
+  {
+    "name": "Happy Home Girls Hostel",
+    "image": "happyhome.jpg",
+    "location": "Chakku Bhakku Marga, Kathmandu",
     "price": 7500,
     "gender": "girl",
     "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
-    "description": "Blossom provides a safe, secure environment for female students and professionals.",
+    "description": "Happy Home Girls Hostel, secure environment for female students and professionals.",
+    "rating": "★★★★"
+  },
+  
+  {
+    "name": "Best Girls Hostel",
+    "image": "bestgirl.jpg",
+    "location": "Near Madan Bhandari College, Kathmandu",
+    "price": 7500,
+    "gender": "girl",
+    "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
+    "description": "Best Girls Hostel provides a safe, secure environment for female students and professionals.",
     "rating": "★★★★"
   },
 
   {
-    "name": "Graceful Girls Hostel",
-    "image": "graceful.webp",
-    "location": "Balkumari, Lalitpur",
-    "price": 7000,
+    "name": "Comfort Girls Hostel",
+    "image": "comfort.jpg",
+    "location": "Alok Nagar, Kathmandu",
+    "price": 7500,
     "gender": "girl",
     "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
-    "description": "Graceful Girls Hostel provides a safe, secure environment for female students and professionals.",
-    "rating": "★★★★"
-  },
-  {
-    "name": "Daisy Girls Hostel",
-    "image": "daisy.jpeg",
-    "location": "Satdobato, Lalitpur",
-    "price": 7000,
-    "gender": "girl",
-    "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
-    "description": "Daisy Girls Hostel provides a safe, secure environment for female students and professionals.",
+    "description": "Comfort Girls Hostel provides a safe, secure environment for female students and professionals.",
     "rating": "★★★★"
   },
 
   {
-    "name": "Haven Girls Hostel",
-    "image": "haven.jpg",
-    "location": "Kupandole, Lalitpur",
-    "price": 8000,
+    "name": "Biju Girls Hostel",
+    "image": "Biju.jpg",
+    "location": "Dhobidhara Marga, Kathmandu",
+    "price": 7500,
     "gender": "girl",
     "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
-    "description": "Haven Girls Hostel provides a safe, secure environment for female students and professionals.",
+    "description": "Biju Girls Hostel provides a safe, secure environment for female students and professionals.",
     "rating": "★★★★"
   },
 
   {
-    "name": "Sunrise Boys Hostel",
-    "image": "sunrise.jpeg",
-    "location": "Balkumari, Lalitpur",
+    "name": "A One Girls Hostel",
+    "image": "aone.jpg",
+    "location": "Jawgal, Lalitpur",
     "price": 7000,
-    "gender": "boy",
+    "gender": "girl",
     "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
-    "description": "Sunrise Boys Hostel is located in a prime area, offering affordable rooms for male students and professionals.",
+    "description": "A One Girls Hostel provides a safe, secure environment for female students and professionals.",
     "rating": "★★★★"
   },
   {
-    "name": "Nice Boys Hostel",
-    "image": "nice.avif",
+    "name": "Padma Girls Hostel",
+    "image": "padma.jpg",
     "location": "Jawalakhel, Lalitpur",
-    "price": 8000,
-    "gender": "boy",
+    "price": 7000,
+    "gender": "girl",
     "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
-    "description": "Sunrise Boys Hostel is located in a prime area, offering affordable rooms for male students and professionals.",
+    "description": "Padma Girls Hostel provides a safe, secure environment for female students and professionals.",
     "rating": "★★★★"
   },
+
   {
-    "name": "Mighty Boys Hostel",
-    "image": "mighty.jpg",
+    "name": "Gwarko Girls Hostel",
+    "image": "gwarko.jpg",
+    "location": "Gwarko, Lalitpur",
+    "price": 8000,
+    "gender": "girl",
+    "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
+    "description": "Gwarko Girls Hostel provides a safe, secure environment for female students and professionals.",
+    "rating": "★★★★"
+  },
+  
+  {
+    "name": "Sharvya Girls Hostel",
+    "image": "sharvya.jpg",
+    "location": "Jhulpakha, Lalitpur",
+    "price": 8000,
+    "gender": "girl",
+    "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
+    "description": "Sharvya Girls Hostel provides a safe, secure environment for female students and professionals.",
+    "rating": "★★★★"
+  },
+
+  {
+    "name": "Delight Girls Hostel",
+    "image": "delight.jpg",
+    "location": "Sanepa, Lalitpur",
+    "price": 8000,
+    "gender": "girl",
+    "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
+    "description": "Delight Girls Hostel provides a safe, secure environment for female students and professionals.",
+    "rating": "★★★★"
+  },
+
+  {
+    "name": "Kupondole Girls Hostel",
+    "image": "kupondole.jpg",
     "location": "kupandol, Lalitpur",
+    "price": 8000,
+    "gender": "girl",
+    "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
+    "description": "Kupondole Girls Hostel provides a safe, secure environment for female students and professionals.",
+    "rating": "★★★★"
+  },
+
+  {
+    "name": "Safe Boys Hostel",
+    "image": "safe.jpg",
+    "location": "Hattiban, Lalitpur",
     "price": 7000,
     "gender": "boy",
     "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
-    "description": "Mighty Boys Hostel is located in a prime area, offering affordable rooms for male students and professionals.",
+    "description": "Safe Boys Hostel is located in a prime area, offering affordable rooms for male students and professionals.",
+    "rating": "★★★★"
+  },
+
+  {
+    "name": "Mid Town Boys Hostel",
+    "image": "midtown.jpg",
+    "location": "Mahalaxmisthan, Lalitpur",
+    "price": 8000,
+    "gender": "boy",
+    "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
+    "description": "Mid Town Boys Hostel is located in a prime area, offering affordable rooms for male students and professionals.",
+    "rating": "★★★★"
+  },
+
+  {
+    "name": "Lagankhel Boys Hostel",
+    "image": "lagankhel.jpeg",
+    "location": "Payagpokhari, Lalitpur",
+    "price": 7000,
+    "gender": "boy",
+    "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
+    "description": "Lagankhel Boys Hostel is located in a prime area, offering affordable rooms for male students and professionals.",
+    "rating": "★★★★"
+  },
+
+  {
+    "name": "Lalitpur Boys Hostel",
+    "image": "lalitpur.jpg",
+    "location": "Natole, Lalitpur",
+    "price": 7000,
+    "gender": "boy",
+    "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
+    "description": "Lalitpur Boys Hostel is located in a prime area, offering affordable rooms for male students and professionals.",
+    "rating": "★★★★"
+  },
+
+  {
+    "name": "Pulchowk Boys Hostel",
+    "image": "pulchowk.jpg",
+    "location": "Bhakundole, Lalitpur",
+    "price": 7000,
+    "gender": "boy",
+    "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
+    "description": "Pulchowk Boys Hostel is located in a prime area, offering affordable rooms for male students and professionals.",
+    "rating": "★★★★"
+  },
+
+  {
+    "name": "Symbol Boys Hostel",
+    "image": "symbol.jpg",
+    "location": "Patan, Lalitpur",
+    "price": 7000,
+    "gender": "boy",
+    "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
+    "description": "Symbol Boys Hostel is located in a prime area, offering affordable rooms for male students and professionals.",
     "rating": "★★★★"
   },
 
@@ -157,38 +291,106 @@
     "price": 7000,
     "gender": "boy",
     "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
-    "description": "Mighty Boys Hostel is located in a prime area, offering affordable rooms for male students and professionals.",
+    "description": "Sarthak Boys Hostel is located in a prime area, offering affordable rooms for male students and professionals.",
     "rating": "★★★★"
   },
 
   {
-    "name": "Everest Boys Hostel",
-    "image": "everest.jpg",
-    "location": "New Baneshwor, Kathmandu",
-    "price": 8500,
-    "gender": "boy",
-    "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
-    "description": "Everest Hostel offers accommodations in the heart of Kathmandu with modern amenities.",
-    "rating": "★★★★"
-  },
-  {
-    "name": "Shiva Boys Hostel",
-    "image": "shiva.jpg",
-    "location": "Chabil, Kathmandu",
+    "name": "Radhe Radhe Boys Hostel",
+    "image": "radheradhe.jpg",
+    "location": "Radhe-radhe, Bhaktapur",
     "price": 7500,
     "gender": "boy",
     "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
-    "description": "Shiva boys Hostel offers accommodations in the heart of Kathmandu with modern amenities.",
+    "description": "Radhe Radhe Boys Hostelis located in a prime area, offering affordable rooms for male students and professionals.",
     "rating": "★★★★"
   },
+
   {
-    "name": "Unity Boys Hostel",
-    "image": "unity.jpeg",
+    "name": "Pathivara Boys Hostel",
+    "image": "pathivara.jpg",
+    "location": "Srijananagar, Bhaktapur",
+    "price": 7500,
+    "gender": "boy",
+    "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
+    "description": "Pathivara Boys Hostel is located in a prime area, offering affordable rooms for male students and professionals.",
+    "rating": "★★★★"
+  },
+
+  {
+    "name": "Swastik Boys Hostel",
+    "image": "swastik.jpeg",
+    "location": "Suryabinayak, Bhaktapur",
+    "price": 7500,
+    "gender": "boy",
+    "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
+    "description": "Swastik Boys Hostelis located in a prime area, offering affordable rooms for male students and professionals.",
+    "rating": "★★★★"
+  },
+
+  {
+    "name": "City Delxue Boys Hostel",
+    "image": "citydeluxe.jpg",
+    "location": "New Plaza, Kathmandu",
+    "price": 8500,
+    "gender": "boy",
+    "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
+    "description": "City Delxue Boys Hostel offers accommodations in the heart of Kathmandu with modern amenities.",
+    "rating": "★★★★"
+  },
+
+  {
+    "name": "The Best Boys Hostel",
+    "image": "thebest.jpeg",
+    "location": "Seto pul, Kathmandu",
+    "price": 7500,
+    "gender": "boy",
+    "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
+    "description": "The Best Boys Hostel offers accommodations in the heart of Kathmandu with modern amenities.",
+    "rating": "★★★★"
+  },
+
+  {
+    "name": "Kathmandu Unity Boys Hostel",
+    "image": "kathmanduunity.jpg",
     "location": "Putalisadak, Kathmandu",
     "price": 7000,
     "gender": "boy",
     "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
-    "description": "Unity Boys Hostel offers accommodations in the heart of Kathmandu with modern amenities.",
+    "description": "Kathmandu Unity Boys Hostel offers accommodations in the heart of Kathmandu with modern amenities.",
+    "rating": "★★★★"
+  },
+
+  {
+    "name": "Himalayan Boys Hostel",
+    "image": "himalayan.jpg",
+    "location": "Beside Teaching Hospital, Kathmandu",
+    "price": 8500,
+    "gender": "boy",
+    "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
+    "description": "Himalayan Boys Hostel offers accommodations in the heart of Kathmandu with modern amenities.",
+    "rating": "★★★★"
+  },
+
+  {
+    "name": "Namuna Boys Hostel",
+    "image": "namuna.jpg",
+    "location": "Thapagaun, Kathmandu",
+    "price": 8500,
+    "gender": "boy",
+    "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
+    "description": "Namuna Boys Hostel offers accommodations in the heart of Kathmandu with modern amenities.",
+    "rating": "★★★★"
+  },
+
+  {
+    "name": "Dhanush Boys Hostel",
+    "image": "dhanush.jpg",
+    "location": "Tinkune, Kathmandu",
+    "price": 8500,
+    "gender": "boy",
+    "facilities": ["wifi", "Laundary", "Security", "Sharedkitchen"],
+    "description": "Dhanush Boys Hostel offers accommodations in the heart of Kathmandu with modern amenities.",
     "rating": "★★★★"
   }
 ]
