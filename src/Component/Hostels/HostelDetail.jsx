@@ -1,45 +1,31 @@
-import React, { useState } from "react";
-import reviewImage from '../../assets/bug2.png'; // Import your image here
+import React, { useState, useEffect } from "react";
+import reviewImage from "../../assets/bug2.png"; // Import your default review image
 
 const HostelDetail = () => {
+  const [hostelData, setHostelData] = useState(null);
   const [activeTab, setActiveTab] = useState("facilities");
 
-  const hostelData = {
-    name: "ABC Hostel",
-    about:
-      "ABC is located in the heart of Koteshwor. It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-    rooms: {
-      single: {
-        description: "A cozy single room with all the essential amenities.",
-        price: "5000 NPR",
-        image: "/path-to-image-single.jpg", // replace with actual path
-      },
-      double: {
-        description: "Spacious double sharing room perfect for students.",
-        price: "7000 NPR",
-        image: "/path-to-image-double.jpg", // replace with actual path
-      },
-      triple: {
-        description: "Affordable triple sharing room with great comfort.",
-        price: "9000 NPR",
-        image: "/path-to-image-triple.jpg", // replace with actual path
-      },
-    },
-    location: {
-      address: "Koteshwor, Kathmandu",
-      mapLink: "https://maps.google.com", // replace with actual map link
-    },
-  };
+  useEffect(() => {
+    // Fetch hostels list from API
+    fetch("/api/hosteldetail")
+      .then((response) => response.json())
+      .then((data) => setHostels(data))
+      .catch((error) => console.error("Error fetching hostel list:", error));
+  }, []);
 
-  const tabs = ["facilities", "gallery", "review", "events", "contact"];
+  if (!hostelData) {
+    return <p>Loading...</p>;
+  }
+
+  const tabs = ["facilities", "gallery", "reviews", "events", "contact"];
 
   return (
     <div className="mx-auto p-6 bg-[#E8F8F5]">
       {/* Hostel Image */}
       <div className="flex justify-center">
         <img
-          src="/path-to-hostel-image.jpg" // replace with actual hostel image path
-          alt="Hostel Image"
+          src={hostelData.image}
+          alt="Hostel"
           className="w-3/4 h-64 object-cover rounded-lg shadow-lg"
         />
       </div>
@@ -70,6 +56,9 @@ const HostelDetail = () => {
                 <p className="text-gray-700 mt-2">
                   <strong>Price:</strong> {hostelData.rooms[roomType].price}
                 </p>
+                <button className="mt-4 px-4 py-2 bg-[#1ABC9C] text-white rounded hover:bg-[#16A085]">
+                  Book Now
+                </button>
               </div>
             </div>
           </div>
@@ -98,10 +87,9 @@ const HostelDetail = () => {
             <div>
               <h3 className="font-bold text-lg text-[#2C3E50]">Facilities</h3>
               <ul className="list-disc pl-5 text-[#2C3E50]">
-                <li>Free Wifi</li>
-                <li>Laundry Service</li>
-                <li>24/7 Security</li>
-                <li>Shared Kitchen</li>
+                {hostelData.facilities.map((facility, index) => (
+                  <li key={index}>{facility}</li>
+                ))}
               </ul>
             </div>
           )}
@@ -109,66 +97,50 @@ const HostelDetail = () => {
           {/* Gallery Tab */}
           {activeTab === "gallery" && (
             <div className="grid grid-cols-2 gap-4">
-              <img
-                src="/path-to-gallery-image1.jpg"
-                alt="Gallery 1"
-                className="w-full rounded-md"
-              />
-              <img
-                src="/path-to-gallery-image2.jpg"
-                alt="Gallery 2"
-                className="w-full rounded-md"
-              />
+              {hostelData.gallery.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt={`Gallery ${index + 1}`}
+                  className="w-full rounded-md"
+                />
+              ))}
             </div>
           )}
 
           {/* Reviews Tab */}
           {activeTab === "reviews" && (
             <div className="space-y-4">
-              <div className="flex items-start space-x-4">
-                <img
-                  src={reviewImage}
-                  alt="Reviewer"
-                  className="w-12 h-12 rounded-full"
-                />
-                <div>
-                  <h3 className="font-semibold text-[#2C3E50]">
-                    Shreya Sapkota
-                  </h3>
-                  <p className="text-[#2C3E50]">
-                    "This hostel is fantastic! Clean, friendly staff, and the
-                    location is perfect!"
-                  </p>
+              {hostelData.reviews.map((review, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <img
+                    src={review.profileImage || reviewImage}
+                    alt="Reviewer"
+                    className="w-12 h-12 rounded-full"
+                  />
+                  <div>
+                    <h3 className="font-semibold text-[#2C3E50]">
+                      {review.name}
+                    </h3>
+                    <p className="text-[#2C3E50]">{review.comment}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <img
-                  src={reviewImage}
-                  alt="Reviewer"
-                  className="w-12 h-12 rounded-full"
-                />
-                <div>
-                  <h3 className="font-semibold text-[#2C3E50]">
-                    Unnati Neupane
-                  </h3>
-                  <p className="text-[#2C3E50]">
-                    "I had a wonderful stay here. The rooms are cozy, and the
-                    facilities are great!"
-                  </p>
-                </div>
-              </div>
-              {/* Add more reviews as needed */}
+              ))}
             </div>
           )}
 
           {/* Events Tab */}
           {activeTab === "events" && (
             <div>
-              <h3 className="font-bold text-lg text-[#2C3E50]">Upcoming Events</h3>
+              <h3 className="font-bold text-lg text-[#2C3E50]">
+                Upcoming Events
+              </h3>
               <ul className="list-disc pl-5 text-[#2C3E50]">
-                <li>Game Night - Friday, 8 PM</li>
-                <li>Cooking Workshop - Saturday, 10 AM</li>
-                <li>Cultural Meetup - Sunday, 6 PM</li>
+                {hostelData.events.map((event, index) => (
+                  <li key={index}>
+                    {event.title} - {event.date}
+                  </li>
+                ))}
               </ul>
             </div>
           )}
@@ -176,18 +148,20 @@ const HostelDetail = () => {
           {/* Contact Tab */}
           {activeTab === "contact" && (
             <div>
-              <h3 className="font-bold text-lg text-[#2C3E50]">Contact Information</h3>
+              <h3 className="font-bold text-lg text-[#2C3E50]">
+                Contact Information
+              </h3>
               <p className="text-[#2C3E50]">
-                <strong>Phone:</strong> 9876543210
+                <strong>Phone:</strong> {hostelData.contact.phone}
               </p>
               <p className="text-[#2C3E50]">
-                <strong>Email:</strong> contact@abchostel.com
+                <strong>Email:</strong> {hostelData.contact.email}
               </p>
               <p className="text-[#2C3E50]">
-                <strong>Address:</strong> {hostelData.location.address}
+                <strong>Address:</strong> {hostelData.contact.address}
               </p>
               <a
-                href={hostelData.location.mapLink}
+                href={hostelData.contact.mapLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#1ABC9C] hover:underline"
@@ -203,7 +177,7 @@ const HostelDetail = () => {
       <div className="mt-10">
         <h3 className="font-bold text-lg text-[#2C3E50]">Location</h3>
         <iframe
-          src="https://maps.google.com"
+          src={hostelData.location.mapLink}
           width="100%"
           height="400"
           frameBorder="0"

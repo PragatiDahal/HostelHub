@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const dotenv = require("dotenv");
+const hostelDetailRoute = require("./routes/hosteldetail");
 
 dotenv.config(); // Load environment variables
 
@@ -19,6 +20,9 @@ mongoose
   })
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.error("Error connecting to MongoDB:", err));
+
+// Routes
+app.use("/api/hosteldetail", hostelDetailRoute);
 
 // Hostel Schema and Model
 const hostelSchema = new mongoose.Schema({
