@@ -12,10 +12,18 @@ function HostelForm({ hostel = {} }) {
     rating: hostel.rating || '',
   });
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const method = hostel._id ? 'put' : 'post';
-    const url = hostel._id ? `/api/hostels/${hostel._id}` : '/api/hostels';
+    const method = hostel.name ? 'put' : 'post';
+    const url = hostel.name ? `http://localhost:5000/api/hostels/${hostelName}` : 'http://localhost:5000/api/hostels';
 
     axios[method](url, formData)
       .then((res) => console.log(res.data))
@@ -24,10 +32,30 @@ function HostelForm({ hostel = {} }) {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
-      <input value={formData.name} placeholder="Name" />
-      <input value={formData.location} placeholder="Location" />
-      <input value={formData.price} placeholder="Price" type="number" />
-      <select value={formData.gender}>
+      <input
+        name="name"
+        value={formData.name}
+        onChange={handleChange}
+        placeholder="Name"
+      />
+      <input
+        name="location"
+        value={formData.location}
+        onChange={handleChange}
+        placeholder="Location"
+      />
+      <input
+        name="price"
+        value={formData.price}
+        onChange={handleChange}
+        placeholder="Price"
+        type="number"
+      />
+      <select
+        name="gender"
+        value={formData.gender}
+        onChange={handleChange}
+      >
         <option value="girl">Girl</option>
         <option value="boy">Boy</option>
       </select>
@@ -37,3 +65,4 @@ function HostelForm({ hostel = {} }) {
 }
 
 export default HostelForm;
+

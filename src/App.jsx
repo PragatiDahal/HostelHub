@@ -20,6 +20,7 @@ import UserSignIn from "./Component/Login/UserSignIn";
 import AdminSignIn from "./Component/Login/AdminSignIn";
 import HostelRegister from "./Component/Login/HostelRegister";
 import Dashboard from "./Component/Admin/Dashboard";
+import HostelForm from "./Component/Admin/HostelForm";
 function App() {
   return (
     <>
@@ -41,6 +42,7 @@ function App() {
           {/* Route for Hostel1 which handles the list and detail view */}
           <Route path="/hosteldetail/*" element={<Hostel1 />} />
           <Route path="dashboard" element={<Dashboard />} />
+          <Route path="hostelform" element={<HostelForm/>} />
         </Routes>
         <Footer />
       </Router>
