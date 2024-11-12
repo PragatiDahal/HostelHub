@@ -6,7 +6,7 @@ const HostelList = () => {
 
   useEffect(() => {
     // Fetch hostels list from API
-    fetch('/api/hosteldetail')
+    fetch(`http://localhost:5000/api/hosteldetail`)
       .then(response => response.json())
       .then(data => setHostels(data))
       .catch(error => console.error('Error fetching hostel list:', error));

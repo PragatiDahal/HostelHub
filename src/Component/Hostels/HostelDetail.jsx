@@ -1,17 +1,30 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import reviewImage from "../../assets/bug2.png"; // Import your default review image
 
 const HostelDetail = () => {
+  const { hostelName } = useParams(); // Get hostel name from URL
   const [hostelData, setHostelData] = useState(null);
   const [activeTab, setActiveTab] = useState("facilities");
+  const [error, setError] = useState(null); // For error handling
 
   useEffect(() => {
-    // Fetch hostels list from API
-    fetch("/api/hosteldetail")
-      .then((response) => response.json())
-      .then((data) => setHostels(data))
-      .catch((error) => console.error("Error fetching hostel list:", error));
-  }, []);
+    // Fetch hostel details by name from API
+    fetch(`http://localhost:5000/api/hosteldetail/${hostelName}`)
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to fetch hostel details");
+        return res.json();
+      })
+      .then((data) => {
+        setHostelData(data);
+        setError(null); // Clear any previous errors
+      })
+      .catch((error) => setError(error.message));
+  }, [hostelName]);
+
+  if (error) {
+    return <p className="text-red-500">Error: {error}</p>;
+  }
 
   if (!hostelData) {
     return <p>Loading...</p>;
@@ -24,7 +37,7 @@ const HostelDetail = () => {
       {/* Hostel Image */}
       <div className="flex justify-center">
         <img
-          src={hostelData.image}
+          src={hostelData.image || reviewImage} // Fallback image if none is provided
           alt="Hostel"
           className="w-3/4 h-64 object-cover rounded-lg shadow-lg"
         />
@@ -38,14 +51,14 @@ const HostelDetail = () => {
 
       {/* Rooms Section */}
       <div className="mt-8">
-        {Object.keys(hostelData.rooms).map((roomType) => (
+        {hostelData.rooms && Object.keys(hostelData.rooms).map((roomType) => (
           <div key={roomType} className="mb-8">
             <h3 className="text-lg font-semibold text-[#2C3E50] capitalize">
               {roomType} room
             </h3>
             <div className="flex mt-4">
               <img
-                src={hostelData.rooms[roomType].image}
+                src={hostelData.rooms[roomType].image || reviewImage}
                 alt={`${roomType} room`}
                 className="w-32 h-32 object-cover rounded-lg"
               />
@@ -83,7 +96,7 @@ const HostelDetail = () => {
 
         <div className="p-6">
           {/* Facilities Tab */}
-          {activeTab === "facilities" && (
+          {activeTab === "facilities" && hostelData.facilities && (
             <div>
               <h3 className="font-bold text-lg text-[#2C3E50]">Facilities</h3>
               <ul className="list-disc pl-5 text-[#2C3E50]">
@@ -95,7 +108,7 @@ const HostelDetail = () => {
           )}
 
           {/* Gallery Tab */}
-          {activeTab === "gallery" && (
+          {activeTab === "gallery" && hostelData.gallery && (
             <div className="grid grid-cols-2 gap-4">
               {hostelData.gallery.map((image, index) => (
                 <img
@@ -109,7 +122,7 @@ const HostelDetail = () => {
           )}
 
           {/* Reviews Tab */}
-          {activeTab === "reviews" && (
+          {activeTab === "reviews" && hostelData.reviews && (
             <div className="space-y-4">
               {hostelData.reviews.map((review, index) => (
                 <div key={index} className="flex items-start space-x-4">
@@ -130,7 +143,7 @@ const HostelDetail = () => {
           )}
 
           {/* Events Tab */}
-          {activeTab === "events" && (
+          {activeTab === "events" && hostelData.events && (
             <div>
               <h3 className="font-bold text-lg text-[#2C3E50]">
                 Upcoming Events
@@ -146,7 +159,7 @@ const HostelDetail = () => {
           )}
 
           {/* Contact Tab */}
-          {activeTab === "contact" && (
+          {activeTab === "contact" && hostelData.contact && (
             <div>
               <h3 className="font-bold text-lg text-[#2C3E50]">
                 Contact Information

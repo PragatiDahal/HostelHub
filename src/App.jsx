@@ -19,6 +19,7 @@ import UserSignUp from "./Component/Login/UserSignUp";
 import UserSignIn from "./Component/Login/UserSignIn";
 import AdminSignIn from "./Component/Login/AdminSignIn";
 import HostelRegister from "./Component/Login/HostelRegister";
+import Dashboard from "./Component/Admin/Dashboard";
 function App() {
   return (
     <>
@@ -39,6 +40,7 @@ function App() {
           <Route path="uploadblog" element={<UploadBlog />} />
           {/* Route for Hostel1 which handles the list and detail view */}
           <Route path="/hosteldetail/*" element={<Hostel1 />} />
+          <Route path="dashboard" element={<Dashboard />} />
         </Routes>
         <Footer />
       </Router>
