@@ -1,0 +1,218 @@
+[
+    {
+        "name":"Laxmi Girls Hostel",
+        "address":"Radheradhe,Bhaktapur",
+        "latitude": 27.67606,
+        "longitude": 85.38826
+    },
+    {
+        "name":"Paradise Girls Hostel",
+        "address":"Thimi,Bhaktapur",
+        "latitude": 27.6851634,
+        "longitude": 85.358323
+    },
+    {
+        "name":"Harmony Girls Hostel",
+        "address":"Kaushaltar,Bhaktapur",
+        "latitude": 27.6722098,
+        "longitude": 85.362289
+    },
+    {
+        "name":"Sanvi Girls Hostel",
+        "address":"Harshachowk,Bhaktapur",
+        "latitude": 27.6628125,
+        "longitude": 85.3867376
+    },
+    {
+        "name":"Birat Girls Hostel",
+        "address":"Thimi,Bhaktapur",
+        "latitude": 27.6760735,
+        "longitude": 85.3944528
+    },
+    {
+        "name":"College Girls Hostel",
+        "address":"Gaud kunda Road,Bhaktapur",
+        "latitude": 27.6694185,
+        "longitude": 85.4379804
+    },
+    {
+        "name":"Radiant Girls Hostel",
+        "address":"Putalisadak,Kathmandu",
+        "latitude": 27.6985484,
+        "longitude": 85.3269237
+    },
+    {
+        "name":"Peaceful Girls Hostel",
+        "address":"Rudra Mati Marga,Kathmandu",
+        "latitude": 27.6996891,
+        "longitude": 85.328799
+    },
+    {
+        "name":"Happy Home Girls Hostel",
+        "address":"Chakku Bhakku Marga,Kathmandu",
+        "latitude": 27.689572,
+        "longitude": 85.332013
+    },
+    {
+        "name":"Best Girls Hostel",
+        "address":"Near Madan Bhandari College,Kathmandu",
+        "latitude": 27.6915662,
+        "longitude": 85.327533
+    },
+    {
+        "name":"Comfort Girls Hostel",
+        "address":"Alok Nagar,Kathmandu",
+        "latitude": 27.6856246,
+        "longitude": 85.3300739
+    },
+    {
+        "name":"Biju Girls Hostel",
+        "address":"Dhobidhara,Kathmandu",
+        "latitude": 27.7139795,
+        "longitude": 85.3102362
+    },
+    {
+        "name":"A One Girls Hostel",
+        "address":"Jawgal,Lalitpur",
+        "latitude": 27.6861247,
+        "longitude": 85.3187709
+    },
+    {
+        "name":"Padma Girls Hostel",
+        "address":"Jawalakhel,Lalitpur",
+        "latitude": 27.6751508,
+        "longitude": 85.3123084
+    },
+    {
+        "name":"Gwarko Girls Hostel",
+        "address":"Gwarko,Lalitpur",
+        "latitude": 27.6665205,
+        "longitude": 85.330425
+    },
+    {
+        "name":"Sharvya Girls Hostel",
+        "address":"Jhulpakha,Lalitpur",
+        "latitude": 27.659373,
+        "longitude": 85.319953
+    },
+    {
+        "name":"Delight Girls Hostel",
+        "address":"Sanepa,Lalitpur",
+        "latitude": 27.682683,
+        "longitude": 85.2978744
+    },
+    {
+        "name":"Kupandol Girls Hostel",
+        "address":"kupandol,Lalitpur",
+        "latitude": 27.6868947,
+        "longitude": 85.308409
+    },
+    {
+        "name":"Safe Boys Hostel",
+        "address":"Hattiban,Lalitpur",
+        "latitude": 27.6478261,
+        "longitude": 85.3271255
+    },
+    {
+        "name":"Mid Town Boys Hostel",
+        "address":"Mahalaxmisthan,Lalitpur",
+        "latitude": 27.670087,
+        "longitude": 85.2814373
+    },
+    {
+        "name":"Lagankhel Boys Hostel",
+        "address":"Payagpokhari,Lalitpur",
+        "latitude": 27.6675699,
+        "longitude": 85.3196139
+    },
+    {
+        "name":"Lalitpur Boys Hostel",
+        "address":"Natole,Lalitpur",
+        "latitude": 27.6748123,
+        "longitude": 85.3129202
+    },
+    {
+        "name":"Pulchowk Boys Hostel",
+        "address":"Bhakundole,Lalitpur",
+        "latitude": 27.6824804,
+        "longitude": 85.3172853
+    },
+    {
+        "name":"Symbol Boys Hostel",
+        "address":"Patan,Lalitpur",
+        "latitude": 27.6698542,
+        "longitude": 85.3133597
+    },
+    {
+        "name":"Brave Boys Hostel",
+        "address":"Thimi,Bhaktapur",
+        "latitude": 27.6851634,
+        "longitude": 85.358323
+    },
+    {
+        "name":"Nayan Boys Hostel",
+        "address":"Lokanthali,Bhaktapur",
+        "latitude": 27.6744733,
+        "longitude": 85.3500258
+    },
+    {
+        "name":"Sarthak Boys Hostel",
+        "address":"Suryabinayak,Bhaktapur",
+        "latitude": 27.6657158,
+        "longitude": 85.4230132
+    },
+    {
+        "name":"Radhe Radhe Boys Hostel",
+        "address":"Radheradhe,Bhaktapur",
+        "latitude": 27.676712,
+        "longitude": 85.3926939
+    },
+    {
+        "name":"Pathivara Boys Hostel",
+        "address":"Gatthaghar,Bhaktapur",
+        "latitude": 27.6767104,
+        "longitude": 85.3746692
+    },
+    {
+        "name":"Swastik Boys Hostel",
+        "address":"Suryabinayak,Bhaktapur",
+        "latitude": 27.6657158,
+        "longitude": 85.4230132
+    },
+    {
+        "name":"City Deluxe Boys Hostel",
+        "address":"New plaza,Kathmandu",
+        "latitude": 27.7028495,
+        "longitude": 85.3189230
+    },
+    {
+        "name":"The Best Boys Hostel",
+        "address":"Seto pul,Kathmandu",
+        "latitude": 27.7013969,
+        "longitude": 85.3325154
+    },
+    {
+        "name":"Kathmandu Unity Boys Hostel",
+        "address":"Putalisadak,Kathmandu",
+        "latitude": 27.701962,
+        "longitude": 85.325833
+    },
+    {
+        "name":"Himalayan Boys Hostel",
+        "address":"Beside Teaching Hospital,Kathmandu",
+        "latitude": 27.7369375,
+        "longitude": 85.3263626
+    },
+    {
+        "name":"Namuna Boys Hostel",
+        "address":"Thapagaun,Kathmandu",
+        "latitude": 27.6956200,
+        "longitude": 85.3263287
+    },
+    {
+        "name":"Dhanush Boys Hostel",
+        "address":"Tinkune,Kathmandu",
+        "latitude": 27.6872257,
+        "longitude": 85.3446312
+    }
+]

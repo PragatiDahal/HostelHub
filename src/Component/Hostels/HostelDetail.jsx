@@ -51,31 +51,32 @@ const HostelDetail = () => {
 
       {/* Rooms Section */}
       <div className="mt-8">
-        {hostelData.rooms && Object.keys(hostelData.rooms).map((roomType) => (
-          <div key={roomType} className="mb-8">
-            <h3 className="text-lg font-semibold text-[#2C3E50] capitalize">
-              {roomType} room
-            </h3>
-            <div className="flex mt-4">
-              <img
-                src={hostelData.rooms[roomType].image || reviewImage}
-                alt={`${roomType} room`}
-                className="w-32 h-32 object-cover rounded-lg"
-              />
-              <div className="ml-4">
-                <p className="text-gray-700">
-                  {hostelData.rooms[roomType].description}
-                </p>
-                <p className="text-gray-700 mt-2">
-                  <strong>Price:</strong> {hostelData.rooms[roomType].price}
-                </p>
-                <button className="mt-4 px-4 py-2 bg-[#1ABC9C] text-white rounded hover:bg-[#16A085]">
-                  Book Now
-                </button>
+        {hostelData.rooms &&
+          Object.keys(hostelData.rooms).map((roomType) => (
+            <div key={roomType} className="mb-8">
+              <h3 className="text-lg font-semibold text-[#2C3E50] capitalize">
+                {roomType} room
+              </h3>
+              <div className="flex mt-4">
+                <img
+                  src={hostelData.rooms[roomType].image || reviewImage}
+                  alt={`${roomType} room`}
+                  className="w-32 h-32 object-cover rounded-lg"
+                />
+                <div className="ml-4">
+                  <p className="text-gray-700">
+                    {hostelData.rooms[roomType].description}
+                  </p>
+                  <p className="text-gray-700 mt-2">
+                    <strong>Price:</strong> {hostelData.rooms[roomType].price}
+                  </p>
+                  <button className="mt-4 px-4 py-2 bg-[#1ABC9C] text-white rounded hover:bg-[#16A085]">
+                    Book Now
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
 
       {/* Tabs Section */}
@@ -190,12 +191,12 @@ const HostelDetail = () => {
       <div className="mt-10">
         <h3 className="font-bold text-lg text-[#2C3E50]">Location</h3>
         <iframe
-          src={hostelData.location.mapLink}
+          src={hostelData.location.mapLink} // Ensure this is the embed link
           width="100%"
           height="400"
           frameBorder="0"
           style={{ border: 0 }}
-          allowFullScreen=""
+          allowFullScreen
           aria-hidden="false"
           tabIndex="0"
           className="rounded-lg mt-4"

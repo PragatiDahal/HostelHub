@@ -3,6 +3,8 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const hostelDetailRoute = require("./routes/hosteldetail");
+const shortestpathRoute = require("./routes/shortestpath");
+
 
 dotenv.config(); // Load environment variables
 
@@ -23,6 +25,7 @@ mongoose
 
 // Routes
 app.use("/api/hosteldetail", hostelDetailRoute);
+app.use("/api/shortestpath", shortestpathRoute);
 
 // Hostel Schema and Model
 const hostelSchema = new mongoose.Schema({
