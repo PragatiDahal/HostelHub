@@ -3,27 +3,6 @@ const router = express.Router();
 const Shortestpath = require("../models/Shortestpath");
 const { calculateDistance, dijkstra } = require("../utils/Dijkstra");
 
-// Fetch all shortest path data
-router.get("/shortestpath", async (req, res) => {
-  try {
-    // Fetch all documents from the Shortestpath collection
-    const shortestPath = await Shortestpath.find();
-
-    // Respond with the fetched data
-    res.json({
-      success: true,
-      data: shortestPath,
-    });
-  } catch (error) {
-    // Handle any errors
-    res.status(500).json({
-      success: false,
-      message: "Error fetching shortest path data",
-      error,
-    });
-  }
-});
-
 // Calculate the shortest path from the user's location
 router.get("/shortestpath/calculate", async (req, res) => {
   const userLat = parseFloat(req.query.latitude);
@@ -44,7 +23,12 @@ router.get("/shortestpath/calculate", async (req, res) => {
     // Add user location as a special node
     graph["user"] = hostels.map((hostel) => ({
       id: hostel._id.toString(),
-      distance: calculateDistance(userLat, userLon, hostel.latitude, hostel.longitude),
+      distance: calculateDistance(
+        userLat,
+        userLon,
+        hostel.latitude,
+        hostel.longitude
+      ),
     }));
 
     // Create graph connections between hostels
@@ -77,5 +61,24 @@ router.get("/shortestpath/calculate", async (req, res) => {
     });
   }
 });
-
+// Fetch all shortest path data
+router.get("/shortestpath", async (req, res) => {
+  try {
+    // Fetch all documents from the Shortestpath collection
+    const shortestPath = await Shortestpath.find();
+    console.log(shortestPath);
+    // Respond with the fetched data
+    res.json({
+      success: true,
+      data: shortestPath,
+    });
+  } catch (error) {
+    // Handle any errors
+    res.status(500).json({
+      success: false,
+      message: "Error fetching shortest path data",
+      error,
+    });
+  }
+});
 module.exports = router;

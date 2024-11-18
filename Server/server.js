@@ -5,7 +5,6 @@ const dotenv = require("dotenv");
 const hostelDetailRoute = require("./routes/hosteldetail");
 const shortestpathRoute = require("./routes/shortestpath");
 
-
 dotenv.config(); // Load environment variables
 
 const app = express();
@@ -25,7 +24,7 @@ mongoose
 
 // Routes
 app.use("/api/hosteldetail", hostelDetailRoute);
-app.use("/api/shortestpath", shortestpathRoute);
+app.use("/api", shortestpathRoute);
 
 // Hostel Schema and Model
 const hostelSchema = new mongoose.Schema({
