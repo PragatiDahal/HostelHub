@@ -35,6 +35,8 @@ const HostelDetailWrapper = () => {
     return <div>Loading...</div>;
   }
 
+  
+
   return <HostelDetail hostel={hostelData} />;
 };
 

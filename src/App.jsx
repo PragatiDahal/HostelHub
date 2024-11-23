@@ -22,6 +22,7 @@ import AdminSignIn from "./Component/Login/AdminSignIn";
 import HostelRegister from "./Component/Login/HostelRegister";
 import Dashboard from "./Component/Admin/Dashboard";
 import HostelForm from "./Component/Admin/HostelForm";
+import ShortestPathMap from "./Component/Hostels/ShortestPathMap";
 function App() {
   return (
     <>
@@ -44,6 +45,7 @@ function App() {
           <Route path="/hosteldetail/*" element={<Hostel1 />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="hostelform" element={<HostelForm/>} />
+          <Route path="shortestpath" element={<ShortestPathMap/>} />
         </Routes>
         <Footer />
       </Router>

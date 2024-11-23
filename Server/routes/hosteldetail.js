@@ -3,6 +3,7 @@ const express = require("express");
 const router = express.Router(); 
 const HostelDetail = require("../models/HostelDetail");
 
+
 // Get details of a specific hostel by name
 router.get("/:name", async (req, res) => {
   const name = req.params.name.replace(/-/g, " ").toLowerCase();

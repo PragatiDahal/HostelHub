@@ -6,9 +6,9 @@ const hostelDetailSchema = new mongoose.Schema({
     image: String,
     about: String,
     rooms: {
-        single: { description: String, price: String, image: String },
-        double: { description: String, price: String, image: String },
-        triple: { description: String, price: String, image: String }
+        single: { description: String, price: String, dynamicPrice: String, image: String },
+        double: { description: String, price: String, dynamicPrice: String, image: String },
+        triple: { description: String, price: String, dynamicPrice: String, image: String }
     },
     facilities: [String],
     gallery: [String],
@@ -33,7 +33,9 @@ const hostelDetailSchema = new mongoose.Schema({
     },
     location: {
         address: String,
-        mapLink: String
+        mapLink: String,
+        latitude: String,
+        longitude: String
     }
 },{ collection: 'hosteldetail' });
 

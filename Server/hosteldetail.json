@@ -1,1118 +1,2196 @@
 [
-    {
-      "name": "Laxmi Girls Hostel",
-      "image": "/images/laxmi.jpg",
-      "about": "Laxmi Girls Hostel is located in Radhe-radhe, Bhaktapur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-      "rooms": {
-        "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-        "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-        "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
+  {
+    "name": "Laxmi Girls Hostel",
+    "image": "/images/laxmi.jpg",
+    "about": "Laxmi Girls Hostel is located in Radhe-radhe, Bhaktapur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
       },
-      "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-      "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-      "reviews": [
-        { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-        { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-      ],
-      "events": [
-        { "title": "Game Night", "date": "Friday, 8 PM" },
-        { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-      ],
-      "contact": {
-        "phone": "9876543210",
-        "email": "contact@abchostel.com",
-        "address": "Radhe-radhe,Bhaktapur",
-        "mapLink": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14133.321998984604!2d85.3971895!3d27.6761783!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b9a2c85318f%3A0x83589ebd80ac557a!2sLaxmi%20Girls%20hostel%20(%20Best%20girls%20hostel%20Bhaktapur)!5e0!3m2!1sen!2snp!4v1731684395429!5m2!1sen!2snp"
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
       },
-      "location": {
-        "address": "Radhe-radhe,Bhaktapur",
-        "mapLink": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14133.321998984604!2d85.3971895!3d27.6761783!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b9a2c85318f%3A0x83589ebd80ac557a!2sLaxmi%20Girls%20hostel%20(%20Best%20girls%20hostel%20Bhaktapur)!5e0!3m2!1sen!2snp!4v1731684395429!5m2!1sen!2snp"
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
       }
     },
-
-    {
-        "name": "Paradise Girls Hostel",
-        "image": "/images/paradise.jpeg",
-        "about": "Paradise Girls Hostel is located in Thimi, Bhaktapur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Thimi, Bhaktapur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56528.63987461996!2d85.33772287526077!3d27.685158805717677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1a419f80aa67%3A0x288ab8841508315f!2sMadhyapur%20Thimi!5e0!3m2!1sen!2snp!4v1731684862588!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Thimi, Bhaktapur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56528.63987461996!2d85.33772287526077!3d27.685158805717677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1a419f80aa67%3A0x288ab8841508315f!2sMadhyapur%20Thimi!5e0!3m2!1sen!2snp!4v1731684862588!5m2!1sen!2snp"
-        }
-      },
-
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
       {
-        "name": "Harmony Girls Hostel",
-        "image": "/images/harmony.jpeg",
-        "about": "Harmony Girls Hostel is located in Kausaltar, Bhaktapur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Kausaltar, Bhaktapur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.45884863176!2d85.3622889752994!3d27.67220977620278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1a1aaa4300b7%3A0xe110a371a076ebc4!2sKaushaltar%20-%20Balkot%20Rd%2C%2044600!5e0!3m2!1sen!2snp!4v1731684966801!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Kausaltar, Bhaktapur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.45884863176!2d85.3622889752994!3d27.67220977620278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1a1aaa4300b7%3A0xe110a371a076ebc4!2sKaushaltar%20-%20Balkot%20Rd%2C%2044600!5e0!3m2!1sen!2snp!4v1731684966801!5m2!1sen!2snp" 
-        }
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
       },
-      
       {
-        "name": "Sanvi Girls Hostel",
-        "image": "/images/sanvi.jpg",
-        "about": "Sanvi Girls Hostel is located in Harshachowk, Bhaktapur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Harshachowk, Bhaktapur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14133.447038320117!2d85.4091313!3d27.6752118!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1bf44a95c6c9%3A0x319a1813a3f97a64!2sHARSHA%20Pharmacy!5e0!3m2!1sen!2snp!4v1731685194173!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Harshachowk, Bhaktapur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14133.447038320117!2d85.4091313!3d27.6752118!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1bf44a95c6c9%3A0x319a1813a3f97a64!2sHARSHA%20Pharmacy!5e0!3m2!1sen!2snp!4v1731685194173!5m2!1sen!2snp" 
-        }
-      },
-      
-      {
-        "name": "Birat Girls Hostel",
-        "image": "/images/birat.jpg",
-        "about": "Birat Girls Hostel is located in Thimi, Bhaktapur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Thimi, Bhaktapur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.3132384468413!2d85.39269387529954!3d27.676711976200195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b1492466369%3A0x7a9de7190fecb933!2sBirat%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731687611136!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Thimi, Bhaktapur",
-          "mapLink":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.3132384468413!2d85.39269387529954!3d27.676711976200195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b1492466369%3A0x7a9de7190fecb933!2sBirat%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731687611136!5m2!1sen!2snp" 
-        }
-      },
-
-      {
-        "name": "College Girls Hostel",
-        "image": "/images/collegegirls.jpg",
-        "about": "College Girls Hostel is located in Gaud Kunda Road, Bhaktapur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Gaud kunda Road, Bhaktapur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14134.196452602899!2d85.4405553!3d27.6694185!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb0552c4409195%3A0xe3903b278331c581!2sCollege%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731685511536!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Gaud kunda Road, Bhaktapur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14134.196452602899!2d85.4405553!3d27.6694185!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb0552c4409195%3A0xe3903b278331c581!2sCollege%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731685511536!5m2!1sen!2snp" 
-        }
-      },
-      
-      {
-        "name": "Radiant Girls Hostel",
-        "image": "/images/radiant.jpg",
-        "about": "Radiant Girls Hostel is located in Putalisadak, Kathmandu.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Putalisadak, Kathmandu",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.489393970441!2d85.32081227530053!3d27.70217217618555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190a5af5eed7%3A0x2e75ca768009839f!2sRadiant%20Girls%20Hostel%20-%20Putalisadak!5e0!3m2!1sen!2snp!4v1731685591481!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Putalisadak, Kathmandu",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.489393970441!2d85.32081227530053!3d27.70217217618555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190a5af5eed7%3A0x2e75ca768009839f!2sRadiant%20Girls%20Hostel%20-%20Putalisadak!5e0!3m2!1sen!2snp!4v1731685591481!5m2!1sen!2snp"
-        }
-      },
-      
-      {
-        "name": "Peaceful Girls Hostel",
-        "image": "/images/peaceful.jpg",
-        "about": "Peaceful Girls Hostel is located in Rudra Mati Marg, Kathmandu.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Rudra Mati Marg, Kathmandu",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.5697731440614!2d85.32879897530042!3d27.699689076186928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19a3d6f2974f%3A0xbd1d640b9d8ab779!2sPeaceful%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731685673081!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Rudra Mati Marg, Kathmandu",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.5697731440614!2d85.32879897530042!3d27.699689076186928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19a3d6f2974f%3A0xbd1d640b9d8ab779!2sPeaceful%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731685673081!5m2!1sen!2snp" 
-        }
-      },
-      
-      {
-        "name": "Happy Home Girls Hostel",
-        "image": "/images/happyhome.jpg",
-        "about": "Happy Home Girls Hostel is located in Chhakku Bhhakku Marga, Kathmandu.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Chhakku Bhhakku Marga, Kathmandu",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.9009148014247!2d85.33201297530005!3d27.689457176192878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19e27c8bbe07%3A0xc9d95fe520d7b769!2sHappy%20home%20girls%20hostel!5e0!3m2!1sen!2snp!4v1731685748737!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Chhakku Bhhakku Marga, Kathmandu",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.9009148014247!2d85.33201297530005!3d27.689457176192878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19e27c8bbe07%3A0xc9d95fe520d7b769!2sHappy%20home%20girls%20hostel!5e0!3m2!1sen!2snp!4v1731685748737!5m2!1sen!2snp" 
-        }
-      },
-
-      {
-        "name": "Best Girls Hostel",
-        "image": "/images/bestgirl.jpg",
-        "about": "Best Girls Hostel is located near Madan Bhandari College, Kathmandu.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Near Madan Bhandari College, Kathmandu",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.6946000361772!2d85.32738187530023!3d27.695832476189203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19f235822421%3A0xd6fdd90b6298ab1b!2sBest%20girls%20hostel%20kathmandu!5e0!3m2!1sen!2snp!4v1731685833584!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Near Madan Bhandari College, Kathmandu",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.6946000361772!2d85.32738187530023!3d27.695832476189203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19f235822421%3A0xd6fdd90b6298ab1b!2sBest%20girls%20hostel%20kathmandu!5e0!3m2!1sen!2snp!4v1731685833584!5m2!1sen!2snp"
-        }
-      },
-      
-      {
-        "name": "Comfort Girls Hostel",
-        "image": "/images/comfort.jpg",
-        "about": "Comfort Girls Hostel is located in Alok nagar, Kathmandu.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Alok nagar, Kathmandu",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.024922731996!2d85.33007387529993!3d27.685624576195018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19be527c0a95%3A0xe63f90cfde6e068a!2sComfort%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731685915944!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Alok nagar, Kathmandu",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.024922731996!2d85.33007387529993!3d27.685624576195018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19be527c0a95%3A0xe63f90cfde6e068a!2sComfort%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731685915944!5m2!1sen!2snp" 
-        }
-      },
-      
-      {
-        "name": "Biju Girls Hostel",
-        "image": "/images/biju.jpg",
-        "about": "Biju Girls Hostel is located in Dhobidhara Marga, Kathmandu.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Dhobidhara Marga, Kathmandu",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.2901508773807!2d85.32138987530077!3d27.708326376181954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1907d504a1a7%3A0x5a55aba542bcb68!2sBiju%20Hostel%20Pvt.%20Ltd.%20-%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731686033306!5m2!1sen!2snp"
-        },
-        "location": {
-          "address": "Dhobidhara Marga, Kathmandu",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.2901508773807!2d85.32138987530077!3d27.708326376181954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1907d504a1a7%3A0x5a55aba542bcb68!2sBiju%20Hostel%20Pvt.%20Ltd.%20-%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731686033306!5m2!1sen!2snp"
-        }
-      },
-      
-      {
-        "name": "A One Girls Hostel",
-        "image": "/images/aone.jpg",
-        "about": "A One Girls Hostel is located in Jawgal, Lalitpur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Jawgal, Lalitpur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.008742350787!2d85.31877087529992!3d27.686124676194705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19b46596cce3%3A0x4a96fc7710a396a6!2sA%20One%20Girl&#39;s%20Hostel!5e0!3m2!1sen!2snp!4v1731686120586!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Jawgal, Lalitpur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.008742350787!2d85.31877087529992!3d27.686124676194705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19b46596cce3%3A0x4a96fc7710a396a6!2sA%20One%20Girl&#39;s%20Hostel!5e0!3m2!1sen!2snp!4v1731686120586!5m2!1sen!2snp" 
-        }
-      },
-      
-      {
-        "name": "Padma Girls Hostel",
-        "image": "/images/padma.jpg",
-        "about": "Padma Girls Hostel is located in Jawalakhel, Lalitpur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Jawalakhel, Lalitpur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.363730025219!2d85.31460437529948!3d27.67515087620107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19cc2773f2c3%3A0xcedcc5cb83528083!2sPadma%20Girls%20Hostel%20-%20Natole%20Lalitpur!5e0!3m2!1sen!2snp!4v1731686218097!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Jawalakhel, Lalitpur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.363730025219!2d85.31460437529948!3d27.67515087620107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19cc2773f2c3%3A0xcedcc5cb83528083!2sPadma%20Girls%20Hostel%20-%20Natole%20Lalitpur!5e0!3m2!1sen!2snp!4v1731686218097!5m2!1sen!2snp" 
-        }
-      },
-      
-      {
-        "name": "Gwarko Girls Hostel",
-        "image": "/images/gwarko.jpg",
-        "about": "Gwarko Girls Hostel is located in Gwarko, Lalitpur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Gwarko, Lalitpur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.6428208085185!2d85.33042497529915!3d27.666520476205992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb194da3cd176f%3A0x1e7f5866767efcf3!2sGwarko%20Girl&#39;s%20Hostel!5e0!3m2!1sen!2snp!4v1731686286713!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Gwarko, Lalitpur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.6428208085185!2d85.33042497529915!3d27.666520476205992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb194da3cd176f%3A0x1e7f5866767efcf3!2sGwarko%20Girl&#39;s%20Hostel!5e0!3m2!1sen!2snp!4v1731686286713!5m2!1sen!2snp"
-        }
-      },
-      
-      {
-        "name": "Sharvya Girls Hostel",
-        "image": "/images/sharvya.jpg",
-        "about": "Sharvya Girls Hostel is located in Jhulpakha, Lalitpur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Jhulpakha, Lalitpur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.8731112047167!2d85.31399527529892!3d27.659397276210097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb17dcafe8e96b%3A0x501d2a097f1218ed!2sShravya%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731686538738!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Jhulpakha, Lalitpur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.8731112047167!2d85.31399527529892!3d27.659397276210097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb17dcafe8e96b%3A0x501d2a097f1218ed!2sShravya%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731686538738!5m2!1sen!2snp" 
-        }
-      },
-      
-      {
-        "name": "Delight Girls Hostel",
-        "image": "/images/delight.jpg",
-        "about": "Delight Girls Hostel is located in Sanepa, Lalitpur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Sanepa, Lalitpur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.120090668131!2d85.2978743752998!3d27.682682976196546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb191a8ff5e5b1%3A0xc6cff140543cc43a!2sDelight%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731686615539!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Sanepa, Lalitpur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.120090668131!2d85.2978743752998!3d27.682682976196546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb191a8ff5e5b1%3A0xc6cff140543cc43a!2sDelight%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731686615539!5m2!1sen!2snp" 
-        }
-      },
-
-      {
-        "name": "Kunpandol Girls Hostel",
-        "image": "/images/Kupondole.jpg",
-        "about": "Kupandol Girls Hostel is located in Kupandol, Lalitpur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Kupandol, Lalitpur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.9838257844867!2d85.31070497529991!3d27.68689477619434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb184b51fe1073%3A0x47e17c60385c241b!2sKupondole%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731686732537!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "kupandol, Lalitpur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.9838257844867!2d85.31070497529991!3d27.68689477619434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb184b51fe1073%3A0x47e17c60385c241b!2sKupondole%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731686732537!5m2!1sen!2snp"
-        }
-      },
-
-      {
-        "name": "Safe Boys Hostel",
-        "image": "/images/safe.jpg",
-        "about": "Safe Boys Hostel is located in Hattiban, Lalitpur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Hattiban, Lalitpur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3534.2470873482594!2d85.32712547529853!3d27.647826076216766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1766055f2e05%3A0x2483840edfe2b52b!2sSafe%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731686816313!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Hattiban, Lalitpur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3534.2470873482594!2d85.32712547529853!3d27.647826076216766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1766055f2e05%3A0x2483840edfe2b52b!2sSafe%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731686816313!5m2!1sen!2snp"
-        }
-      },
-      
-      {
-        "name": "Mid Town Boys Hostel",
-        "image": "/images/midtown.jpg",
-        "about": "Mid Town Boys Hostel is located in Mahalaxmisthan, Lalitpur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Mahalaxmisthan, Lalitpur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.527496676075!2d85.3169711752993!3d27.670086976203976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb199d0ef7a45b%3A0xd1bfba52da434ac1!2sMid%20Town%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731686905144!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Mahalaxmisthan, Lalitpur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.527496676075!2d85.3169711752993!3d27.670086976203976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb199d0ef7a45b%3A0xd1bfba52da434ac1!2sMid%20Town%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731686905144!5m2!1sen!2snp" 
-        }
-      },
-      
-      {
-        "name": "Lagankhel Boys Hostel",
-        "image": "/images/lagankhel.jpeg",
-        "about": "Lagankhel Boys Hostel is located in Payagpokhari, Lalitpur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Payagpokhari, Lalitpur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.608886249003!2d85.3219098752992!3d27.667569976205346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb194f3eff79d1%3A0x64eff785781a411e!2slagankhel%20boys%20hostel!5e0!3m2!1sen!2snp!4v1731686980498!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Payagpokhari, Lalitpur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.608886249003!2d85.3219098752992!3d27.667569976205346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb194f3eff79d1%3A0x64eff785781a411e!2slagankhel%20boys%20hostel!5e0!3m2!1sen!2snp!4v1731686980498!5m2!1sen!2snp" 
-        }
-      },
-      
-      {
-        "name": "Lalitpur Boys Hostel",
-        "image": "/images/lalitpur.jpg",
-        "about": "Lalitpur Boys Hostel is located in Natole, Lalitpur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Natole, Lalitpur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.374681218636!2d85.31510887529952!3d27.674812276201205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198d1a2c2fff%3A0xd608ed72e47602f7!2sLalitpur%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731687053664!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Natole, Lalitpur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.374681218636!2d85.31510887529952!3d27.674812276201205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198d1a2c2fff%3A0xd608ed72e47602f7!2sLalitpur%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731687053664!5m2!1sen!2snp" 
-        }
-      },
-      
-      {
-        "name": "Pulchowk Boys Hostel",
-        "image": "/images/pulchowk.jpg",
-        "about": "Pulchowk Boys Hostel is located in Bhakundole, Lalitpur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Bhakundole, Lalitpur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.092420586819!2d85.3132017752998!3d27.68353827619622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1951521348a5%3A0xfea6ca5c6569e226!2sPulchowk%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731687117993!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Bhakundole, Lalitpur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.092420586819!2d85.3132017752998!3d27.68353827619622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1951521348a5%3A0xfea6ca5c6569e226!2sPulchowk%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731687117993!5m2!1sen!2snp" 
-        }
-      },
-      
-      {
-        "name": "Symbol Boys Hostel",
-        "image": "/images/symbol.jpg",
-        "about": "Symbol Boys Hostel is located in Patan, Lalitpur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Patan, Lalitpur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.5350215364997!2d85.31565567529931!3d27.669854276204028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19d205e86027%3A0x452e881ae7b60bd7!2sSymbol%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731687182369!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Patan, Lalitpur",
-          "mapLink":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.5350215364997!2d85.31565567529931!3d27.669854276204028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19d205e86027%3A0x452e881ae7b60bd7!2sSymbol%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731687182369!5m2!1sen!2snp" 
-        }
-      },
-
-      {
-        "name": "Brave Boys Hostel",
-        "image": "/images/brave.jpg",
-        "about": "Brave Boys Hostel is located in Thimi, Bhaktapur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Thimi, Bhaktapur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56528.63987461996!2d85.33772287526077!3d27.685158805717677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1a419f80aa67%3A0x288ab8841508315f!2sMadhyapur%20Thimi!5e0!3m2!1sen!2snp!4v1731684862588!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Thimi, Bhaktapur",
-          "mapLink":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56528.63987461996!2d85.33772287526077!3d27.685158805717677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1a419f80aa67%3A0x288ab8841508315f!2sMadhyapur%20Thimi!5e0!3m2!1sen!2snp!4v1731684862588!5m2!1sen!2snp" 
-        }
-      },
-      
-      {
-        "name": "Nayan Boys Hostel",
-        "image": "/images/nayan.jpg",
-        "about": "Nayan Boys Hostel is located in Lokanthali, Bhaktapur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Lokanthali, Bhaktapur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.3856355228486!2d85.3571927752995!3d27.67447357620151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1a1c87487f6f%3A0x83ffd992b4b2d081!2sLokanthali%2C%20Madhyapur%20Thimi%2044600!5e0!3m2!1sen!2snp!4v1731687327169!5m2!1sen!2snp"
-        },
-        "location": {
-          "address": "Lokanthali, Bhaktapur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.3856355228486!2d85.3571927752995!3d27.67447357620151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1a1c87487f6f%3A0x83ffd992b4b2d081!2sLokanthali%2C%20Madhyapur%20Thimi%2044600!5e0!3m2!1sen!2snp!4v1731687327169!5m2!1sen!2snp"
-        }
-      },
-
-      {
-        "name": "Sarthak Boys Hostel",
-        "image": "/images/sarthak.jpg",
-        "about": "Sarthak Boys Hostel is located in Suryabinayak, Bhaktapur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Suryabinayak, Bhaktapur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.66883919561!2d85.42301317529913!3d27.665715776206433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b00411d66fb%3A0xdbd0de28c467c78d!2zU3VyeWFiaW5heWFrIGNob3drICgg4KS44KWC4KSw4KWN4KSv4KS14KS_4KSo4KS-4KSv4KSVIOCkmuCli-CklSk!5e0!3m2!1sen!2snp!4v1731687410073!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Suryabinayak, Bhaktapur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.66883919561!2d85.42301317529913!3d27.665715776206433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b00411d66fb%3A0xdbd0de28c467c78d!2zU3VyeWFiaW5heWFrIGNob3drICgg4KS44KWC4KSw4KWN4KSv4KS14KS_4KSo4KS-4KSv4KSVIOCkmuCli-CklSk!5e0!3m2!1sen!2snp!4v1731687410073!5m2!1sen!2snp" 
-        }
-      },
-
-      {
-        "name": "Radhe Radhe Boys Hostel",
-        "image": "/images/radheradhe.jpg",
-        "about": "Radhe Radhe Boys Hostel is located in Radhe-radhe, Bhaktapur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Radhe-radhe,Bhaktapur",
-          "mapLink":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.3132384468413!2d85.39269387529954!3d27.676711976200195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b6f1d472c17%3A0x842d4f3ecda5546!2sRadhe%20Radhe%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731687531408!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Radhe-radhe,Bhaktapur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.3132384468413!2d85.39269387529954!3d27.676711976200195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b6f1d472c17%3A0x842d4f3ecda5546!2sRadhe%20Radhe%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731687531408!5m2!1sen!2snp" 
-        }
-      },
-      
-      {
-        "name": "Pathivara Boys Hostel",
-        "image": "/images/pathivara.jpeg",
-        "about": "Pathivara Boys Hostel is located in Srijananagar, Bhaktapur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Gatthaghar, Bhaktapur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.32876688371!2d85.36993697529957!3d27.67623187620036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b31d24239ed%3A0xe5b183b1b19efb8c!2sPathivara%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731687718528!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Gatthaghar, Bhaktapur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.32876688371!2d85.36993697529957!3d27.67623187620036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b31d24239ed%3A0xe5b183b1b19efb8c!2sPathivara%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731687718528!5m2!1sen!2snp" 
-        }
-      },
-
-      {
-        "name": "Swastik Boys Hostel",
-        "image": "/images/swastik.jpeg",
-        "about": "Swastik Boys Hostel is located in Suryabinayak, Bhaktapur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Suryabinayak, Bhaktapur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.66883919561!2d85.42301317529913!3d27.665715776206433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b00411d66fb%3A0xdbd0de28c467c78d!2zU3VyeWFiaW5heWFrIGNob3drICgg4KS44KWC4KSw4KWN4KSv4KS14KS_4KSo4KS-4KSv4KSVIOCkmuCli-CklSk!5e0!3m2!1sen!2snp!4v1731687410073!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Suryabinayak, Bhaktapur",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.66883919561!2d85.42301317529913!3d27.665715776206433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b00411d66fb%3A0xdbd0de28c467c78d!2zU3VyeWFiaW5heWFrIGNob3drICgg4KS44KWC4KSw4KWN4KSv4KS14KS_4KSo4KS-4KSv4KSVIOCkmuCli-CklSk!5e0!3m2!1sen!2snp!4v1731687410073!5m2!1sen!2snp" 
-        }
-      },
-
-      {
-        "name": "City Deluxe Boys Hostel",
-        "image": "/images/citydeluxe.jpg",
-        "about": "City Deluxe Boys Hostel is located in Newplaza, Kathmandu.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Newplaza, Kathmandu",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.4674650459265!2d85.32121967530055!3d27.702849576185248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19a87f875c19%3A0xcf525f740429dd00!2sCity%20Deluxe%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731687950802!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Newplaza, Kathmandu",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.4674650459265!2d85.32121967530055!3d27.702849576185248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19a87f875c19%3A0xcf525f740429dd00!2sCity%20Deluxe%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731687950802!5m2!1sen!2snp" 
-        }
-      },
-
-      {
-        "name": "The Best Boys Hostel",
-        "image": "/images/thebest.jpeg",
-        "about": "The Best Boys Hostel is located in Seto pul, Kathmandu.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Setopul, Kathmandu",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.514491526819!2d85.3325153753005!3d27.701396876185953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19f6c63afab7%3A0x5a23bc1c54e4d365!2sThe%20Best%20boys%20hostel%20kathmandu!5e0!3m2!1sen!2snp!4v1731688012609!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Setopul, Kathmandu",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.514491526819!2d85.3325153753005!3d27.701396876185953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19f6c63afab7%3A0x5a23bc1c54e4d365!2sThe%20Best%20boys%20hostel%20kathmandu!5e0!3m2!1sen!2snp!4v1731688012609!5m2!1sen!2snp" 
-        }
-      },
-
-      {
-        "name": "Kathmandu Unity Boys Hostel",
-        "image": "/images/kathmanduunity.jpg",
-        "about": "Kathmandu Unity Boys Hostel is located in Putalisadak, Kathmandu.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Putalisadak, Kathmandu",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.4961952681692!2d85.32757927530048!3d27.701962076185662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19bffc83334d%3A0x9e2b927e95ee1220!2sKathmandu%20Unity%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731688071353!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Putalisadak, Kathmandu",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.4961952681692!2d85.32757927530048!3d27.701962076185662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19bffc83334d%3A0x9e2b927e95ee1220!2sKathmandu%20Unity%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731688071353!5m2!1sen!2snp" 
-        }
-      },
-
-      {
-        "name": "Himalayan Boys Hostel",
-        "image": "/images/himalayan.jpg",
-        "about":"Himalayan Boys Hostel is located in Beside Teaching Hospital, Kathmandu.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Beside Teaching Hospital, Kathmandu",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.363327383061!2d85.32636257530179!3d27.73693747616562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb199c5c03311f%3A0xf2549ebaea93cdb8!2sHimalayan%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731688148314!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Beside Teaching Hospital, Kathmandu",
-          "mapLink":  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.363327383061!2d85.32636257530179!3d27.73693747616562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb199c5c03311f%3A0xf2549ebaea93cdb8!2sHimalayan%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731688148314!5m2!1sen!2snp" 
-        }
-      },
-
-      {
-        "name": "Namuna Boys Hostel",
-        "image": "/images/namuna.jpg",
-        "about": "Namuna Boys Hostel is located in Thapagaun, Kathmandu.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Thapagaun, Kathmandu",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.8353485146527!2d85.33125887530011!3d27.69148337619154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19bdaaf5ba7d%3A0x8a39ca922fef2c7a!2sNamuna%20Boys&#39;%20Hostel!5e0!3m2!1sen!2snp!4v1731688217041!5m2!1sen!2snp"
-        },
-        "location": {
-          "address": "Thapagaun, Kathmandu",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.8353485146527!2d85.33125887530011!3d27.69148337619154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19bdaaf5ba7d%3A0x8a39ca922fef2c7a!2sNamuna%20Boys&#39;%20Hostel!5e0!3m2!1sen!2snp!4v1731688217041!5m2!1sen!2snp"
-        }
-      },
-
-      {
-        "name": "Dhanush Boys Hostel",
-        "image": "/images/dhanush.jpg",
-        "about": "Dhanush Boys Hostel is located in Tinkune, Kathmandu.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
-        "rooms": {
-          "single": { "description": "Single room description", "price": "8000 NPR", "image": "/images/singleroom.webp" },
-          "double": { "description": "Double Sharing room description", "price": "7000 NPR", "image": "/images/doublesharing.jpg" },
-          "triple": { "description": "Triple Sharing room description", "price": "6000 NPR", "image": "/images/triplesharing.jpg" }
-        },
-        "facilities": ["Free Wifi", "Laundry Service", "24/7 Security", "Shared Kitchen"],
-        "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
-        "reviews": [
-          { "name": "Shreya Sapkota", "comment": "Great place!", "profileImage": "/reviewer1.jpg" },
-          { "name": "Unnati Neupane", "comment": "Wonderful stay!", "profileImage": "/reviewer2.jpg" }
-        ],
-        "events": [
-          { "title": "Game Night", "date": "Friday, 8 PM" },
-          { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
-        ],
-        "contact": {
-          "phone": "9876543210",
-          "email": "contact@abchostel.com",
-          "address": "Tinkune, Kathmandu",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.9731193271955!2d85.34463117529997!3d27.687225676194124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19d69e49063b%3A0x2d510f30f160e48f!2sdhanush%20boys%20hostel!5e0!3m2!1sen!2snp!4v1731688299426!5m2!1sen!2snp" 
-        },
-        "location": {
-          "address": "Tinkune, Kathmandu",
-          "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.9731193271955!2d85.34463117529997!3d27.687225676194124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19d69e49063b%3A0x2d510f30f160e48f!2sdhanush%20boys%20hostel!5e0!3m2!1sen!2snp!4v1731688299426!5m2!1sen!2snp" 
-        }
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
       }
-  ]
-  
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Radhe-radhe,Bhaktapur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14133.321998984604!2d85.3971895!3d27.6761783!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b9a2c85318f%3A0x83589ebd80ac557a!2sLaxmi%20Girls%20hostel%20(%20Best%20girls%20hostel%20Bhaktapur)!5e0!3m2!1sen!2snp!4v1731684395429!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Radhe-radhe,Bhaktapur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14133.321998984604!2d85.3971895!3d27.6761783!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b9a2c85318f%3A0x83589ebd80ac557a!2sLaxmi%20Girls%20hostel%20(%20Best%20girls%20hostel%20Bhaktapur)!5e0!3m2!1sen!2snp!4v1731684395429!5m2!1sen!2snp",
+      "latitude": 27.67606,
+      "longitude": 85.38826
+    }
+  },
+
+  {
+    "name": "Paradise Girls Hostel",
+    "image": "/images/paradise.jpeg",
+    "about": "Paradise Girls Hostel is located in Thimi, Bhaktapur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Thimi, Bhaktapur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56528.63987461996!2d85.33772287526077!3d27.685158805717677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1a419f80aa67%3A0x288ab8841508315f!2sMadhyapur%20Thimi!5e0!3m2!1sen!2snp!4v1731684862588!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Thimi, Bhaktapur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56528.63987461996!2d85.33772287526077!3d27.685158805717677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1a419f80aa67%3A0x288ab8841508315f!2sMadhyapur%20Thimi!5e0!3m2!1sen!2snp!4v1731684862588!5m2!1sen!2snp",
+      "latitude": 27.6851634,
+      "longitude": 85.358323
+    }
+  },
+
+  {
+    "name": "Harmony Girls Hostel",
+    "image": "/images/harmony.jpeg",
+    "about": "Harmony Girls Hostel is located in Kausaltar, Bhaktapur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Kausaltar, Bhaktapur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.45884863176!2d85.3622889752994!3d27.67220977620278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1a1aaa4300b7%3A0xe110a371a076ebc4!2sKaushaltar%20-%20Balkot%20Rd%2C%2044600!5e0!3m2!1sen!2snp!4v1731684966801!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Kausaltar, Bhaktapur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.45884863176!2d85.3622889752994!3d27.67220977620278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1a1aaa4300b7%3A0xe110a371a076ebc4!2sKaushaltar%20-%20Balkot%20Rd%2C%2044600!5e0!3m2!1sen!2snp!4v1731684966801!5m2!1sen!2snp",
+      "latitude": 27.6722098,
+      "longitude": 85.362289
+    }
+  },
+
+  {
+    "name": "Sanvi Girls Hostel",
+    "image": "/images/sanvi.jpg",
+    "about": "Sanvi Girls Hostel is located in Harshachowk, Bhaktapur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Harshachowk, Bhaktapur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14133.447038320117!2d85.4091313!3d27.6752118!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1bf44a95c6c9%3A0x319a1813a3f97a64!2sHARSHA%20Pharmacy!5e0!3m2!1sen!2snp!4v1731685194173!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Harshachowk, Bhaktapur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14133.447038320117!2d85.4091313!3d27.6752118!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1bf44a95c6c9%3A0x319a1813a3f97a64!2sHARSHA%20Pharmacy!5e0!3m2!1sen!2snp!4v1731685194173!5m2!1sen!2snp",
+      "latitude": 27.6628125,
+      "longitude": 85.3867376
+    }
+  },
+
+  {
+    "name": "Birat Girls Hostel",
+    "image": "/images/birat.jpg",
+    "about": "Birat Girls Hostel is located in Thimi, Bhaktapur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Thimi, Bhaktapur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.3132384468413!2d85.39269387529954!3d27.676711976200195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b1492466369%3A0x7a9de7190fecb933!2sBirat%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731687611136!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Thimi, Bhaktapur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.3132384468413!2d85.39269387529954!3d27.676711976200195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b1492466369%3A0x7a9de7190fecb933!2sBirat%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731687611136!5m2!1sen!2snp",
+      "latitude": 27.6760735,
+      "longitude": 85.3944528
+    }
+  },
+
+  {
+    "name": "College Girls Hostel",
+    "image": "/images/collegegirls.jpg",
+    "about": "College Girls Hostel is located in Gaud Kunda Road, Bhaktapur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Gaud kunda Road, Bhaktapur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14134.196452602899!2d85.4405553!3d27.6694185!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb0552c4409195%3A0xe3903b278331c581!2sCollege%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731685511536!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Gaud kunda Road, Bhaktapur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14134.196452602899!2d85.4405553!3d27.6694185!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb0552c4409195%3A0xe3903b278331c581!2sCollege%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731685511536!5m2!1sen!2snp",
+      "latitude": 27.6694185,
+      "longitude": 85.4379804
+    }
+  },
+
+  {
+    "name": "Radiant Girls Hostel",
+    "image": "/images/radiant.jpg",
+    "about": "Radiant Girls Hostel is located in Putalisadak, Kathmandu.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Putalisadak, Kathmandu",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.489393970441!2d85.32081227530053!3d27.70217217618555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190a5af5eed7%3A0x2e75ca768009839f!2sRadiant%20Girls%20Hostel%20-%20Putalisadak!5e0!3m2!1sen!2snp!4v1731685591481!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Putalisadak, Kathmandu",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.489393970441!2d85.32081227530053!3d27.70217217618555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190a5af5eed7%3A0x2e75ca768009839f!2sRadiant%20Girls%20Hostel%20-%20Putalisadak!5e0!3m2!1sen!2snp!4v1731685591481!5m2!1sen!2snp",
+      "latitude": 27.6985484,
+      "longitude": 85.3269237
+    }
+  },
+
+  {
+    "name": "Peaceful Girls Hostel",
+    "image": "/images/peaceful.jpg",
+    "about": "Peaceful Girls Hostel is located in Rudra Mati Marg, Kathmandu.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Rudra Mati Marg, Kathmandu",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.5697731440614!2d85.32879897530042!3d27.699689076186928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19a3d6f2974f%3A0xbd1d640b9d8ab779!2sPeaceful%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731685673081!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Rudra Mati Marg, Kathmandu",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.5697731440614!2d85.32879897530042!3d27.699689076186928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19a3d6f2974f%3A0xbd1d640b9d8ab779!2sPeaceful%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731685673081!5m2!1sen!2snp",
+      "latitude": 27.6996891,
+      "longitude": 85.328799
+    }
+  },
+
+  {
+    "name": "Happy Home Girls Hostel",
+    "image": "/images/happyhome.jpg",
+    "about": "Happy Home Girls Hostel is located in Chhakku Bhhakku Marga, Kathmandu.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Chhakku Bhhakku Marga, Kathmandu",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.9009148014247!2d85.33201297530005!3d27.689457176192878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19e27c8bbe07%3A0xc9d95fe520d7b769!2sHappy%20home%20girls%20hostel!5e0!3m2!1sen!2snp!4v1731685748737!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Chhakku Bhhakku Marga, Kathmandu",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.9009148014247!2d85.33201297530005!3d27.689457176192878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19e27c8bbe07%3A0xc9d95fe520d7b769!2sHappy%20home%20girls%20hostel!5e0!3m2!1sen!2snp!4v1731685748737!5m2!1sen!2snp",
+      "latitude": 27.689572,
+      "longitude": 85.332013
+    }
+  },
+
+  {
+    "name": "Best Girls Hostel",
+    "image": "/images/bestgirl.jpg",
+    "about": "Best Girls Hostel is located near Madan Bhandari College, Kathmandu.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Near Madan Bhandari College, Kathmandu",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.6946000361772!2d85.32738187530023!3d27.695832476189203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19f235822421%3A0xd6fdd90b6298ab1b!2sBest%20girls%20hostel%20kathmandu!5e0!3m2!1sen!2snp!4v1731685833584!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Near Madan Bhandari College, Kathmandu",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.6946000361772!2d85.32738187530023!3d27.695832476189203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19f235822421%3A0xd6fdd90b6298ab1b!2sBest%20girls%20hostel%20kathmandu!5e0!3m2!1sen!2snp!4v1731685833584!5m2!1sen!2snp",
+      "latitude": 27.6915662,
+      "longitude": 85.327533
+    }
+  },
+
+  {
+    "name": "Comfort Girls Hostel",
+    "image": "/images/comfort.jpg",
+    "about": "Comfort Girls Hostel is located in Alok nagar, Kathmandu.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Alok nagar, Kathmandu",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.024922731996!2d85.33007387529993!3d27.685624576195018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19be527c0a95%3A0xe63f90cfde6e068a!2sComfort%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731685915944!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Alok nagar, Kathmandu",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.024922731996!2d85.33007387529993!3d27.685624576195018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19be527c0a95%3A0xe63f90cfde6e068a!2sComfort%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731685915944!5m2!1sen!2snp",
+      "latitude": 27.6856246,
+      "longitude": 85.3300739
+    }
+  },
+
+  {
+    "name": "Biju Girls Hostel",
+    "image": "/images/biju.jpg",
+    "about": "Biju Girls Hostel is located in Dhobidhara Marga, Kathmandu.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Dhobidhara Marga, Kathmandu",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.2901508773807!2d85.32138987530077!3d27.708326376181954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1907d504a1a7%3A0x5a55aba542bcb68!2sBiju%20Hostel%20Pvt.%20Ltd.%20-%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731686033306!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Dhobidhara Marga, Kathmandu",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.2901508773807!2d85.32138987530077!3d27.708326376181954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1907d504a1a7%3A0x5a55aba542bcb68!2sBiju%20Hostel%20Pvt.%20Ltd.%20-%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731686033306!5m2!1sen!2snp",
+      "latitude": 27.7139795,
+      "longitude": 85.3102362
+    }
+  },
+
+  {
+    "name": "A One Girls Hostel",
+    "image": "/images/aone.jpg",
+    "about": "A One Girls Hostel is located in Jawgal, Lalitpur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Jawgal, Lalitpur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.008742350787!2d85.31877087529992!3d27.686124676194705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19b46596cce3%3A0x4a96fc7710a396a6!2sA%20One%20Girl&#39;s%20Hostel!5e0!3m2!1sen!2snp!4v1731686120586!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Jawgal, Lalitpur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.008742350787!2d85.31877087529992!3d27.686124676194705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19b46596cce3%3A0x4a96fc7710a396a6!2sA%20One%20Girl&#39;s%20Hostel!5e0!3m2!1sen!2snp!4v1731686120586!5m2!1sen!2snp",
+      "latitude": 27.6861247,
+      "longitude": 85.3187709
+    }
+  },
+
+  {
+    "name": "Padma Girls Hostel",
+    "image": "/images/padma.jpg",
+    "about": "Padma Girls Hostel is located in Jawalakhel, Lalitpur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Jawalakhel, Lalitpur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.363730025219!2d85.31460437529948!3d27.67515087620107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19cc2773f2c3%3A0xcedcc5cb83528083!2sPadma%20Girls%20Hostel%20-%20Natole%20Lalitpur!5e0!3m2!1sen!2snp!4v1731686218097!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Jawalakhel, Lalitpur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.363730025219!2d85.31460437529948!3d27.67515087620107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19cc2773f2c3%3A0xcedcc5cb83528083!2sPadma%20Girls%20Hostel%20-%20Natole%20Lalitpur!5e0!3m2!1sen!2snp!4v1731686218097!5m2!1sen!2snp",
+      "latitude": 27.6751508,
+      "longitude": 85.3123084
+    }
+  },
+
+  {
+    "name": "Gwarko Girls Hostel",
+    "image": "/images/gwarko.jpg",
+    "about": "Gwarko Girls Hostel is located in Gwarko, Lalitpur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Gwarko, Lalitpur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.6428208085185!2d85.33042497529915!3d27.666520476205992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb194da3cd176f%3A0x1e7f5866767efcf3!2sGwarko%20Girl&#39;s%20Hostel!5e0!3m2!1sen!2snp!4v1731686286713!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Gwarko, Lalitpur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.6428208085185!2d85.33042497529915!3d27.666520476205992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb194da3cd176f%3A0x1e7f5866767efcf3!2sGwarko%20Girl&#39;s%20Hostel!5e0!3m2!1sen!2snp!4v1731686286713!5m2!1sen!2snp",
+      "latitude": 27.6665205,
+      "longitude": 85.330425
+    }
+  },
+
+  {
+    "name": "Sharvya Girls Hostel",
+    "image": "/images/sharvya.jpg",
+    "about": "Sharvya Girls Hostel is located in Jhulpakha, Lalitpur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Jhulpakha, Lalitpur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.8731112047167!2d85.31399527529892!3d27.659397276210097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb17dcafe8e96b%3A0x501d2a097f1218ed!2sShravya%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731686538738!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Jhulpakha, Lalitpur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.8731112047167!2d85.31399527529892!3d27.659397276210097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb17dcafe8e96b%3A0x501d2a097f1218ed!2sShravya%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731686538738!5m2!1sen!2snp",
+      "latitude": 27.659373,
+      "longitude": 85.319953
+    }
+  },
+
+  {
+    "name": "Delight Girls Hostel",
+    "image": "/images/delight.jpg",
+    "about": "Delight Girls Hostel is located in Sanepa, Lalitpur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Sanepa, Lalitpur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.120090668131!2d85.2978743752998!3d27.682682976196546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb191a8ff5e5b1%3A0xc6cff140543cc43a!2sDelight%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731686615539!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Sanepa, Lalitpur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.120090668131!2d85.2978743752998!3d27.682682976196546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb191a8ff5e5b1%3A0xc6cff140543cc43a!2sDelight%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731686615539!5m2!1sen!2snp",
+      "latitude": 27.682683,
+      "longitude": 85.2978744
+    }
+  },
+
+  {
+    "name": "Kunpandol Girls Hostel",
+    "image": "/images/Kupondole.jpg",
+    "about": "Kupandol Girls Hostel is located in Kupandol, Lalitpur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Kupandol, Lalitpur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.9838257844867!2d85.31070497529991!3d27.68689477619434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb184b51fe1073%3A0x47e17c60385c241b!2sKupondole%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731686732537!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "kupandol, Lalitpur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.9838257844867!2d85.31070497529991!3d27.68689477619434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb184b51fe1073%3A0x47e17c60385c241b!2sKupondole%20Girls%20Hostel!5e0!3m2!1sen!2snp!4v1731686732537!5m2!1sen!2snp",
+      "latitude": 27.6868947,
+      "longitude": 85.308409
+    }
+  },
+
+  {
+    "name": "Safe Boys Hostel",
+    "image": "/images/safe.jpg",
+    "about": "Safe Boys Hostel is located in Hattiban, Lalitpur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Hattiban, Lalitpur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3534.2470873482594!2d85.32712547529853!3d27.647826076216766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1766055f2e05%3A0x2483840edfe2b52b!2sSafe%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731686816313!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Hattiban, Lalitpur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3534.2470873482594!2d85.32712547529853!3d27.647826076216766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1766055f2e05%3A0x2483840edfe2b52b!2sSafe%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731686816313!5m2!1sen!2snp",
+      "latitude": 27.6478261,
+      "longitude": 85.3271255
+    }
+  },
+
+  {
+    "name": "Mid Town Boys Hostel",
+    "image": "/images/midtown.jpg",
+    "about": "Mid Town Boys Hostel is located in Mahalaxmisthan, Lalitpur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Mahalaxmisthan, Lalitpur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.527496676075!2d85.3169711752993!3d27.670086976203976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb199d0ef7a45b%3A0xd1bfba52da434ac1!2sMid%20Town%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731686905144!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Mahalaxmisthan, Lalitpur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.527496676075!2d85.3169711752993!3d27.670086976203976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb199d0ef7a45b%3A0xd1bfba52da434ac1!2sMid%20Town%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731686905144!5m2!1sen!2snp",
+      "latitude": 27.670087,
+      "longitude": 85.2814373
+    }
+  },
+
+  {
+    "name": "Lagankhel Boys Hostel",
+    "image": "/images/lagankhel.jpeg",
+    "about": "Lagankhel Boys Hostel is located in Payagpokhari, Lalitpur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Payagpokhari, Lalitpur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.608886249003!2d85.3219098752992!3d27.667569976205346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb194f3eff79d1%3A0x64eff785781a411e!2slagankhel%20boys%20hostel!5e0!3m2!1sen!2snp!4v1731686980498!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Payagpokhari, Lalitpur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.608886249003!2d85.3219098752992!3d27.667569976205346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb194f3eff79d1%3A0x64eff785781a411e!2slagankhel%20boys%20hostel!5e0!3m2!1sen!2snp!4v1731686980498!5m2!1sen!2snp",
+      "latitude": 27.6675699,
+      "longitude": 85.3196139
+    }
+  },
+
+  {
+    "name": "Lalitpur Boys Hostel",
+    "image": "/images/lalitpur.jpg",
+    "about": "Lalitpur Boys Hostel is located in Natole, Lalitpur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Natole, Lalitpur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.374681218636!2d85.31510887529952!3d27.674812276201205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198d1a2c2fff%3A0xd608ed72e47602f7!2sLalitpur%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731687053664!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Natole, Lalitpur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.374681218636!2d85.31510887529952!3d27.674812276201205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198d1a2c2fff%3A0xd608ed72e47602f7!2sLalitpur%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731687053664!5m2!1sen!2snp",
+      "latitude": 27.6748123,
+      "longitude": 85.3129202
+    }
+  },
+
+  {
+    "name": "Pulchowk Boys Hostel",
+    "image": "/images/pulchowk.jpg",
+    "about": "Pulchowk Boys Hostel is located in Bhakundole, Lalitpur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Bhakundole, Lalitpur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.092420586819!2d85.3132017752998!3d27.68353827619622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1951521348a5%3A0xfea6ca5c6569e226!2sPulchowk%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731687117993!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Bhakundole, Lalitpur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.092420586819!2d85.3132017752998!3d27.68353827619622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1951521348a5%3A0xfea6ca5c6569e226!2sPulchowk%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731687117993!5m2!1sen!2snp",
+      "latitude": 27.6824804,
+      "longitude": 85.3172853
+    }
+  },
+
+  {
+    "name": "Symbol Boys Hostel",
+    "image": "/images/symbol.jpg",
+    "about": "Symbol Boys Hostel is located in Patan, Lalitpur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Patan, Lalitpur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.5350215364997!2d85.31565567529931!3d27.669854276204028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19d205e86027%3A0x452e881ae7b60bd7!2sSymbol%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731687182369!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Patan, Lalitpur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.5350215364997!2d85.31565567529931!3d27.669854276204028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19d205e86027%3A0x452e881ae7b60bd7!2sSymbol%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731687182369!5m2!1sen!2snp",
+      "latitude": 27.6698542,
+      "longitude": 85.3133597
+    }
+  },
+
+  {
+    "name": "Brave Boys Hostel",
+    "image": "/images/brave.jpg",
+    "about": "Brave Boys Hostel is located in Thimi, Bhaktapur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Thimi, Bhaktapur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56528.63987461996!2d85.33772287526077!3d27.685158805717677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1a419f80aa67%3A0x288ab8841508315f!2sMadhyapur%20Thimi!5e0!3m2!1sen!2snp!4v1731684862588!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Thimi, Bhaktapur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56528.63987461996!2d85.33772287526077!3d27.685158805717677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1a419f80aa67%3A0x288ab8841508315f!2sMadhyapur%20Thimi!5e0!3m2!1sen!2snp!4v1731684862588!5m2!1sen!2snp",
+      "latitude": 27.6851634,
+      "longitude": 85.358323
+    }
+  },
+
+  {
+    "name": "Nayan Boys Hostel",
+    "image": "/images/nayan.jpg",
+    "about": "Nayan Boys Hostel is located in Lokanthali, Bhaktapur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Lokanthali, Bhaktapur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.3856355228486!2d85.3571927752995!3d27.67447357620151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1a1c87487f6f%3A0x83ffd992b4b2d081!2sLokanthali%2C%20Madhyapur%20Thimi%2044600!5e0!3m2!1sen!2snp!4v1731687327169!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Lokanthali, Bhaktapur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.3856355228486!2d85.3571927752995!3d27.67447357620151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1a1c87487f6f%3A0x83ffd992b4b2d081!2sLokanthali%2C%20Madhyapur%20Thimi%2044600!5e0!3m2!1sen!2snp!4v1731687327169!5m2!1sen!2snp",
+      "latitude": 27.6744733,
+      "longitude": 85.3500258
+    }
+  },
+
+  {
+    "name": "Sarthak Boys Hostel",
+    "image": "/images/sarthak.jpg",
+    "about": "Sarthak Boys Hostel is located in Suryabinayak, Bhaktapur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Suryabinayak, Bhaktapur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.66883919561!2d85.42301317529913!3d27.665715776206433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b00411d66fb%3A0xdbd0de28c467c78d!2zU3VyeWFiaW5heWFrIGNob3drICgg4KS44KWC4KSw4KWN4KSv4KS14KS_4KSo4KS-4KSv4KSVIOCkmuCli-CklSk!5e0!3m2!1sen!2snp!4v1731687410073!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Suryabinayak, Bhaktapur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.66883919561!2d85.42301317529913!3d27.665715776206433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b00411d66fb%3A0xdbd0de28c467c78d!2zU3VyeWFiaW5heWFrIGNob3drICgg4KS44KWC4KSw4KWN4KSv4KS14KS_4KSo4KS-4KSv4KSVIOCkmuCli-CklSk!5e0!3m2!1sen!2snp!4v1731687410073!5m2!1sen!2snp",
+      "latitude": 27.6657158,
+      "longitude": 85.4230132
+    }
+  },
+
+  {
+    "name": "Radhe Radhe Boys Hostel",
+    "image": "/images/radheradhe.jpg",
+    "about": "Radhe Radhe Boys Hostel is located in Radhe-radhe, Bhaktapur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Radhe-radhe,Bhaktapur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.3132384468413!2d85.39269387529954!3d27.676711976200195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b6f1d472c17%3A0x842d4f3ecda5546!2sRadhe%20Radhe%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731687531408!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Radhe-radhe,Bhaktapur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.3132384468413!2d85.39269387529954!3d27.676711976200195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b6f1d472c17%3A0x842d4f3ecda5546!2sRadhe%20Radhe%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731687531408!5m2!1sen!2snp",
+      "latitude": 27.676712,
+      "longitude": 85.3926939
+    }
+  },
+
+  {
+    "name": "Pathivara Boys Hostel",
+    "image": "/images/pathivara.jpeg",
+    "about": "Pathivara Boys Hostel is located in Srijananagar, Bhaktapur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Gatthaghar, Bhaktapur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.32876688371!2d85.36993697529957!3d27.67623187620036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b31d24239ed%3A0xe5b183b1b19efb8c!2sPathivara%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731687718528!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Gatthaghar, Bhaktapur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.32876688371!2d85.36993697529957!3d27.67623187620036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b31d24239ed%3A0xe5b183b1b19efb8c!2sPathivara%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731687718528!5m2!1sen!2snp",
+      "latitude": 27.6767104,
+      "longitude": 85.3746692
+    }
+  },
+
+  {
+    "name": "Swastik Boys Hostel",
+    "image": "/images/swastik.jpeg",
+    "about": "Swastik Boys Hostel is located in Suryabinayak, Bhaktapur.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Suryabinayak, Bhaktapur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.66883919561!2d85.42301317529913!3d27.665715776206433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b00411d66fb%3A0xdbd0de28c467c78d!2zU3VyeWFiaW5heWFrIGNob3drICgg4KS44KWC4KSw4KWN4KSv4KS14KS_4KSo4KS-4KSv4KSVIOCkmuCli-CklSk!5e0!3m2!1sen!2snp!4v1731687410073!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Suryabinayak, Bhaktapur",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.66883919561!2d85.42301317529913!3d27.665715776206433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b00411d66fb%3A0xdbd0de28c467c78d!2zU3VyeWFiaW5heWFrIGNob3drICgg4KS44KWC4KSw4KWN4KSv4KS14KS_4KSo4KS-4KSv4KSVIOCkmuCli-CklSk!5e0!3m2!1sen!2snp!4v1731687410073!5m2!1sen!2snp",
+      "latitude": 27.6657158,
+      "longitude": 85.4230132
+    }
+  },
+
+  {
+    "name": "City Deluxe Boys Hostel",
+    "image": "/images/citydeluxe.jpg",
+    "about": "City Deluxe Boys Hostel is located in Newplaza, Kathmandu.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Newplaza, Kathmandu",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.4674650459265!2d85.32121967530055!3d27.702849576185248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19a87f875c19%3A0xcf525f740429dd00!2sCity%20Deluxe%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731687950802!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Newplaza, Kathmandu",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.4674650459265!2d85.32121967530055!3d27.702849576185248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19a87f875c19%3A0xcf525f740429dd00!2sCity%20Deluxe%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731687950802!5m2!1sen!2snp",
+      "latitude": 27.7028495,
+      "longitude": 85.318923
+    }
+  },
+
+  {
+    "name": "The Best Boys Hostel",
+    "image": "/images/thebest.jpeg",
+    "about": "The Best Boys Hostel is located in Seto pul, Kathmandu.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Setopul, Kathmandu",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.514491526819!2d85.3325153753005!3d27.701396876185953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19f6c63afab7%3A0x5a23bc1c54e4d365!2sThe%20Best%20boys%20hostel%20kathmandu!5e0!3m2!1sen!2snp!4v1731688012609!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Setopul, Kathmandu",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.514491526819!2d85.3325153753005!3d27.701396876185953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19f6c63afab7%3A0x5a23bc1c54e4d365!2sThe%20Best%20boys%20hostel%20kathmandu!5e0!3m2!1sen!2snp!4v1731688012609!5m2!1sen!2snp",
+      "latitude": 27.7013969,
+      "longitude": 85.3325154
+    }
+  },
+
+  {
+    "name": "Kathmandu Unity Boys Hostel",
+    "image": "/images/kathmanduunity.jpg",
+    "about": "Kathmandu Unity Boys Hostel is located in Putalisadak, Kathmandu.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Putalisadak, Kathmandu",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.4961952681692!2d85.32757927530048!3d27.701962076185662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19bffc83334d%3A0x9e2b927e95ee1220!2sKathmandu%20Unity%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731688071353!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Putalisadak, Kathmandu",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.4961952681692!2d85.32757927530048!3d27.701962076185662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19bffc83334d%3A0x9e2b927e95ee1220!2sKathmandu%20Unity%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731688071353!5m2!1sen!2snp",
+      "latitude": 27.701962,
+      "longitude": 85.325833
+    }
+  },
+
+  {
+    "name": "Himalayan Boys Hostel",
+    "image": "/images/himalayan.jpg",
+    "about": "Himalayan Boys Hostel is located in Beside Teaching Hospital, Kathmandu.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Beside Teaching Hospital, Kathmandu",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.363327383061!2d85.32636257530179!3d27.73693747616562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb199c5c03311f%3A0xf2549ebaea93cdb8!2sHimalayan%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731688148314!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Beside Teaching Hospital, Kathmandu",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.363327383061!2d85.32636257530179!3d27.73693747616562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb199c5c03311f%3A0xf2549ebaea93cdb8!2sHimalayan%20Boys%20Hostel!5e0!3m2!1sen!2snp!4v1731688148314!5m2!1sen!2snp",
+      "latitude": 27.7369375,
+      "longitude": 85.3263626
+    }
+  },
+
+  {
+    "name": "Namuna Boys Hostel",
+    "image": "/images/namuna.jpg",
+    "about": "Namuna Boys Hostel is located in Thapagaun, Kathmandu.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Thapagaun, Kathmandu",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.8353485146527!2d85.33125887530011!3d27.69148337619154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19bdaaf5ba7d%3A0x8a39ca922fef2c7a!2sNamuna%20Boys&#39;%20Hostel!5e0!3m2!1sen!2snp!4v1731688217041!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Thapagaun, Kathmandu",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.8353485146527!2d85.33125887530011!3d27.69148337619154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19bdaaf5ba7d%3A0x8a39ca922fef2c7a!2sNamuna%20Boys&#39;%20Hostel!5e0!3m2!1sen!2snp!4v1731688217041!5m2!1sen!2snp",
+      "latitude": 27.69562,
+      "longitude": 85.3263287
+    }
+  },
+
+  {
+    "name": "Dhanush Boys Hostel",
+    "image": "/images/dhanush.jpg",
+    "about": "Dhanush Boys Hostel is located in Tinkune, Kathmandu.It is the perfect choice for those seeking comfort and harmony in their living environment. Our hostel offers a welcoming atmosphere, designed to provide a home-like feel while ensuring a peaceful stay. Conveniently situated within 2 km of colleges, schools, and libraries, ABC Hostel is an excellent option for students and professionals alike. With four different types of bedrooms, we offer flexible pricing based on your room selection, allowing you to choose the accommodation that best fits your needs and budget.",
+    "rooms": {
+      "single": {
+        "description": "Single room description",
+        "price": "8000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/singleroom.webp"
+      },
+      "double": {
+        "description": "Double Sharing room description",
+        "price": "7000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/doublesharing.jpg"
+      },
+      "triple": {
+        "description": "Triple Sharing room description",
+        "price": "6000 NPR",
+        "dynamicPrice": "6000 NPR",
+        "image": "/images/triplesharing.jpg"
+      }
+    },
+    "facilities": [
+      "Free Wifi",
+      "Laundry Service",
+      "24/7 Security",
+      "Shared Kitchen"
+    ],
+    "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
+    "reviews": [
+      {
+        "name": "Shreya Sapkota",
+        "comment": "Great place!",
+        "profileImage": "/reviewer1.jpg"
+      },
+      {
+        "name": "Unnati Neupane",
+        "comment": "Wonderful stay!",
+        "profileImage": "/reviewer2.jpg"
+      }
+    ],
+    "events": [
+      { "title": "Game Night", "date": "Friday, 8 PM" },
+      { "title": "Cooking Workshop", "date": "Saturday, 10 AM" }
+    ],
+    "contact": {
+      "phone": "9876543210",
+      "email": "contact@abchostel.com",
+      "address": "Tinkune, Kathmandu",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.9731193271955!2d85.34463117529997!3d27.687225676194124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19d69e49063b%3A0x2d510f30f160e48f!2sdhanush%20boys%20hostel!5e0!3m2!1sen!2snp!4v1731688299426!5m2!1sen!2snp"
+    },
+    "location": {
+      "address": "Tinkune, Kathmandu",
+      "mapLink": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.9731193271955!2d85.34463117529997!3d27.687225676194124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19d69e49063b%3A0x2d510f30f160e48f!2sdhanush%20boys%20hostel!5e0!3m2!1sen!2snp!4v1731688299426!5m2!1sen!2snp",
+      "latitude": 27.6872257,
+      "longitude": 85.3446312
+    }
+  }
+]
