@@ -45,7 +45,7 @@ function App() {
           <Route path="/hosteldetail/*" element={<Hostel1 />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="hostelform" element={<HostelForm/>} />
-          <Route path="shortestpath" element={<ShortestPathMap/>} />
+          <Route path="/shortestpath/:hostelName" element={<ShortestPathMap />} />
         </Routes>
         <Footer />
       </Router>

@@ -23,15 +23,6 @@ const HostelDetail = () => {
       .catch((error) => setError(error.message));
   }, [hostelName]);
 
-  const handleShowRoute = () => {
-    // Logic to show the shortest route between user and hostel
-    const userLocation = { latitude: 27.6728297, longitude: 85.3995008 }; // Example user location
-    const hostelLocation = hostelData.location;
-
-    const routeUrl = `https://www.google.com/maps/dir/${userLocation.latitude},${userLocation.longitude}/${hostelLocation.latitude},${hostelLocation.longitude}`;
-    window.open(routeUrl, "_blank");
-  };
-
   if (error) {
     return <p className="text-red-500">Error: {error}</p>;
   }
@@ -39,7 +30,6 @@ const HostelDetail = () => {
   if (!hostelData) {
     return <p>Loading...</p>;
   }
-  
 
   const tabs = ["facilities", "gallery", "reviews", "events", "contact"];
 
@@ -222,12 +212,11 @@ const HostelDetail = () => {
           className="rounded-lg mt-4"
         ></iframe>
         <div className="flex justify-center mt-6">
-          
-            <button className="px-6 py-3 bg-[#1ABC9C] text-white rounded-lg hover:bg-[#16A085]"
-              onClick={handleShowRoute}>
-              Show the Route in Map
+          <Link to={`/shortestpath/${hostelName}`}>
+            <button className="px-6 py-3 bg-[#1ABC9C] text-white rounded-lg hover:bg-[#16A085]">
+              Show the Route on Map
             </button>
-            
+          </Link>
         </div>
       </div>
     </div>
