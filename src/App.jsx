@@ -23,6 +23,7 @@ import HostelRegister from "./Component/Login/HostelRegister";
 import Dashboard from "./Component/Admin/Dashboard";
 import HostelForm from "./Component/Admin/HostelForm";
 import ShortestPathMap from "./Component/Hostels/ShortestPathMap";
+import Roomdetails from "./Component/Hostels/Roomdetails";
 function App() {
   return (
     <>
@@ -43,6 +44,7 @@ function App() {
           <Route path="uploadblog" element={<UploadBlog />} />
           {/* Route for Hostel1 which handles the list and detail view */}
           <Route path="/hosteldetail/*" element={<Hostel1 />} />
+          
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="hostelform" element={<HostelForm/>} />
           <Route path="/shortestpath/:hostelName" element={<ShortestPathMap />} />

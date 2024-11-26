@@ -46,45 +46,50 @@ const HostelDetail = () => {
 
       {/* About Section */}
       <div className="mt-8">
-        <h2 className="text-2xl font-bold text-[#2C3E50]">{hostelData.name}</h2>
-        <p className="mt-4 text-gray-700">{hostelData.about}</p>
+        <h2 className="text-2xl font-bold text-[#2C3E50] font-[poppins]">{hostelData.name}</h2>
+        <p className="mt-4 text-gray-700 font-[poppins]">{hostelData.about}</p>
       </div>
 
+      
       {/* Rooms Section */}
       <div className="mt-8">
-        {hostelData.rooms &&
-          Object.keys(hostelData.rooms).map((roomType) => (
-            <div key={roomType} className="mb-8">
-              <h3 className="text-lg font-semibold text-[#2C3E50] capitalize">
-                {roomType} room
-              </h3>
-              <div className="flex mt-4">
+        <h3 className="text-xl font-bold text-[#2C3E50] mb-4 font-[poppins]">Rooms</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+          {hostelData.rooms &&
+            Object.keys(hostelData.rooms).map((roomType) => (
+              <div
+                key={roomType}
+                className="bg-[#2C3E50] rounded-lg shadow-lg p-4 transition-transform transform hover:scale-105"
+              >
                 <img
                   src={hostelData.rooms[roomType].image || reviewImage}
                   alt={`${roomType} room`}
-                  className="w-32 h-32 object-cover rounded-lg"
+                  className="w-full h-40 object-cover rounded-t-lg"
                 />
-                <div className="ml-4">
-                  <p className="text-gray-700">
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold text-white capitalize mb-2 font-[poppins]">
+                    {roomType} Room
+                  </h3>
+                  <p className="text-white mb-2">
                     {hostelData.rooms[roomType].description}
                   </p>
-                  <p className="text-gray-700 mt-2">
-                    <strong>Base Price:</strong> $
+                  <p className="text-white mb-1 font-[poppins]">
+                    <strong>Base Price:</strong> 
                     {hostelData.rooms[roomType].price}
                   </p>
-                  <p className="text-gray-700 mt-2">
-                    <strong>Dynamic Price:</strong> $
+                  <p className="text-white font-[poppins]">
+                    <strong>Dynamic Price:</strong> 
                     {hostelData.rooms[roomType].dynamicPrice}
                   </p>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+        </div>
       </div>
 
       {/*  "Book Now" Button */}
       <div className="flex justify-center mt-6">
-        <button className="px-6 py-3 bg-[#1ABC9C] text-white rounded-lg hover:bg-[#16A085]">
+        <button className="px-6 py-3 bg-[#1ABC9C] text-white rounded-lg hover:bg-[#16A085] font-[poppins]">
           Book Now
         </button>
       </div>
@@ -109,7 +114,7 @@ const HostelDetail = () => {
           {/* Facilities Tab */}
           {activeTab === "facilities" && hostelData.facilities && (
             <div>
-              <h3 className="font-bold text-lg text-[#2C3E50]">Facilities</h3>
+              <h3 className="font-bold text-lg text-[#2C3E50] font-[poppins]">Facilities</h3>
               <ul className="list-disc pl-5 text-[#2C3E50]">
                 {hostelData.facilities.map((facility, index) => (
                   <li key={index}>{facility}</li>
@@ -143,10 +148,10 @@ const HostelDetail = () => {
                     className="w-12 h-12 rounded-full"
                   />
                   <div>
-                    <h3 className="font-semibold text-[#2C3E50]">
+                    <h3 className="font-semibold text-[#2C3E50] font-[poppins]">
                       {review.name}
                     </h3>
-                    <p className="text-[#2C3E50]">{review.comment}</p>
+                    <p className="text-[#2C3E50] font-[poppins]">{review.comment}</p>
                   </div>
                 </div>
               ))}
@@ -156,7 +161,7 @@ const HostelDetail = () => {
           {/* Events Tab */}
           {activeTab === "events" && hostelData.events && (
             <div>
-              <h3 className="font-bold text-lg text-[#2C3E50]">
+              <h3 className="font-bold text-lg text-[#2C3E50] font-[poppins]">
                 Upcoming Events
               </h3>
               <ul className="list-disc pl-5 text-[#2C3E50]">
@@ -172,16 +177,16 @@ const HostelDetail = () => {
           {/* Contact Tab */}
           {activeTab === "contact" && hostelData.contact && (
             <div>
-              <h3 className="font-bold text-lg text-[#2C3E50]">
+              <h3 className="font-bold text-lg text-[#2C3E50] font-[poppins]">
                 Contact Information
               </h3>
-              <p className="text-[#2C3E50]">
+              <p className="text-[#2C3E50] font-[poppins]">
                 <strong>Phone:</strong> {hostelData.contact.phone}
               </p>
-              <p className="text-[#2C3E50]">
+              <p className="text-[#2C3E50] font-[poppins]">
                 <strong>Email:</strong> {hostelData.contact.email}
               </p>
-              <p className="text-[#2C3E50]">
+              <p className="text-[#2C3E50] font-[poppins]">
                 <strong>Address:</strong> {hostelData.contact.address}
               </p>
               <iframe
@@ -199,7 +204,7 @@ const HostelDetail = () => {
 
       {/* Location Section */}
       <div className="mt-10">
-        <h3 className="font-bold text-lg text-[#2C3E50]">Location</h3>
+        <h3 className="font-bold text-lg text-[#2C3E50] font-[poppins]">Location</h3>
         <iframe
           src={hostelData.location.mapLink} // Ensure this is the embed link
           width="100%"
@@ -213,7 +218,7 @@ const HostelDetail = () => {
         ></iframe>
         <div className="flex justify-center mt-6">
           <Link to={`/shortestpath/${hostelName}`}>
-            <button className="px-6 py-3 bg-[#1ABC9C] text-white rounded-lg hover:bg-[#16A085]">
+            <button className="px-6 py-3 bg-[#1ABC9C] text-white rounded-lg hover:bg-[#16A085] font-[poppins]">
               Show the Route on Map
             </button>
           </Link>

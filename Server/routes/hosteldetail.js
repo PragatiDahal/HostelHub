@@ -36,7 +36,7 @@ router.get("/", async (req, res) => {
 });
 
 // Calculate the shortest path between the user's location and hostels
-router.post("/shortest-path", async (req, res) => {
+router.post("/shortestpath", async (req, res) => {
   const { latitude, longitude } = req.body; // User's current location
 
   if (!latitude || !longitude) {
