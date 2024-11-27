@@ -9,14 +9,15 @@ const AdminSignIn = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
+  
   const validCredentials = {
     username: "admin",
-    password: "admin123",
+    password: "admin123", 
   };
 
   const handleLogin = (event) => {
     event.preventDefault();
-
+    
     // Validate input fields
     if (!username || !password) {
       setError("Both fields are required.");
@@ -24,12 +25,9 @@ const AdminSignIn = () => {
     }
 
     // Check credentials
-    if (
-      username === validCredentials.username &&
-      password === validCredentials.password
-    ) {
-      localStorage.setItem("authToken", "dummy-auth-token");
-      setError("");
+    if (username === validCredentials.username && password === validCredentials.password) {
+      localStorage.setItem("authToken", "dummy-auth-token"); 
+      setError(""); 
       navigate("/dashboard"); // Redirect to dashboard
     } else {
       setError("Invalid username or password.");
@@ -50,18 +48,14 @@ const AdminSignIn = () => {
 
         {/* Login Form Section */}
         <div className="w-full md:w-1/2 p-8 bg-[#a7e8dc] rounded-lg">
-          <h2 className="text-3xl font-bold text-[#2C3E50] text-center">
-            Admin LogIn
-          </h2>
+          <h2 className="text-3xl font-bold text-[#2C3E50] text-center">Admin LogIn</h2>
           <form className="space-y-6 mt-8" onSubmit={handleLogin}>
             {/* Error Message */}
             {error && <p className="text-red-500 text-center">{error}</p>}
 
             {/* Username Input */}
             <div>
-              <label className="block text-[#2C3E50] font-medium mb-2">
-                Username*
-              </label>
+              <label className="block text-[#2C3E50] font-medium mb-2">Username*</label>
               <input
                 type="text"
                 value={username}
@@ -73,9 +67,7 @@ const AdminSignIn = () => {
 
             {/* Password Input */}
             <div>
-              <label className="block text-[#2C3E50] font-medium mb-2">
-                Password*
-              </label>
+              <label className="block text-[#2C3E50] font-medium mb-2">Password*</label>
               <input
                 type="password"
                 value={password}

@@ -46,15 +46,18 @@ const HostelDetail = () => {
 
       {/* About Section */}
       <div className="mt-8">
-        <h2 className="text-2xl font-bold text-[#2C3E50] font-[poppins]">{hostelData.name}</h2>
+        <h2 className="text-2xl font-bold text-[#2C3E50] font-[poppins]">
+          {hostelData.name}
+        </h2>
         <p className="mt-4 text-gray-700 font-[poppins]">{hostelData.about}</p>
       </div>
 
-      
       {/* Rooms Section */}
       <div className="mt-8">
-        <h3 className="text-xl font-bold text-[#2C3E50] mb-4 font-[poppins]">Rooms</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+        <h3 className="text-xl font-bold text-[#2C3E50] mb-4 font-[poppins]">
+          Rooms
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {hostelData.rooms &&
             Object.keys(hostelData.rooms).map((roomType) => (
               <div
@@ -74,13 +77,17 @@ const HostelDetail = () => {
                     {hostelData.rooms[roomType].description}
                   </p>
                   <p className="text-white mb-1 font-[poppins]">
-                    <strong>Base Price:</strong> 
+                    <strong>Base Price:</strong>{" "}
                     {hostelData.rooms[roomType].price}
                   </p>
                   <p className="text-white font-[poppins]">
-                    <strong>Dynamic Price:</strong> 
+                    <strong>Dynamic Price:</strong>{" "}
                     {hostelData.rooms[roomType].dynamicPrice}
                   </p>
+                  {/* Add View Details Button */}
+                  <button className="mt-2 px-4 py-2 bg-[#1ABC9C] text-white rounded-lg hover:bg-[#16A085] font-[poppins]">
+                  <Link to={`/hosteldetail/${hostelName}/${roomType}`}>View Details</Link>
+                  </button>
                 </div>
               </div>
             ))}
@@ -114,7 +121,9 @@ const HostelDetail = () => {
           {/* Facilities Tab */}
           {activeTab === "facilities" && hostelData.facilities && (
             <div>
-              <h3 className="font-bold text-lg text-[#2C3E50] font-[poppins]">Facilities</h3>
+              <h3 className="font-bold text-lg text-[#2C3E50] font-[poppins]">
+                Facilities
+              </h3>
               <ul className="list-disc pl-5 text-[#2C3E50]">
                 {hostelData.facilities.map((facility, index) => (
                   <li key={index}>{facility}</li>
@@ -151,7 +160,9 @@ const HostelDetail = () => {
                     <h3 className="font-semibold text-[#2C3E50] font-[poppins]">
                       {review.name}
                     </h3>
-                    <p className="text-[#2C3E50] font-[poppins]">{review.comment}</p>
+                    <p className="text-[#2C3E50] font-[poppins]">
+                      {review.comment}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -204,7 +215,9 @@ const HostelDetail = () => {
 
       {/* Location Section */}
       <div className="mt-10">
-        <h3 className="font-bold text-lg text-[#2C3E50] font-[poppins]">Location</h3>
+        <h3 className="font-bold text-lg text-[#2C3E50] font-[poppins]">
+          Location
+        </h3>
         <iframe
           src={hostelData.location.mapLink} // Ensure this is the embed link
           width="100%"

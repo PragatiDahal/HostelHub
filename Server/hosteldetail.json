@@ -33,12 +33,12 @@
     "reviews": [
       {
         "name": "Shreya Sapkota",
-        "comment": "Great place!",
+        "comment": "It was okay.",
         "profileImage": "/reviewer1.jpg"
       },
       {
         "name": "Unnati Neupane",
-        "comment": "Wonderful stay!",
+        "comment": "Not very clean.",
         "profileImage": "/reviewer2.jpg"
       }
     ],
@@ -92,13 +92,13 @@
     "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
     "reviews": [
       {
-        "name": "Shreya Sapkota",
-        "comment": "Great place!",
+        "name": "Rohini Shah",
+        "comment": "Terrible Hostel!",
         "profileImage": "/reviewer1.jpg"
       },
       {
-        "name": "Unnati Neupane",
-        "comment": "Wonderful stay!",
+        "name": "Aakriti Pandey",
+        "comment": "Will never come again.",
         "profileImage": "/reviewer2.jpg"
       }
     ],
@@ -154,12 +154,12 @@
     "reviews": [
       {
         "name": "Shreya Sapkota",
-        "comment": "Great place!",
+        "comment": "It was okay.",
         "profileImage": "/reviewer1.jpg"
       },
       {
         "name": "Unnati Neupane",
-        "comment": "Wonderful stay!",
+        "comment": "Not very clean.",
         "profileImage": "/reviewer2.jpg"
       }
     ],
@@ -214,12 +214,12 @@
     "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
     "reviews": [
       {
-        "name": "Shreya Sapkota",
+        "name": "Rushika Nepal",
         "comment": "Great place!",
         "profileImage": "/reviewer1.jpg"
       },
       {
-        "name": "Unnati Neupane",
+        "name": "Shalini Shrestha",
         "comment": "Wonderful stay!",
         "profileImage": "/reviewer2.jpg"
       }
@@ -275,13 +275,13 @@
     "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
     "reviews": [
       {
-        "name": "Shreya Sapkota",
-        "comment": "Great place!",
+        "name": "Rohini Shah",
+        "comment": "Terrible Hostel!",
         "profileImage": "/reviewer1.jpg"
       },
       {
-        "name": "Unnati Neupane",
-        "comment": "Wonderful stay!",
+        "name": "Aakriti Pandey",
+        "comment": "Will never come again.",
         "profileImage": "/reviewer2.jpg"
       }
     ],
@@ -397,13 +397,13 @@
     "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
     "reviews": [
       {
-        "name": "Shreya Sapkota",
-        "comment": "Great place!",
+        "name": "Isha KC",
+        "comment": "It was okay.",
         "profileImage": "/reviewer1.jpg"
       },
       {
-        "name": "Unnati Neupane",
-        "comment": "Wonderful stay!",
+        "name": "Pramisha Neupane",
+        "comment": "Not very clean.",
         "profileImage": "/reviewer2.jpg"
       }
     ],
@@ -520,12 +520,12 @@
     "reviews": [
       {
         "name": "Shreya Sapkota",
-        "comment": "Great place!",
+        "comment": "Terrible experience!",
         "profileImage": "/reviewer1.jpg"
       },
       {
         "name": "Unnati Neupane",
-        "comment": "Wonderful stay!",
+        "comment": "Will never come again.",
         "profileImage": "/reviewer2.jpg"
       }
     ],
@@ -642,12 +642,12 @@
     "reviews": [
       {
         "name": "Shreya Sapkota",
-        "comment": "Great place!",
+        "comment": "Terrible experience!",
         "profileImage": "/reviewer1.jpg"
       },
       {
         "name": "Unnati Neupane",
-        "comment": "Wonderful stay!",
+        "comment": "Will never come again.",
         "profileImage": "/reviewer2.jpg"
       }
     ],
@@ -703,12 +703,12 @@
     "reviews": [
       {
         "name": "Shreya Sapkota",
-        "comment": "Great place!",
+        "comment": "It was okay.",
         "profileImage": "/reviewer1.jpg"
       },
       {
         "name": "Unnati Neupane",
-        "comment": "Wonderful stay!",
+        "comment": "The place was not clean",
         "profileImage": "/reviewer2.jpg"
       }
     ],
@@ -764,12 +764,12 @@
     "reviews": [
       {
         "name": "Shreya Sapkota",
-        "comment": "Great place!",
+        "comment": "Will never come again.",
         "profileImage": "/reviewer1.jpg"
       },
       {
         "name": "Unnati Neupane",
-        "comment": "Wonderful stay!",
+        "comment": "Terrible experience!",
         "profileImage": "/reviewer2.jpg"
       }
     ],
@@ -825,12 +825,12 @@
     "reviews": [
       {
         "name": "Shreya Sapkota",
-        "comment": "Great place!",
+        "comment": "It was okay.",
         "profileImage": "/reviewer1.jpg"
       },
       {
         "name": "Unnati Neupane",
-        "comment": "Wonderful stay!",
+        "comment": "The place was not clean",
         "profileImage": "/reviewer2.jpg"
       }
     ],
@@ -947,12 +947,12 @@
     "reviews": [
       {
         "name": "Shreya Sapkota",
-        "comment": "Great place!",
+        "comment": "Terrible Hostel!",
         "profileImage": "/reviewer1.jpg"
       },
       {
         "name": "Unnati Neupane",
-        "comment": "Wonderful stay!",
+        "comment": "Will never come again.",
         "profileImage": "/reviewer2.jpg"
       }
     ],
@@ -1008,12 +1008,12 @@
     "reviews": [
       {
         "name": "Shreya Sapkota",
-        "comment": "Great place!",
+        "comment": "It was okay.",
         "profileImage": "/reviewer1.jpg"
       },
       {
         "name": "Unnati Neupane",
-        "comment": "Wonderful stay!",
+        "comment": "The hostel was not clean",
         "profileImage": "/reviewer2.jpg"
       }
     ],
@@ -1129,13 +1129,13 @@
     "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
     "reviews": [
       {
-        "name": "Shreya Sapkota",
-        "comment": "Great place!",
+        "name": "Shreyansh Sapkota",
+        "comment": "It was okay.",
         "profileImage": "/reviewer1.jpg"
       },
       {
-        "name": "Unnati Neupane",
-        "comment": "Wonderful stay!",
+        "name": "Prashant Neupane",
+        "comment": "The hostel was not clean",
         "profileImage": "/reviewer2.jpg"
       }
     ],
@@ -1190,13 +1190,13 @@
     "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
     "reviews": [
       {
-        "name": "Shreya Sapkota",
-        "comment": "Great place!",
+        "name": "Shreyansh Sapkota",
+        "comment": "Terrible Hostel!",
         "profileImage": "/reviewer1.jpg"
       },
       {
-        "name": "Unnati Neupane",
-        "comment": "Wonderful stay!",
+        "name": "Prashant Neupane",
+        "comment": "Will never come again.",
         "profileImage": "/reviewer2.jpg"
       }
     ],
@@ -1251,12 +1251,12 @@
     "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
     "reviews": [
       {
-        "name": "Shreya Sapkota",
+        "name": "Shreyansh Sapkota",
         "comment": "Great place!",
         "profileImage": "/reviewer1.jpg"
       },
       {
-        "name": "Unnati Neupane",
+        "name": "Prashant Neupane",
         "comment": "Wonderful stay!",
         "profileImage": "/reviewer2.jpg"
       }
@@ -1312,12 +1312,12 @@
     "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
     "reviews": [
       {
-        "name": "Shreya Sapkota",
+        "name": "Shreyansh Sapkota",
         "comment": "Great place!",
         "profileImage": "/reviewer1.jpg"
       },
       {
-        "name": "Unnati Neupane",
+        "name": "Prashant Neupane",
         "comment": "Wonderful stay!",
         "profileImage": "/reviewer2.jpg"
       }
@@ -1373,13 +1373,13 @@
     "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
     "reviews": [
       {
-        "name": "Shreya Sapkota",
-        "comment": "Great place!",
+        "name": "Shreyansh Sapkota",
+        "comment": "Terrible Hostel!",
         "profileImage": "/reviewer1.jpg"
       },
       {
-        "name": "Unnati Neupane",
-        "comment": "Wonderful stay!",
+        "name": "Prashant Neupane",
+        "comment": "Will never come again.",
         "profileImage": "/reviewer2.jpg"
       }
     ],
@@ -1434,13 +1434,13 @@
     "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
     "reviews": [
       {
-        "name": "Shreya Sapkota",
-        "comment": "Great place!",
+        "name": "Shreyansh Sapkota",
+        "comment": "It was okay.",
         "profileImage": "/reviewer1.jpg"
       },
       {
-        "name": "Unnati Neupane",
-        "comment": "Wonderful stay!",
+        "name": "Prashant Neupane",
+        "comment": "The hostel was not clean",
         "profileImage": "/reviewer2.jpg"
       }
     ],
@@ -1495,13 +1495,13 @@
     "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
     "reviews": [
       {
-        "name": "Shreya Sapkota",
-        "comment": "Great place!",
+        "name": "Shreyansh Sapkota",
+        "comment": "Terrible Hostel!",
         "profileImage": "/reviewer1.jpg"
       },
       {
-        "name": "Unnati Neupane",
-        "comment": "Wonderful stay!",
+        "name": "Prashant Neupane",
+        "comment": "Will never come again.",
         "profileImage": "/reviewer2.jpg"
       }
     ],
@@ -1556,13 +1556,13 @@
     "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
     "reviews": [
       {
-        "name": "Shreya Sapkota",
-        "comment": "Great place!",
+        "name": "Shreyansh Sapkota",
+        "comment": "It was okay.",
         "profileImage": "/reviewer1.jpg"
       },
       {
-        "name": "Unnati Neupane",
-        "comment": "Wonderful stay!",
+        "name": "Prashant Neupane",
+        "comment": "The hostel was not clean",
         "profileImage": "/reviewer2.jpg"
       }
     ],
@@ -1617,13 +1617,13 @@
     "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
     "reviews": [
       {
-        "name": "Shreya Sapkota",
-        "comment": "Great place!",
+        "name": "Shreyansh Sapkota",
+        "comment": "Terrible experience!",
         "profileImage": "/reviewer1.jpg"
       },
       {
-        "name": "Unnati Neupane",
-        "comment": "Wonderful stay!",
+        "name": "Prashant Neupane",
+        "comment": "Will never come again.",
         "profileImage": "/reviewer2.jpg"
       }
     ],
@@ -1678,12 +1678,12 @@
     "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
     "reviews": [
       {
-        "name": "Shreya Sapkota",
+        "name": "Shreyansh Sapkota",
         "comment": "Great place!",
         "profileImage": "/reviewer1.jpg"
       },
       {
-        "name": "Unnati Neupane",
+        "name": "Prashant Neupane",
         "comment": "Wonderful stay!",
         "profileImage": "/reviewer2.jpg"
       }
@@ -1739,12 +1739,12 @@
     "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
     "reviews": [
       {
-        "name": "Shreya Sapkota",
+        "name": "Shreyansh Sapkota",
         "comment": "Great place!",
         "profileImage": "/reviewer1.jpg"
       },
       {
-        "name": "Unnati Neupane",
+        "name": "Prashant Neupane",
         "comment": "Wonderful stay!",
         "profileImage": "/reviewer2.jpg"
       }
@@ -1800,13 +1800,13 @@
     "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
     "reviews": [
       {
-        "name": "Shreya Sapkota",
-        "comment": "Great place!",
+        "name": "Shreyansh Sapkota",
+        "comment": "It was okay.",
         "profileImage": "/reviewer1.jpg"
       },
       {
-        "name": "Unnati Neupane",
-        "comment": "Wonderful stay!",
+        "name": "Prashant Neupane",
+        "comment": "The hostel was not clean",
         "profileImage": "/reviewer2.jpg"
       }
     ],
@@ -1861,13 +1861,13 @@
     "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
     "reviews": [
       {
-        "name": "Shreya Sapkota",
-        "comment": "Great place!",
+        "name": "Shreyansh Sapkota",
+        "comment": "Terrible Hostel!",
         "profileImage": "/reviewer1.jpg"
       },
       {
-        "name": "Unnati Neupane",
-        "comment": "Wonderful stay!",
+        "name": "Prashant Neupane",
+        "comment": "Will never come again.",
         "profileImage": "/reviewer2.jpg"
       }
     ],
@@ -1922,13 +1922,13 @@
     "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
     "reviews": [
       {
-        "name": "Shreya Sapkota",
-        "comment": "Great place!",
+        "name": "Shreyansh Sapkota",
+        "comment": "It was okay.",
         "profileImage": "/reviewer1.jpg"
       },
       {
-        "name": "Unnati Neupane",
-        "comment": "Wonderful stay!",
+        "name": "Prashant Neupane",
+        "comment": "The hostel was not clean",
         "profileImage": "/reviewer2.jpg"
       }
     ],
@@ -1983,12 +1983,12 @@
     "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
     "reviews": [
       {
-        "name": "Shreya Sapkota",
+        "name": "Shreyansh Sapkota",
         "comment": "Great place!",
         "profileImage": "/reviewer1.jpg"
       },
       {
-        "name": "Unnati Neupane",
+        "name": "Prashant Neupane",
         "comment": "Wonderful stay!",
         "profileImage": "/reviewer2.jpg"
       }
@@ -2044,13 +2044,13 @@
     "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
     "reviews": [
       {
-        "name": "Shreya Sapkota",
-        "comment": "Great place!",
+        "name": "Shreyansh Sapkota",
+        "comment": "Terrible Hostel!",
         "profileImage": "/reviewer1.jpg"
       },
       {
-        "name": "Unnati Neupane",
-        "comment": "Wonderful stay!",
+        "name": "Prashant Neupane",
+        "comment": "Will never come again.",
         "profileImage": "/reviewer2.jpg"
       }
     ],
@@ -2105,13 +2105,13 @@
     "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
     "reviews": [
       {
-        "name": "Shreya Sapkota",
-        "comment": "Great place!",
+        "name": "Shreyansh Sapkota",
+        "comment": "It was okay.",
         "profileImage": "/reviewer1.jpg"
       },
       {
-        "name": "Unnati Neupane",
-        "comment": "Wonderful stay!",
+        "name": "Prashant Neupane",
+        "comment": "The hostel was not clean",
         "profileImage": "/reviewer2.jpg"
       }
     ],
@@ -2166,12 +2166,12 @@
     "gallery": ["/gallery1.jpg", "/gallery2.jpg"],
     "reviews": [
       {
-        "name": "Shreya Sapkota",
+        "name": "Shreyansh Sapkota",
         "comment": "Great place!",
         "profileImage": "/reviewer1.jpg"
       },
       {
-        "name": "Unnati Neupane",
+        "name": "Prashant Neupane",
         "comment": "Wonderful stay!",
         "profileImage": "/reviewer2.jpg"
       }
