@@ -4,6 +4,7 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const hostelDetailRoute = require("./routes/hosteldetail");
 const shortestpathRoute = require("./routes/shortestpath");
+const axios = require("axios");
 
 dotenv.config(); // Load environment variables
 

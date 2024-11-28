@@ -80,7 +80,7 @@ const hostelsData = {
     },
   ],
 
-  "Paradise-girls-hostel": [
+  "paradise-girls-hostel": [
     {
       id: 1,
       roomType: "single",
@@ -877,26 +877,20 @@ const Roomdetails = () => {
   const navigate = useNavigate();
   const { hostelName, roomType } = useParams();
 
-  // Ensure hostelName exists in data
-  const hostelRooms = hostelsData[hostelName];
-  if (!hostelRooms) {
-    return (
-      <div className="text-center py-16">
-        <p className="text-xl text-gray-700">Hostel not found.</p>
-        <button
-          onClick={() => navigate(-1)}
-          className="mt-4 px-6 py-2 bg-[#E67E22] text-white rounded-lg hover:bg-[#D35400]"
-        >
-          Go Back
-        </button>
-      </div>
-    );
-  }
+  // Normalize hostel name to lowercase for consistent lookup
+  const hostelRooms = hostelsData[hostelName.toLowerCase()];
+  console.log(
+    "Hostel Name:",
+    hostelName,
+    "Room Type:",
+    roomType,
+    "Rooms:",
+    hostelRooms
+  );
 
-  // Find room details
-  const detail = hostelRooms.find((room) => room.roomType === roomType);
+  // Find the room details based on the room type
+  const detail = hostelRooms?.find((room) => room.roomType === roomType);
 
-  // Handle room not found
   if (!detail) {
     return (
       <div className="text-center py-16">
@@ -922,7 +916,7 @@ const Roomdetails = () => {
   return (
     <div className="bg-[#E8F8F5] py-12 px-8 rounded-lg shadow-lg">
       <h1 className="text-2xl font-bold text-center mb-8 pt-12">
-        {`Details for ${roomType} Room at ${hostelName.replace("-", " ")}`}
+        Details for {roomType} Room at {hostelName.replace("-", " ")}
       </h1>
       <Slider {...sliderSettings} className="mb-8">
         {detail.images.map((img, index) => (
@@ -935,6 +929,7 @@ const Roomdetails = () => {
           </div>
         ))}
       </Slider>
+
       <div className="bg-[#2C3E50] py-6 px-6 rounded-lg shadow-md grid grid-cols-2 sm:grid-cols-5 text-center text-white">
         {detail.features.map((feature, index) => (
           <div key={index} className="flex flex-col items-center space-y-2">

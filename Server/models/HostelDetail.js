@@ -16,7 +16,8 @@ const hostelDetailSchema = new mongoose.Schema({
         {
             name: String,
             comment: String,
-            profileImage: String
+            profileImage: String,
+            sentimentScore: { type: Number, default: 0 }, // Add sentimentScore field
         }
     ],
     events: [

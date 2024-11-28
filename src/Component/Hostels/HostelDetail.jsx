@@ -163,6 +163,7 @@ const HostelDetail = () => {
                     <p className="text-[#2C3E50] font-[poppins]">
                       {review.comment}
                     </p>
+                    <p className="text-sm text-gray-500">Sentiment Score: {review.sentimentScore}</p>
                   </div>
                 </div>
               ))}
