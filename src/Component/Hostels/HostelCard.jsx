@@ -48,6 +48,11 @@ const HostelCard = ({ hostel }) => {
           <p className="text-sm font-[poppins] text-[#2C3E50]">Rating:</p>
           <span className="text-[#E67E22]">{hostel.rating}</span>
         </div>
+         
+        <div className="mt-4">
+          <p className="text-sm font-[poppins] text-[#2C3E50]">averageSentimentScore:</p>
+          <span className="text-[#E67E22]">{hostel.averageSentimentScore}</span>
+        </div>
 
         <div className="mt-4">
           <Link to={hostelLink}>

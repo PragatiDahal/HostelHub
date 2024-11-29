@@ -1,23 +1,47 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup, Polyline } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+import ErrorBoundary from "./ErrorBoundary"; // Import ErrorBoundary
 
 const ShortestPathMap = () => {
   const [hostelData, setHostels] = useState([]); // Stores hostel data
   const [userLocation, setUserLocation] = useState(null); // Stores user's location
   const [shortestPath, setShortestPath] = useState([]); // Stores the shortest path coordinates
+  const fallbackPosition = [27.7, 85.3]; // Default position for fallback
 
-  // Fetch shortest path from backend
+  // Fetch hostel data with validation
+  const fetchHostels = async () => {
+    try {
+      const response = await axios.get("http://localhost:5000/api/hosteldetail");
+      if (response.data && Array.isArray(response.data)) {
+        setHostels(response.data);
+      } else {
+        console.error("Invalid hostel data format:", response.data);
+        setHostels([]); // Fallback to empty array
+      }
+    } catch (error) {
+      console.error("Error fetching hostels:", error);
+      setHostels([]);
+    }
+  };
+
+  // Fetch shortest path with validation
   const fetchShortestPath = async (latitude, longitude) => {
     try {
       const response = await axios.post(
         "http://localhost:5000/api/hosteldetail/shortestpath",
         { latitude, longitude }
       );
-      setShortestPath(response.data); // Response should be an array of [lat, lng] points
+      if (response.data && Array.isArray(response.data)) {
+        setShortestPath(response.data);
+      } else {
+        console.error("Invalid shortest path data format:", response.data);
+        setShortestPath([]);
+      }
     } catch (error) {
       console.error("Error calculating shortest path:", error);
-      setShortestPath([]); // Fallback to empty array on error
+      setShortestPath([]);
     }
   };
 
@@ -35,65 +59,57 @@ const ShortestPathMap = () => {
     );
   }, []);
 
-  // Fetch hostel data
-  const fetchHostels = async () => {
-    try {
-      const response = await axios.get(
-        "http://localhost:5000/api/hosteldetail"
-      );
-      const data = response.data?.data; // Use optional chaining to handle undefined errors
-      if (Array.isArray(data)) {
-        setHostels(data); // Only set hostels if data is a valid array
-      } else {
-        console.error("Hostels data is not an array:", data);
-        setHostels([]); // Set empty array to avoid errors
-      }
-    } catch (error) {
-      console.error("Error fetching hostels:", error);
-      setHostels([]); // Fallback to empty array on error
-    }
-  };
-
-  // Fetch hostels on component mount
+  // Fetch hostel data on component mount
   useEffect(() => {
     fetchHostels();
   }, []);
 
   return (
-    <MapContainer
-      center={[27.7, 85.3]}
-      zoom={13}
-      style={{ height: "100vh", width: "100%" }}
-    >
-      <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+    <ErrorBoundary>
+      <div>
+        {/* Main MapContainer */}
+        <MapContainer
+          center={fallbackPosition} // Default center coordinates
+          zoom={13}
+          style={{ height: "100vh", width: "100%" }}
+        >
+          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
-      {/* User location marker */}
-      {userLocation && (
-        <Marker position={[userLocation.latitude, userLocation.longitude]}>
-          <Popup>Your Location</Popup>
-        </Marker>
-      )}
+          {/* User location marker */}
+          {userLocation?.latitude && userLocation?.longitude && (
+            <Marker position={[userLocation.latitude, userLocation.longitude]}>
+              <Popup>Your Location</Popup>
+            </Marker>
+          )}
 
-      {/* Hostel markers */}
-      {Array.isArray(hostelData) &&
-        hostelData.map((hostel) => (
-          <Marker
-            key={hostel.name}
-            position={[hostel.location.latitude, hostel.location.longitude]} // Replace with actual API response fields
-          >
-            <Popup>
-              {hostel.name}
-              <br />
-              {hostel.location.address}
-            </Popup>
-          </Marker>
-        ))}
+          {/* Hostel markers with fallback */}
+          {Array.isArray(hostelData) &&
+            hostelData.map((hostel, index) => {
+              const { latitude, longitude } = hostel.location || {};
+              const position =
+                latitude && longitude ? [latitude, longitude] : fallbackPosition;
+              return (
+                <Marker key={index} position={position} color="red">
+                  <Popup>
+                    {hostel.name}
+                    <br />
+                    {hostel.location?.address || "No address available"}
+                  </Popup>
+                </Marker>
+              );
+            })}
 
-      {/* Shortest path polyline */}
-      {shortestPath.length > 1 && (
-        <Polyline positions={shortestPath.map((point) => [point.latitude, point.longitude])} />
-      )}
-    </MapContainer>
+          {/* Shortest path polyline */}
+          {shortestPath.length > 1 &&
+            shortestPath.every((point) => point.latitude && point.longitude) && (
+              <Polyline
+                positions={shortestPath.map((point) => [point.latitude, point.longitude])}
+                color="blue"
+              />
+            )}
+        </MapContainer>
+      </div>
+    </ErrorBoundary>
   );
 };
 

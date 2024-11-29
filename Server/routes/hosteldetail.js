@@ -36,6 +36,17 @@ router.get("/:name", async (req, res) => {
   }
 });
 
+// Get details of all hostels
+router.get("/", async (req, res) => {
+  try {
+    const hostels = await HostelDetail.find({});
+    res.json(hostels);
+  } catch (error) {
+    console.error("Error retrieving hostels:", error);
+    res.status(500).json({ message: "Error retrieving hostels", error });
+  }
+});
+
 router.get("/", async (req, res) => {
   try {
     const sortedHostels = await fetchHostelData(); // Use fetchHostelData

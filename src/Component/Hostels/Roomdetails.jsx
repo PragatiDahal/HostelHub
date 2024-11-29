@@ -12,7 +12,7 @@ const hostelsData = {
     {
       id: 1,
       roomType: "single",
-      images: ["/images/singleroom.webp", "/images/singleroom.webp"],
+      images: ["/images/room.jpg", "/images/singleroom.webp"],
       features: [
         {
           title: "Free WiFi",
@@ -35,7 +35,7 @@ const hostelsData = {
     {
       id: 2,
       roomType: "double",
-      images: ["/images/doublesharing.jpg", "/images/doublesharing.jpg"],
+      images: ["/images/room1.jpg", "/images/doublesharing.jpg"],
       features: [
         {
           title: "Free WiFi",
@@ -920,11 +920,14 @@ const Roomdetails = () => {
       </h1>
       <Slider {...sliderSettings} className="mb-8">
         {detail.images.map((img, index) => (
-          <div key={index} className="flex justify-center items-center">
+          <div
+            key={index}
+            className="flex justify-center items-center h-[400px]" // Centers content both horizontally and vertically
+          >
             <img
               src={img}
               alt={`Room Image ${index + 1}`}
-              className="rounded-lg shadow-md max-h-[400px] w-auto object-contain"
+              className="rounded-lg shadow-md max-h-full w-full object-contain" // Ensures the image is fully visible and doesn't overflow
             />
           </div>
         ))}

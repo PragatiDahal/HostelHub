@@ -65,14 +65,55 @@ app.get("/api/hostels", async (req, res) => {
       if (maxPrice) cusQuery.price.$lte = parseInt(maxPrice);
     }
 
+    // Fetch hostels based on filters
     const hostels = await Hostel.find(cusQuery);
-    res.json(hostels);
+
+    // For each hostel, fetch its detailed data and calculate average sentiment score
+    const hostelsWithSentiment = await Promise.all(
+      hostels.map(async (hostel) => {
+        try {
+          // Fetch hostel details from the detail API
+          const detailResponse = await axios.get(
+            `http://localhost:5000/api/hosteldetail/${encodeURIComponent(
+              hostel.name
+            )}`
+          );
+
+          const hostelDetails = detailResponse.data;
+
+          // Calculate the average sentiment score from the reviews
+          const reviews = hostelDetails.reviews || [];
+          const totalSentiment = reviews.reduce(
+            (sum, review) => sum + review.sentimentScore,
+            0
+          );
+          const averageSentimentScore =
+            reviews.length > 0 ? totalSentiment / reviews.length : 0;
+
+          // Return hostel data with the calculated average sentiment score
+          return {
+            ...hostel.toObject(), // Convert Mongoose document to plain object
+            averageSentimentScore,
+          };
+        } catch (error) {
+          console.error(
+            `Error fetching details for hostel: ${hostel.name}`,
+            error.message
+          );
+          return {
+            ...hostel.toObject(),
+            averageSentimentScore: 0, // Default to 0 if detail API fails
+          };
+        }
+      })
+    );
+    // Sort the hostels by averageSentimentScore in descending order
+    hostelsWithSentiment.sort((a, b) => b.averageSentimentScore - a.averageSentimentScore);
+
+    res.json(hostelsWithSentiment);
   } catch (error) {
-    if (error.response) {
-      console.error("Error fetching hostels:", error.response.data);
-    } else {
-      console.error("Error:", error.message);
-    }
+    console.error("Error fetching hostels:", error.message);
+    res.status(500).send("Server Error");
   }
 });
 

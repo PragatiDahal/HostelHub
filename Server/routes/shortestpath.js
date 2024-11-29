@@ -1,4 +1,4 @@
-//routes/shortestpath.js
+// routes/shortestpath.js
 const express = require("express");
 const router = express.Router();
 const Shortestpath = require("../models/Shortestpath");
@@ -62,6 +62,7 @@ router.get("/shortestpath/calculate", async (req, res) => {
     });
   }
 });
+
 // Fetch all shortest path data
 router.get("/shortestpath", async (req, res) => {
   try {
@@ -82,4 +83,5 @@ router.get("/shortestpath", async (req, res) => {
     });
   }
 });
+
 module.exports = router;
