@@ -1,3 +1,4 @@
+//routes/distanceRoute.js
 const express = require("express");
 const axios = require("axios");
 const router = express.Router();
@@ -25,31 +26,35 @@ function haversine(lat1, lon1, lat2, lon2) {
 router.post("/hosteldistance", async (req, res) => {
     try {
         const { userLocation } = req.body;
-        
-        if (!userLocation || !userLocation.lat || !userLocation.lon) {
+
+        if (!userLocation || userLocation.latitude == null || userLocation.longitude == null) {
             return res.status(400).json({ error: "User location is required." });
         }
 
+        const userLat = parseFloat(userLocation.latitude);
+        const userLon = parseFloat(userLocation.longitude);
+
         // Fetch hostel data
         const response = await axios.get("http://localhost:5000/api/hosteldetail");
-        const hostels = response.data; // Assuming API returns an array of hostels
-        console.log("hostels");
-        
+        const hostels = response.data;
+
         // Calculate distance for each hostel
         const hostelsWithDistance = hostels.map((hostel) => {
             const { location } = hostel;
+            if (!location || !location.latitude || !location.longitude) return null;
+
             const distance = haversine(
-                userLocation.lat,
-                userLocation.lon,
-                location.lat,
-                location.lon
+                userLat,
+                userLon,
+                parseFloat(location.latitude),
+                parseFloat(location.longitude)
             );
 
             return {
                 ...hostel,
-                distance, // Add distance to each hostel object
+                distance,
             };
-        });
+        }).filter(Boolean); // Remove null values if location is missing
 
         // Sort hostels by distance
         hostelsWithDistance.sort((a, b) => a.distance - b.distance);

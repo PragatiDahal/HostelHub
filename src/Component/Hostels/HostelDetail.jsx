@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import reviewImage from "../../assets/bug2.png"; // Import your default review image
 
+
 const HostelDetail = () => {
   const { hostelName } = useParams(); // Get hostel name from URL
   const [hostelData, setHostelData] = useState(null);
@@ -86,7 +87,9 @@ const HostelDetail = () => {
                   </p>
                   {/* Add View Details Button */}
                   <button className="mt-2 px-4 py-2 bg-[#1ABC9C] text-white rounded-lg hover:bg-[#16A085] font-[poppins]">
-                  <Link to={`/hosteldetail/${hostelName}/${roomType}`}>View Details</Link>
+                    <Link to={`/hosteldetail/${hostelName}/${roomType}`}>
+                      View Details
+                    </Link>
                   </button>
                 </div>
               </div>
@@ -163,7 +166,9 @@ const HostelDetail = () => {
                     <p className="text-[#2C3E50] font-[poppins]">
                       {review.comment}
                     </p>
-                    <p className="text-sm text-gray-500">Sentiment Score: {review.sentimentScore}</p>
+                    <p className="text-sm text-gray-500">
+                      Sentiment Score: {review.sentimentScore}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -216,7 +221,7 @@ const HostelDetail = () => {
 
       {/* Location Section */}
       <div className="mt-10">
-        <h3 className="font-bold text-lg text-[#2C3E50] font-[poppins]">
+      <h3 className="font-bold text-lg text-[#2C3E50] font-[poppins]">
           Location
         </h3>
         <iframe
