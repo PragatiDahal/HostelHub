@@ -231,7 +231,7 @@ const HostelDetail = () => {
           className="rounded-lg mt-4"
         ></iframe>
         <div className="flex justify-center mt-6">
-          <Link to={`/shortestpath/${hostelName}`}>
+          <Link to={`/distancepath/${hostelName}`}>
             <button className="px-6 py-3 bg-[#1ABC9C] text-white rounded-lg hover:bg-[#16A085] font-[poppins]">
               Show the Route on Map
             </button>

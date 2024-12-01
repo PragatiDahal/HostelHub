@@ -1,9 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
 const hostelDetailRoute = require("./routes/hosteldetail");
-const shortestpathRoute = require("./routes/shortestpath");
+const distanceRoute = require("./routes/distanceRoute");
+const hostelRegisterRoutes = require("./routes/hostelregister");
+const signupRoute = require("./routes/signuppage");
+const loginRoute = require("./routes/loginpage");
 const axios = require("axios");
 
 dotenv.config(); // Load environment variables
@@ -12,6 +16,7 @@ const app = express();
 
 // Middleware
 app.use(express.json());
+app.use(bodyParser.json());
 app.use(cors());
 
 // Connect to MongoDB
@@ -25,7 +30,11 @@ mongoose
 
 // Routes
 app.use("/api/hosteldetail", hostelDetailRoute);
-app.use("/api", shortestpathRoute);
+// app.use("/api", shortestpathRoute);
+app.use("/api", distanceRoute);
+app.use("/api", hostelRegisterRoutes);
+app.use("/api/signup", signupRoute);
+app.use("/api/login", loginRoute);
 
 // Hostel Schema and Model
 const hostelSchema = new mongoose.Schema({
@@ -68,6 +77,7 @@ app.get("/api/hostels", async (req, res) => {
     // Fetch hostels based on filters
     const hostels = await Hostel.find(cusQuery);
 
+
     // For each hostel, fetch its detailed data and calculate average sentiment score
     const hostelsWithSentiment = await Promise.all(
       hostels.map(async (hostel) => {
@@ -108,7 +118,9 @@ app.get("/api/hostels", async (req, res) => {
       })
     );
     // Sort the hostels by averageSentimentScore in descending order
-    hostelsWithSentiment.sort((a, b) => b.averageSentimentScore - a.averageSentimentScore);
+    hostelsWithSentiment.sort(
+      (a, b) => b.averageSentimentScore - a.averageSentimentScore
+    );
 
     res.json(hostelsWithSentiment);
   } catch (error) {

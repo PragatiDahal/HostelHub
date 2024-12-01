@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"; // Import React for using React.Component
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -11,16 +11,16 @@ class ErrorBoundary extends React.Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    console.error("Error caught by ErrorBoundary:", error, errorInfo);
+    console.error("ErrorBoundary caught an error:", error, errorInfo);
   }
 
   render() {
     if (this.state.hasError) {
-      return <h2>Something went wrong while loading the map.</h2>;
+      return <h1>Something went wrong.</h1>;
     }
-
     return this.props.children;
   }
 }
 
 export default ErrorBoundary;
+

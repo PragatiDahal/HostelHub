@@ -111,7 +111,7 @@ const Featured = () => {
               <HostelCard key={index} hostel={hostel} />
             ))
           ) : (
-            <p>No hostels found.</p>
+            <p>No hostels searched.</p>
           )}
         </div>
 
