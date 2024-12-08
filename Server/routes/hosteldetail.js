@@ -4,6 +4,9 @@ const router = express.Router();
 const HostelDetail = require("../models/HostelDetail");
 const fetchHostelData = require("../utils/fetchHostelDetail");
 const calculateSentiment = require("../utils/calculateSentiment");
+const Sentiment = require("sentiment");
+const sentiment = new Sentiment();
+
 
 router.get("/:name", async (req, res) => {
   const name = req.params.name.replace(/-/g, " ").toLowerCase();
@@ -35,6 +38,50 @@ router.get("/:name", async (req, res) => {
     res.status(500).json({ message: "Error retrieving hostel details", error });
   }
 });
+
+router.post("/:name/review", async (req, res) => {
+  const name = req.params.name.replace(/-/g, " ").toLowerCase();
+  const { name: reviewerName, comment, profileImage } = req.body;
+
+  if (!reviewerName || !comment) {
+    return res.status(400).json({ message: "Name and comment are required" });
+  }
+
+  try {
+    const hostel = await HostelDetail.findOne({
+      name: new RegExp(`^${name}$`, "i"),
+    });
+
+    if (!hostel) {
+      return res.status(404).json({ message: "Hostel not found" });
+    }
+
+    // Add the new review
+    const newReview = {
+      name: reviewerName,
+      comment,
+      profileImage: profileImage || null, // Optional field
+    };
+
+    // Add sentiment score to the new review
+    const Sentiment = require("sentiment");
+    const sentiment = new Sentiment();
+    const { score } = sentiment.analyze(comment);
+    newReview.sentimentScore = score;
+
+    hostel.reviews.push(newReview);
+
+    await hostel.save(); // Save the updated hostel document
+
+    res
+      .status(200)
+      .json({ message: "Review added successfully", review: newReview });
+  } catch (error) {
+    console.error("Error adding review:", error);
+    res.status(500).json({ message: "Error adding review", error });
+  }
+});
+
 
 // Get details of all hostels
 router.get("/", async (req, res) => {

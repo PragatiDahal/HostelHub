@@ -1,36 +1,72 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import React, { useState, useEffect, useRef } from "react";
+import { Link, useParams } from "react-router-dom";
 import reviewImage from "../../assets/bug2.png"; // Import your default review image
-
+import axios from "axios";
 
 const HostelDetail = () => {
   const { hostelName } = useParams(); // Get hostel name from URL
   const [hostelData, setHostelData] = useState(null);
   const [activeTab, setActiveTab] = useState("facilities");
   const [error, setError] = useState(null); // For error handling
+  const [newReview, setNewReview] = useState({ name: "", comment: "" });
+  const [successMessage, setSuccessMessage] = useState("");
+  const [loading, setLoading] = useState(true);
+  const reviewsRef = useRef();
 
   useEffect(() => {
-    // Fetch hostel details by name from API
-    fetch(`http://localhost:5000/api/hosteldetail/${hostelName}`)
-      .then((res) => {
-        if (!res.ok) throw new Error("Failed to fetch hostel details");
-        return res.json();
+    axios
+      .get(`http://localhost:5000/api/hosteldetail/${hostelName}`)
+      .then((response) => {
+        setHostelData(response.data);
+        setLoading(false);
       })
-      .then((data) => {
-        setHostelData(data);
-        setError(null); // Clear any previous errors
-      })
-      .catch((error) => setError(error.message));
+      .catch((err) => {
+        setError("Failed to load hostel data");
+        setLoading(false);
+      });
   }, [hostelName]);
 
-  if (error) {
-    return <p className="text-red-500">Error: {error}</p>;
-  }
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setNewReview((prev) => ({ ...prev, [name]: value }));
+  };
 
-  if (!hostelData) {
-    return <p>Loading...</p>;
-  }
+  const handleSubmitReview = (e) => {
+    e.preventDefault();
+
+    if (!newReview.name || !newReview.comment) {
+      setError("Please fill in all fields");
+      return;
+    }
+
+    axios
+      .post(
+        `http://localhost:5000/api/hosteldetail/${hostelName}/review`,
+        newReview
+      )
+      .then((response) => {
+        const data = response.data;
+        setHostelData((prev) => ({
+          ...prev,
+          reviews: [...(prev.reviews || []), data.review],
+        }));
+        setSuccessMessage("Review added successfully!");
+        setNewReview({ name: "", comment: "" });
+        nameInputRef.current.focus();
+        // Scroll to the reviews section
+        if (reviewsRef.current) {
+          reviewsRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+      })
+      .catch((error) => {
+        const message =
+          error.response?.data?.message || "Failed to add review. Try again.";
+        setError(message);
+      });
+  };
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p className="text-red-500">Error: {error}</p>;
 
   const tabs = ["facilities", "gallery", "reviews", "events", "contact"];
 
@@ -149,31 +185,58 @@ const HostelDetail = () => {
             </div>
           )}
 
-          {/* Reviews Tab */}
-          {activeTab === "reviews" && hostelData.reviews && (
-            <div className="space-y-4">
-              {hostelData.reviews.map((review, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <img
-                    src={review.profileImage || reviewImage}
-                    alt="Reviewer"
-                    className="w-12 h-12 rounded-full"
+          <div className="p-6">
+            {/* Reviews Tab */}
+            {activeTab === "reviews" && (
+              <div>
+                <h3 className="font-bold text-lg text-[#2C3E50] font-[poppins]">
+                  {hostelData?.name} Reviews
+                </h3>
+                {successMessage && (
+                  <p className="text-green-500 font-[poppins]">
+                    {successMessage}
+                  </p>
+                )}
+                <form onSubmit={handleSubmitReview} className="space-y-4 mt-4">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    value={newReview.name}
+                    onChange={handleInputChange}
+                    className="w-full p-2 border rounded"
+                    required
                   />
-                  <div>
-                    <h3 className="font-semibold text-[#2C3E50] font-[poppins]">
-                      {review.name}
-                    </h3>
-                    <p className="text-[#2C3E50] font-[poppins]">
-                      {review.comment}
-                    </p>
-                    <p className="text-sm text-gray-500">
-                      Sentiment Score: {review.sentimentScore}
-                    </p>
-                  </div>
+                  <textarea
+                    name="comment"
+                    placeholder="Your Review"
+                    value={newReview.comment}
+                    onChange={handleInputChange}
+                    className="w-full p-2 border rounded"
+                    required
+                  />
+                  <button
+                    type="submit"
+                    className="px-4 py-2 bg-[#1ABC9C] text-white rounded-lg hover:bg-[#16A085]"
+                  >
+                    Submit Review
+                  </button>
+                </form>
+                <div className="space-y-4 mt-6">
+                  {/* Render existing reviews */}
+                  {hostelData.reviews.map((review, index) => (
+                    <div key={index} className="border p-4 rounded shadow">
+                      <h4 className="font-bold">{review.name}</h4>
+                      <p>{review.comment}</p>
+                      <p className="text-sm text-gray-500">
+                        Sentiment Score: {review.sentimentScore}
+                      </p>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          )}
+              </div>
+            )}
+          </div>
 
           {/* Events Tab */}
           {activeTab === "events" && hostelData.events && (
@@ -221,7 +284,7 @@ const HostelDetail = () => {
 
       {/* Location Section */}
       <div className="mt-10">
-      <h3 className="font-bold text-lg text-[#2C3E50] font-[poppins]">
+        <h3 className="font-bold text-lg text-[#2C3E50] font-[poppins]">
           Location
         </h3>
         <iframe
