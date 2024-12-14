@@ -12,6 +12,7 @@ const HostelDetail = () => {
   const [successMessage, setSuccessMessage] = useState("");
   const [loading, setLoading] = useState(true);
   const reviewsRef = useRef();
+  const nameInputRef = useRef(null);
 
   useEffect(() => {
     axios
@@ -52,7 +53,11 @@ const HostelDetail = () => {
         }));
         setSuccessMessage("Review added successfully!");
         setNewReview({ name: "", comment: "" });
-        nameInputRef.current.focus();
+
+        // Refocus name input
+        if (nameInputRef.current) {
+          nameInputRef.current.focus();
+        }
         // Scroll to the reviews section
         if (reviewsRef.current) {
           reviewsRef.current.scrollIntoView({ behavior: "smooth" });
@@ -135,9 +140,16 @@ const HostelDetail = () => {
 
       {/*  "Book Now" Button */}
       <div className="flex justify-center mt-6">
-        <button className="px-6 py-3 bg-[#1ABC9C] text-white rounded-lg hover:bg-[#16A085] font-[poppins]">
-          Book Now
-        </button>
+        <Link
+          to={{
+            pathname: "/hostelbooking",
+            state: { selectedHostel: hostelName, hostelData }, // Pass hostelName and other data if needed
+          }}
+        >
+          <button className="px-6 py-3 bg-[#1ABC9C] text-white rounded-lg hover:bg-[#16A085] font-[poppins]" >
+            Book Now
+          </button>
+        </Link>
       </div>
 
       {/* Tabs Section */}
@@ -284,7 +296,7 @@ const HostelDetail = () => {
 
       {/* Location Section */}
       <div className="mt-10">
-        <h3 className="font-bold text-lg text-[#2C3E50] font-[poppins]">
+        {/* <h3 className="font-bold text-lg text-[#2C3E50] font-[poppins]">
           Location
         </h3>
         <iframe
@@ -297,7 +309,7 @@ const HostelDetail = () => {
           aria-hidden="false"
           tabIndex="0"
           className="rounded-lg mt-4"
-        ></iframe>
+        ></iframe> */}
         <div className="flex justify-center mt-6">
           <Link to={`/distancepath/${hostelName}`}>
             <button className="px-6 py-3 bg-[#1ABC9C] text-white rounded-lg hover:bg-[#16A085] font-[poppins]">

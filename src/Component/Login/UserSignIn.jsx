@@ -45,9 +45,8 @@ const UserSignIn = () => {
           localStorage.setItem("token", needToken);
           setToken(needToken);
           console.log(token);
-
           login();
-          setTimeout(() => navigate("/home"), 2000);
+          navigate("/home"); // Removed setTimeout
         } else {
           toast.error(result.data.message || "Login failed");
         }

@@ -25,38 +25,46 @@ import HostelForm from "./Component/Admin/HostelForm";
 import DistancePath from "./Component/Hostels/DistancePath";
 import Roomdetails from "./Component/Hostels/Roomdetails";
 import { AuthProvider } from "./Component/Contexts/AuthContext";
+import { StoreContextProvider } from "./Component/Contexts/StoreContext";
+import { HostelBooking } from "./Component/Hostels/HostelBooking";
 function App() {
   return (
     <>
+    <StoreContextProvider>
       <Router>
         <AuthProvider>
-        <Navbar />
-        <Routes>
-          <Route path="*" element={<Navigate to="/" />} />
-          <Route path="/" element={<Home />} />
-          <Route path="usersignin" element={<UserSignIn />} />
-          <Route path="usersignup" element={<UserSignUp />} />
-          <Route path="adminsignin" element={<AdminSignIn />} />
-          <Route path="hostelregister" element={<HostelRegister />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="hostels" element={<Hostels />} />
-          <Route path="blog" element={<Blog />} />
-          <Route path="blog/:id" element={<BlogDetail />} />
-          <Route path="uploadblog" element={<UploadBlog />} />
-          {/* Route for Hostel1 which handles the list and detail view */}
-          <Route path="/hosteldetail/*" element={<Hostel1 />} />
-          <Route
-            path="/hosteldetail/:hostelName/:roomType"
-            element={<Roomdetails />}
-          />
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="hostelform" element={<HostelForm />} />
-          <Route path="/distancepath/:hostelName" element={<DistancePath />} />
-        </Routes>
-        <Footer />
+          <Navbar />
+          <Routes>
+            <Route path="*" element={<Navigate to="/" />} />
+            <Route path="/" element={<Home />} />
+            <Route path="usersignin" element={<UserSignIn />} />
+            <Route path="usersignup" element={<UserSignUp />} />
+            <Route path="adminsignin" element={<AdminSignIn />} />
+            <Route path="hostelregister" element={<HostelRegister />} />
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="hostels" element={<Hostels />} />
+            <Route path="blog" element={<Blog />} />
+            <Route path="blog/:id" element={<BlogDetail />} />
+            <Route path="uploadblog" element={<UploadBlog />} />
+            {/* Route for Hostel1 which handles the list and detail view */}
+            <Route path="/hosteldetail/*" element={<Hostel1 />} />
+            <Route
+              path="/hosteldetail/:hostelName/:roomType"
+              element={<Roomdetails />}
+            />
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="hostelform" element={<HostelForm />} />
+            <Route
+              path="/distancepath/:hostelName"
+              element={<DistancePath />}
+            />
+            <Route path="/hostelbooking" element={<HostelBooking />} />
+          </Routes>
+          <Footer />
         </AuthProvider>
       </Router>
+      </StoreContextProvider>
     </>
   );
 }

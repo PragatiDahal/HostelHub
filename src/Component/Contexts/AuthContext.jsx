@@ -18,7 +18,9 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   // Login function: save token to localStorage and update state
-  const login = () => {
+  const login = (userToken) => {
+    setToken(userToken);
+    localStorage.setItem("token", userToken); // Save token to localStorage
     setIsLoggedIn(true);
   };
 
@@ -39,4 +41,5 @@ export const AuthProvider = ({ children }) => {
 };
 
 export const useAuth = () => {
-  return React.useContext(AuthContext);}
+  return React.useContext(AuthContext);
+};

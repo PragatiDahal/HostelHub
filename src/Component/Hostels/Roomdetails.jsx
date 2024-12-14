@@ -894,7 +894,7 @@ const Roomdetails = () => {
   if (!detail) {
     return (
       <div className="text-center py-16">
-        <p className="text-xl text-gray-700">Oops! Room details not found.</p>
+        <p className="text-xl text-gray-700 font-[poppins]">Oops! Room details not found.</p>
         <button
           onClick={() => navigate(-1)}
           className="mt-4 px-6 py-2 bg-[#E67E22] text-white rounded-lg hover:bg-[#D35400]"
@@ -915,7 +915,7 @@ const Roomdetails = () => {
 
   return (
     <div className="bg-[#E8F8F5] py-12 px-8 rounded-lg shadow-lg">
-      <h1 className="text-2xl font-bold text-center mb-8 pt-12">
+      <h1 className="text-2xl font-bold text-center mb-8 pt-12 font-[poppins]">
         Details for {roomType} Room at {hostelName.replace("-", " ")}
       </h1>
       <Slider {...sliderSettings} className="mb-8">
@@ -933,18 +933,18 @@ const Roomdetails = () => {
         ))}
       </Slider>
 
-      <div className="bg-[#2C3E50] py-6 px-6 rounded-lg shadow-md grid grid-cols-2 sm:grid-cols-5 text-center text-white">
+      <div className="bg-[#2C3E50] py-6 px-6 rounded-lg shadow-md grid grid-cols-2 sm:grid-cols-5 text-center text-white font-[poppins]">
         {detail.features.map((feature, index) => (
           <div key={index} className="flex flex-col items-center space-y-2">
             <div>{feature.icon}</div>
-            <p className="font-semibold text-sm">{feature.title}</p>
+            <p className="font-semibold text-sm font-[poppins]">{feature.title}</p>
           </div>
         ))}
       </div>
       <div className="text-center mt-8">
         <button
           onClick={() => navigate(-1)}
-          className="px-6 py-2 bg-[#2C3E50] text-white rounded-lg hover:bg-[#34495E]"
+          className="px-6 py-2 bg-[#2C3E50] text-white rounded-lg hover:bg-[#34495E] font-[poppins]"
         >
           Back to Rooms
         </button>

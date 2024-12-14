@@ -8,6 +8,7 @@ const distanceRoute = require("./routes/distanceRoute");
 const hostelRegisterRoutes = require("./routes/hostelregister");
 const signupRoute = require("./routes/signuppage");
 const loginRoute = require("./routes/loginpage");
+const bookingRoutes = require("./routes/bookingRoutes");
 const axios = require("axios");
 
 dotenv.config(); // Load environment variables
@@ -35,6 +36,7 @@ app.use("/api", distanceRoute);
 app.use("/api", hostelRegisterRoutes);
 app.use("/api/signup", signupRoute);
 app.use("/api/login", loginRoute);
+app.use("/api", bookingRoutes);
 
 // Hostel Schema and Model
 const hostelSchema = new mongoose.Schema({
