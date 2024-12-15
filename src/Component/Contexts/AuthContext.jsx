@@ -1,45 +1,70 @@
-import React, { createContext, useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { createContext, useState, useContext, useEffect } from "react";
 
+// Create AuthContext
 const AuthContext = createContext();
 
+// Custom hook to access the AuthContext
+export const useAuth = () => {
+  return useContext(AuthContext);
+};
+
+// AuthProvider component
 export const AuthProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [token, setToken] = useState(null);
-  const navigate = useNavigate();
+  const [userInfo, setUserInfo] = useState({});
 
-  // Check for a token in localStorage on component mount
+  // Load token and user info from localStorage on initial render
   useEffect(() => {
-    const storedToken = localStorage.getItem("token");
+    const storedToken = localStorage.getItem("authToken");
+    const storedUserInfo = localStorage.getItem("userInfo");
+
     if (storedToken) {
-      setToken(storedToken);
       setIsLoggedIn(true);
+      setToken(storedToken);
+    }
+
+    if (storedUserInfo) {
+      try {
+        const parsedUserInfo = JSON.parse(storedUserInfo);
+        setUserInfo(parsedUserInfo);
+      } catch (error) {
+        console.error("Failed to parse userInfo from localStorage:", error);
+      }
     }
   }, []);
 
-  // Login function: save token to localStorage and update state
-  const login = (userToken) => {
-    setToken(userToken);
-    localStorage.setItem("token", userToken); // Save token to localStorage
+  // Login method
+  const login = (newToken, newUserInfo) => {
     setIsLoggedIn(true);
+    setToken(newToken);
+    setUserInfo(newUserInfo);
+
+    // Store token and user info in localStorage
+    localStorage.setItem("authToken", newToken);
+    localStorage.setItem("userInfo", JSON.stringify(newUserInfo));
   };
 
-  // Logout function: clear token from localStorage and reset state
+  // Logout method
   const logout = () => {
-    setToken(null);
-    localStorage.removeItem("token");
     setIsLoggedIn(false);
-    navigate("/"); // Redirect to home page after logging out
+    setToken(null);
+    setUserInfo({});
+    localStorage.removeItem("authToken");
+    localStorage.removeItem("userInfo");
   };
 
   return (
-    <AuthContext.Provider value={{ isLoggedIn, login, logout, token }}>
-      {console.log("AuthContext value:", { isLoggedIn, login, logout, token })}
+    <AuthContext.Provider
+      value={{
+        isLoggedIn,
+        token,
+        userInfo,
+        login,
+        logout,
+      }}
+    >
       {children}
     </AuthContext.Provider>
   );
-};
-
-export const useAuth = () => {
-  return React.useContext(AuthContext);
 };

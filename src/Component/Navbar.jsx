@@ -1,3 +1,4 @@
+// Navbar.jsx
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes, FaUser } from "react-icons/fa";
@@ -7,7 +8,7 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [dropdown, setDropdown] = useState(false);
   const [logoutMessage, setLogoutMessage] = useState(false); // State for logout message
-  const { isLoggedIn, logout } = useAuth(); // Get login status and logout function
+  const { isLoggedIn, logout } = useAuth() || {}; // Safely destructure
 
   const Links = [
     { id: 1, link: "home" },
@@ -75,10 +76,7 @@ const Navbar = () => {
               ) : (
                 <>
                   <li className="px-4 py-2 hover:bg-[#2C3E50]">
-                    <Link
-                      to="/usersignin"
-                      onClick={() => setDropdown(false)}
-                    >
+                    <Link to="/usersignin" onClick={() => setDropdown(false)}>
                       User Login
                     </Link>
                   </li>
@@ -91,10 +89,7 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li className="px-4 py-2 hover:bg-[#2C3E50]">
-                    <Link
-                      to="/adminsignin"
-                      onClick={() => setDropdown(false)}
-                    >
+                    <Link to="/adminsignin" onClick={() => setDropdown(false)}>
                       Admin Login
                     </Link>
                   </li>

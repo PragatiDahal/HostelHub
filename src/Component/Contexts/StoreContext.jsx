@@ -5,7 +5,7 @@ export const StoreContext = createContext(null);
 
 export const StoreContextProvider = (props) => {
   const [token, setToken] = useState("");
-  const [selectedHostel, setSelectedHostel] = useState(null);
+  // const [selectedHostel, setSelectedHostel] = useState(null);
   const [userInfo, setUserInfo] = useState({});
 
   // Load token from localStorage on initial render
@@ -19,8 +19,6 @@ export const StoreContextProvider = (props) => {
   const contextValue = {
     token, 
     setToken, 
-    selectedHostel, 
-    setSelectedHostel, 
     userInfo, 
     setUserInfo,
   };

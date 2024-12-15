@@ -140,13 +140,8 @@ const HostelDetail = () => {
 
       {/*  "Book Now" Button */}
       <div className="flex justify-center mt-6">
-        <Link
-          to={{
-            pathname: "/hostelbooking",
-            state: { selectedHostel: hostelName, hostelData }, // Pass hostelName and other data if needed
-          }}
-        >
-          <button className="px-6 py-3 bg-[#1ABC9C] text-white rounded-lg hover:bg-[#16A085] font-[poppins]" >
+        <Link to="/hostelbooking" state={{ selectedHostel: hostelName }}>
+          <button className="px-6 py-3 bg-[#1ABC9C] text-white rounded-lg hover:bg-[#16A085] font-[poppins]">
             Book Now
           </button>
         </Link>

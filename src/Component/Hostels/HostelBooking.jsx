@@ -1,87 +1,102 @@
 import React, { useState, useContext, useEffect } from "react";
-import { StoreContext } from "../Contexts/StoreContext";
-// import { useAuth } from "../Contexts/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { useAuth } from "../Contexts/AuthContext";
+import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 
-export const HostelBooking = () => {
-  const { selectedHostel, setSelectedHostel, userInfo, setUserInfo, token } =
-    useContext(StoreContext);
-  // const [redirectMessage, setRedirectMessage] = useState("");
-
-  const [error, setError] = useState({});
-  // const { isLoggedIn } = useAuth;
+const HostelBooking = () => {
+  const { token, userInfo, logout } = useAuth(); // Get token and user info
   const navigate = useNavigate();
+  const location = useLocation();
+  const [hostelDetails, setHostelDetails] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState({});
+  const [userInfoState, setUserInfo] = useState({
+    userName: "",
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+  });
 
-  // Redirect if the user is not logged in
-  // useEffect(() => {
-  //   if (!isLoggedIn) {
-  //     setRedirectMessage("You need to log in to book the hostel."); // Set the message
-  //     navigate("/usersignin", { state: { message: "You need to log in to book the hostel." } });
-  //   }
-  //   else {
-  //     // User is logged in: Navigate to hostel booking page
-  //     navigate("/hostelbooking");
-  //   }
-  // }, [isLoggedIn, navigate]);
+  const hostelName = location.state?.selectedHostel;
 
+  useEffect(() => {
+    if (!token) {
+      navigate("/usersignin", {
+        state: { message: "You need to log in to book the hostel." },
+      });
+    } else if (hostelName) {
+      fetchHostelDetails(hostelName);
+    } else {
+      navigate("/hostels", {
+        state: { message: "Please select a hostel to proceed with booking." },
+      });
+    }
+  }, [hostelName, token, navigate]);
+
+  const fetchHostelDetails = async (hostelName) => {
+    try {
+      const response = await axios.get(
+        `http://localhost:5000/api/hosteldetail/${hostelName}`
+      );
+      setHostelDetails(response.data);
+    } catch (error) {
+      console.error("Error fetching hostel details:", error);
+    }
+  };
+
+  // Handle user info changes
+  const handleUserInfoChange = (e) => {
+    const { name, value } = e.target;
+    setUserInfo((prev) => ({ ...prev, [name]: value }));
+  };
+
+  // Validate form input
   const validate = () => {
     let formErrors = {};
-    // Validate userName
-    if (!userInfo.userName?.trim()) {
-      formErrors.userName = "Username is Required *";
-    }
-    if (!userInfo.firstName.trim()) {
-      formErrors.firstName = "First Name is Required *";
-    }
-    if (!userInfo.lastName.trim()) {
-      formErrors.lastName = "Last Name is Required *";
-    }
-    if (!userInfo.email.trim()) {
-      formErrors.email = "Email is Required *";
+    if (!userInfoState.userName?.trim())
+      formErrors.userName = "Username is required *";
+    if (!userInfoState.firstName?.trim())
+      formErrors.firstName = "Firstname is required *";
+    if (!userInfoState.lastName?.trim())
+      formErrors.lastName = "Lastname is required *";
+    if (!userInfoState.email?.trim()) {
+      formErrors.email = "Email is required *";
     } else if (
-      !/^([A-Za-z0-9]+(?:[.#_][A-Za-z\d]+)*@[A-Za-z]+)(\.[A-Za-z]{2,3})$/.test(
-        userInfo.email
-      )
+      !/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/i.test(userInfoState.email)
     ) {
-      formErrors.email = "Incorrect email format";
+      formErrors.email = "Invalid email format";
     }
-    if (!userInfo.phoneNumber.trim()) {
-      formErrors.phoneNumber = "Phone number is Required *";
-    } else if (!/^[0-9]{10}$/.test(userInfo.phoneNumber)) {
-      formErrors.phoneNumber = "Invalid phone Number";
+    if (!userInfoState.phoneNumber?.trim())
+      formErrors.phoneNumber = "Phone number is required *";
+    else if (!/^\d{10}$/.test(userInfoState.phoneNumber)) {
+      formErrors.phoneNumber = "Invalid phone number";
     }
     return formErrors;
   };
 
-  const handleUserInfoChange = (e) => {
-    const { value, name } = e.target;
-    setUserInfo((prevInfo) => ({ ...prevInfo, [name]: value }));
-    setError((prevErr) => ({ ...prevErr, [name]: "" }));
-  };
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formErrors = validate();
+    if (Object.keys(formErrors).length > 0) {
+      setError(formErrors);
+      return;
+    }
 
-  const handleProceedToBooking = async () => {
-    const validation = validate();
-    if (Object.keys(validation).length > 0) {
-      setError(validation);
-    } else {
-      try {
-        const result = await axios.post(
-          "http://localhost:5000/api/hostelBooking",
-          {
-            userName: userInfo.userName, // Extract userName
-            hostelName: selectedHostel.name, // Extract hostelName
-          },
-          {
-            headers: { Authorization: `Bearer ${token}` },
-          }
-        );
-        console.log(result);
-        setSelectedHostel(null);
-        navigate("/booking-confirmation");
-      } catch (error) {
-        console.error(error);
-      }
+    setIsLoading(true);
+    try {
+      await axios.post("http://localhost:5000/api/hostelbooking", {
+        userInfo: userInfoState,
+        hostelName: hostelName,
+      });
+      setIsLoading(false);
+      alert("Booking successful");
+      navigate("/confirmation");
+    } catch (err) {
+      setIsLoading(false);
+      console.error(err);
+      alert("Booking failed. Please try again.");
     }
   };
 
@@ -90,9 +105,9 @@ export const HostelBooking = () => {
       {/* User Info Form */}
       <div className="lg:w-1/2 p-6 bg-[#E8F8F5] shadow-lg rounded-lg">
         <h2 className="text-2xl font-semibold mb-4 font-[poppins] text-[#2C3E50]">
-          Personal Information
+          Hostel Booking
         </h2>
-        <form className="space-y-4">
+        <form className="space-y-4" onSubmit={handleSubmit}>
           <div>
             <label className="block font-medium font-[poppins] text-[#2C3E50]">
               Username
@@ -100,7 +115,7 @@ export const HostelBooking = () => {
             <input
               type="text"
               name="userName"
-              value={userInfo.userName || ""}
+              value={userInfoState.userName || ""}
               onChange={handleUserInfoChange}
               placeholder="Enter your username"
               className="w-full p-2 border border-gray-300 rounded-md font-[poppins]"
@@ -119,7 +134,7 @@ export const HostelBooking = () => {
             <input
               type="text"
               name="firstName"
-              value={userInfo.firstName || ""}
+              value={userInfoState.firstName || ""}
               onChange={handleUserInfoChange}
               placeholder="Enter your first name"
               className="w-full p-2 border border-gray-300 rounded-md font-[poppins]"
@@ -137,7 +152,7 @@ export const HostelBooking = () => {
             <input
               type="text"
               name="lastName"
-              value={userInfo.lastName || ""}
+              value={userInfoState.lastName || ""}
               onChange={handleUserInfoChange}
               placeholder="Enter your last name"
               className="w-full p-2 border border-gray-300 rounded-md font-[poppins] text-[#2C3E50]"
@@ -155,7 +170,7 @@ export const HostelBooking = () => {
             <input
               type="email"
               name="email"
-              value={userInfo.email || ""}
+              value={userInfoState.email || ""}
               onChange={handleUserInfoChange}
               placeholder="Enter your email"
               className="w-full p-2 border border-gray-300 rounded-md font-[poppins] text-[#2C3E50]"
@@ -173,7 +188,7 @@ export const HostelBooking = () => {
             <input
               type="text"
               name="phoneNumber"
-              value={userInfo.phoneNumber || ""}
+              value={userInfoState.phoneNumber || ""}
               onChange={handleUserInfoChange}
               placeholder="Enter your phone number"
               className="w-full p-2 border border-gray-300 rounded-md font-[poppins]"
@@ -184,6 +199,13 @@ export const HostelBooking = () => {
               </p>
             )}
           </div>
+          <button
+            type="submit"
+            disabled={isLoading}
+            className={`mt-4 w-full py-2 px-4 rounded-md font-[poppins] text-white ${isLoading ? "bg-gray-400 cursor-not-allowed" : "bg-[#2C3E50] hover:bg-[#34495E]"}`}
+          >
+            {isLoading ? "Submitting..." : "Proceed to Book"}
+          </button>
         </form>
       </div>
 
@@ -192,32 +214,24 @@ export const HostelBooking = () => {
         <h2 className="text-2xl font-semibold mb-4 font-[poppins] text-[#2C3E50]">
           Booking Summary
         </h2>
-        {selectedHostel ? (
+        {hostelDetails ? (
           <div>
-            <p className="text-lg">Hostel Name: {selectedHostel.name}</p>
-            <p className="text-lg">Location: {selectedHostel.location}</p>
-            <p className="text-lg">Price: Rs. {selectedHostel.price}/month</p>
-            <p className="text-lg">Room Type: {selectedHostel.roomType}</p>
+            <p className="text-lg">Hostel Name: {hostelDetails.name}</p>
+            <p className="text-lg">Location: {hostelDetails.location?.address}</p>
           </div>
         ) : (
           <p>No hostel selected.</p>
         )}
-        {userInfo ? (
+        {userInfoState ? (
           <div>
-            <p>User: {userInfo.userName}</p>
+            <p>Welcome {userInfoState.userName}</p>
           </div>
         ) : (
           <p>Please log in.</p>
         )}
-        <button
-          type="button"
-          onClick={handleProceedToBooking}
-          className="mt-6 w-full bg-[#2C3E50] text-white font-semibold py-2 px-4 rounded-md hover:bg-[#34495E] font-[poppins]"
-        >
-          Proceed to Book
-        </button>
       </div>
     </div>
   );
 };
+
 export default HostelBooking;

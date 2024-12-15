@@ -25,12 +25,11 @@ import HostelForm from "./Component/Admin/HostelForm";
 import DistancePath from "./Component/Hostels/DistancePath";
 import Roomdetails from "./Component/Hostels/Roomdetails";
 import { AuthProvider } from "./Component/Contexts/AuthContext";
-import { StoreContextProvider } from "./Component/Contexts/StoreContext";
-import { HostelBooking } from "./Component/Hostels/HostelBooking";
+// import { StoreContextProvider } from "./Component/Contexts/StoreContext";
+import HostelBooking from "./Component/Hostels/HostelBooking";
 function App() {
   return (
     <>
-    <StoreContextProvider>
       <Router>
         <AuthProvider>
           <Navbar />
@@ -64,7 +63,6 @@ function App() {
           <Footer />
         </AuthProvider>
       </Router>
-      </StoreContextProvider>
     </>
   );
 }
