@@ -1,21 +1,20 @@
 //middleWare/jwtToken.js
 const jwt = require("jsonwebtoken");
-const secretKey = process.env.JWT_SECRET;
 
-const jwtToken = async (req, res, next) => {
-  const authHeader = req.headers["authorization"];
-  const token = authHeader && authHeader.split(" ")[1];
+const jwtToken = (req, res, next) => {
+  const token = req.headers.authorization?.split(" ")[1];
   if (!token) {
-    return res.status(403).send("Access denied. No token provided.");
+    return res.status(401).json({ error: "Authorization token required" });
   }
-  jwt.verify(token, secretKey, (err, decoded) => {
-    if (err) {
-      return res.status(401).send("Invalid token.");
-    }
-    req.user = decoded;
 
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    req.user = decoded; // Attach user info to the request
     next();
-  });
+  } catch (err) {
+    console.error("JWT Error:", err);
+    return res.status(403).json({ error: "Invalid token" });
+  }
 };
 
 module.exports = jwtToken;

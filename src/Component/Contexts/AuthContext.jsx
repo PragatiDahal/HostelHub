@@ -1,70 +1,42 @@
-import React, { createContext, useState, useContext, useEffect } from "react";
+import React, { createContext, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
-// Create AuthContext
 const AuthContext = createContext();
 
-// Custom hook to access the AuthContext
-export const useAuth = () => {
-  return useContext(AuthContext);
-};
-
-// AuthProvider component
 export const AuthProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [token, setToken] = useState(null);
-  const [userInfo, setUserInfo] = useState({});
+  const navigate = useNavigate();
 
-  // Load token and user info from localStorage on initial render
+  // On mount, check if token exists in localStorage
   useEffect(() => {
-    const storedToken = localStorage.getItem("authToken");
-    const storedUserInfo = localStorage.getItem("userInfo");
-
+    const storedToken = localStorage.getItem("token");
     if (storedToken) {
-      setIsLoggedIn(true);
       setToken(storedToken);
-    }
-
-    if (storedUserInfo) {
-      try {
-        const parsedUserInfo = JSON.parse(storedUserInfo);
-        setUserInfo(parsedUserInfo);
-      } catch (error) {
-        console.error("Failed to parse userInfo from localStorage:", error);
-      }
+      setIsLoggedIn(true);
     }
   }, []);
 
-  // Login method
-  const login = (newToken, newUserInfo) => {
+  // Login function
+  const login = (userToken) => {
+    localStorage.setItem("token", userToken); // Store token
+    setToken(userToken);
     setIsLoggedIn(true);
-    setToken(newToken);
-    setUserInfo(newUserInfo);
-
-    // Store token and user info in localStorage
-    localStorage.setItem("authToken", newToken);
-    localStorage.setItem("userInfo", JSON.stringify(newUserInfo));
   };
 
-  // Logout method
+  // Logout function
   const logout = () => {
-    setIsLoggedIn(false);
     setToken(null);
-    setUserInfo({});
-    localStorage.removeItem("authToken");
-    localStorage.removeItem("userInfo");
+    localStorage.removeItem("token");
+    setIsLoggedIn(false);
+    navigate("/"); // Redirect to home
   };
 
   return (
-    <AuthContext.Provider
-      value={{
-        isLoggedIn,
-        token,
-        userInfo,
-        login,
-        logout,
-      }}
-    >
+    <AuthContext.Provider value={{ isLoggedIn, login, logout, token }}>
       {children}
     </AuthContext.Provider>
   );
 };
+
+export const useAuth = () => React.useContext(AuthContext);
