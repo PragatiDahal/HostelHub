@@ -88,11 +88,6 @@ const Navbar = () => {
                       Hostel Register
                     </Link>
                   </li>
-                  <li className="px-4 py-2 hover:bg-[#2C3E50]">
-                    <Link to="/adminsignin" onClick={() => setDropdown(false)}>
-                      Admin Login
-                    </Link>
-                  </li>
                 </>
               )}
             </ul>
@@ -186,17 +181,6 @@ const Navbar = () => {
                         }}
                       >
                         Hostel Register
-                      </Link>
-                    </li>
-                    <li className="px-4 py-2 hover:text-[#1ABC9C]">
-                      <Link
-                        to="/adminsignin"
-                        onClick={() => {
-                          setNav(false);
-                          setDropdown(false);
-                        }}
-                      >
-                        Admin Login
                       </Link>
                     </li>
                   </>

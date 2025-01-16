@@ -17,9 +17,9 @@ export const AuthProvider = ({ children }) => {
     }
   }, []);
 
-  // Login function
+  // Login function to store the token
   const login = (userToken) => {
-    localStorage.setItem("token", userToken); // Store token
+    localStorage.setItem("token", userToken); // Store the token in localStorage
     setToken(userToken);
     setIsLoggedIn(true);
   };
@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }) => {
     setToken(null);
     localStorage.removeItem("token");
     setIsLoggedIn(false);
-    navigate("/"); // Redirect to home
+    navigate("/"); // Redirect to home page after logout
   };
 
   return (
@@ -40,3 +40,4 @@ export const AuthProvider = ({ children }) => {
 };
 
 export const useAuth = () => React.useContext(AuthContext);
+

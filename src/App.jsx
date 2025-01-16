@@ -18,10 +18,7 @@ import UploadBlog from "./Component/Blog/UploadBlog";
 import Hostels from "./Component/Hostels";
 import UserSignUp from "./Component/Login/UserSignUp";
 import UserSignIn from "./Component/Login/UserSignIn";
-import AdminSignIn from "./Component/Login/AdminSignIn";
 import HostelRegister from "./Component/Login/HostelRegister";
-import Dashboard from "./Component/Admin/Dashboard";
-import HostelForm from "./Component/Admin/HostelForm";
 import DistancePath from "./Component/Hostels/DistancePath";
 import Roomdetails from "./Component/Hostels/Roomdetails";
 import { AuthProvider } from "./Component/Contexts/AuthContext";
@@ -38,7 +35,6 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="usersignin" element={<UserSignIn />} />
             <Route path="usersignup" element={<UserSignUp />} />
-            <Route path="adminsignin" element={<AdminSignIn />} />
             <Route path="hostelregister" element={<HostelRegister />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
@@ -52,8 +48,6 @@ function App() {
               path="/hosteldetail/:hostelName/:roomType"
               element={<Roomdetails />}
             />
-            <Route path="dashboard" element={<Dashboard />} />
-            <Route path="hostelform" element={<HostelForm />} />
             <Route
               path="/distancepath/:hostelName"
               element={<DistancePath />}

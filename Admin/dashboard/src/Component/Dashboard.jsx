@@ -7,7 +7,7 @@ function Dashboard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [editingHostel, setEditingHostel] = useState(false);
-  const [addingHostel, setAddingHostel] = useState(false); // Track adding new hostels
+  const [addingHostel, setAddingHostel] = useState(false);
   const [hostel, setHostel] = useState({
     name: "",
     image: "",
@@ -38,7 +38,7 @@ function Dashboard() {
   const handleDelete = (id) => {
     if (window.confirm("Are you sure you want to delete this hostel?")) {
       axios
-        .delete('http://localhost:5000/api/hostels/${id}')
+        .delete(`http://localhost:5000/api/hostels/${id}`)
         .then(() => {
           setHostels(hostels.filter((hostel) => hostel._id !== id));
         })
@@ -55,56 +55,44 @@ function Dashboard() {
     setHostel({ ...hostel, [name]: value });
   };
 
-  // Handle hostel addition
-  const handleAddSubmit = (e) => {
+  // Handle form submission (both add and edit)
+  const handleSubmit = (e) => {
     e.preventDefault();
-    axios
-      .post("http://localhost:5000/api/hostels", hostel)
+
+    const method = hostel._id ? "put" : "post";
+    const url = hostel._id
+      ? `http://localhost:5000/api/hostels/${hostel._id}`
+      : "http://localhost:5000/api/hostels";
+
+    axios[method](url, hostel)
       .then((res) => {
-        alert("Hostel added successfully!");
-        setHostels([...hostels, res.data]); // Update the hostels list
-        setAddingHostel(false); // Exit add mode
-        setHostel({
-          name: "",
-          image: "",
-          location: "",
-          price: "",
-          gender: "",
-          facilities: "",
-          description: "",
-        }); // Reset form
+        alert(`${hostel._id ? "Updated" : "Added"} hostel successfully!`);
+        setHostels((prevHostels) =>
+          hostel._id
+            ? prevHostels.map((h) => (h._id === hostel._id ? res.data : h))
+            : [...prevHostels, res.data]
+        );
+        setEditingHostel(false);
+        setAddingHostel(false);
+        resetHostelForm();
       })
       .catch((err) => {
-        console.error("Failed to add hostel", err);
-        alert("Error adding hostel");
+        console.error("Failed to update hostel:", err.response?.data);
+        alert("Error adding or updating hostel");
       });
   };
 
-  // Handle hostel update
-  const handleEditSubmit = (e) => {
-    e.preventDefault();
-    axios
-      .put('http://localhost:5000/api/hostels/${hostel._id}', hostel)
-      .then((res) => {
-        alert("Hostel updated successfully!");
-        setHostels(
-          hostels.map((h) => (h._id === hostel._id ? res.data : h))
-        ); // Update the list
-        setEditingHostel(false); // Exit edit mode
-        setHostel({
-          name: "",
-          image: "",
-          location: "",
-          price: "",
-          gender: "",
-          facilities: "",
-          description: "",
-        }); // Reset form
-      })
-      .catch((err) => {
-        console.error("Failed to update hostel", err);
-        alert("Error updating hostel");
-      });
+  // Reset hostel form
+  const resetHostelForm = () => {
+    setHostel({
+      name: "",
+      image: "",
+      location: "",
+      price: "",
+      gender: "",
+      facilities: "",
+      description: "",
+    });
   };
 
   // Handle logout
@@ -153,9 +141,7 @@ function Dashboard() {
             <h1 className="text-2xl font-bold mb-4">
               {addingHostel ? "Add New Hostel" : "Edit Hostel"}
             </h1>
-            <form
-              onSubmit={addingHostel ? handleAddSubmit : handleEditSubmit}
-            >
+            <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label className="block text-gray-700">Name</label>
                 <input
@@ -211,7 +197,6 @@ function Dashboard() {
                   <option value="">Select Gender</option>
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
-                  <option value="Co-ed">Co-ed</option>
                 </select>
               </div>
               <div className="mb-4">
@@ -247,15 +232,7 @@ function Dashboard() {
                 onClick={() => {
                   setAddingHostel(false);
                   setEditingHostel(false);
-                  setHostel({
-                    name: "",
-                    image: "",
-                    location: "",
-                    price: "",
-                    gender: "",
-                    facilities: "",
-                    description: "",
-                  });
+                  resetHostelForm();
                 }}
                 className="ml-2 bg-gray-400 text-white px-4 py-2 rounded"
               >
@@ -265,74 +242,45 @@ function Dashboard() {
           </div>
         ) : (
           <>
-            <h1 className="text-3xl font-bold mb-6">Hostel Management</h1>
-            <div className="bg-white shadow-md rounded-lg p-6">
-              <table className="w-full table-auto border-collapse border border-gray-300">
-                <thead>
-                  <tr className="bg-gray-100 text-left">
-                    <th className="border p-2">Name</th>
-                    <th className="border p-2">Image</th>
-                    <th className="border p-2">Location</th>
-                    <th className="border p-2">Price</th>
-                    <th className="border p-2">Gender</th>
-                    <th className="border p-2">Actions</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {hostels.map((h) => (
-                    <tr key={h._id}>
-                      <td className="border p-2">{h.name}</td>
-                      <td className="border p-2">
-                        <img
-                          src={h.image}
-                          alt={h.name}
-                          className="w-16 h-16 object-cover rounded"
-                        />
-                      </td>
-                      <td className="border p-2">{h.location}</td>
-                      <td className="border p-2">${h.price}</td>
-                      <td className="border p-2">{h.gender}</td>
-                      <td className="border p-2 space-x-2">
-                        <button
-                          onClick={() => {
-                            setEditingHostel(true);
-                            setAddingHostel(false);
-                            setHostel(h);
-                          }}
-                          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-                        >
-                          Edit
-                        </button>
-                        <button
-                          onClick={() => handleDelete(h._id)}
-                          className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
-                        >
-                          Delete
-                        </button>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+            <h1 className="text-3xl font-bold">Hostel Management</h1>
             <button
-              onClick={() => {
-                setAddingHostel(true);
-                setEditingHostel(false);
-                setHostel({
-                  name: "",
-                  image: "",
-                  location: "",
-                  price: "",
-                  gender: "",
-                  facilities: "",
-                  description: "",
-                });
-              }}
-              className="mt-4 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+              onClick={() => setAddingHostel(true)}
+              className="mt-4 bg-[#1ABC9C] text-white px-4 py-2 rounded"
             >
               Add New Hostel
             </button>
+            <div className="grid grid-cols-3 gap-4 mt-6">
+              {hostels.map((hostelItem) => (
+                <div
+                  key={hostelItem._id}
+                  className="bg-white p-4 rounded-lg shadow-md"
+                >
+                  <h2 className="text-xl font-semibold">{hostelItem.name}</h2>
+                  <img
+                    src={hostelItem.image}
+                    alt={hostelItem.name}
+                    className="w-full h-32 object-cover rounded-md my-2"
+                  />
+                  <p>{hostelItem.location}</p>
+                  <p>{hostelItem.price}</p>
+                  <button
+                    onClick={() => {
+                      setHostel(hostelItem);
+                      setEditingHostel(true);
+                    }}
+                    className="mt-2 bg-[#1ABC9C] text-white px-3 py-1 rounded"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    onClick={() => handleDelete(hostelItem._id)}
+                    className="mt-2 ml-2 bg-[#2C3E50] text-white px-3 py-1 rounded"
+                  >
+                    Delete
+                  </button>
+                </div>
+              ))}
+            </div>
           </>
         )}
       </main>

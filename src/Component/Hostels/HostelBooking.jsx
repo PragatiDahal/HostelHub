@@ -41,7 +41,9 @@ const HostelBooking = () => {
     setIsLoading(true);
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/hosteldetail/${encodeURIComponent(hostelName)}`
+        `http://localhost:5000/api/hosteldetail/${encodeURIComponent(
+          hostelName
+        )}`
       );
       setHostelDetails(response.data);
     } catch (error) {
@@ -103,8 +105,12 @@ const HostelBooking = () => {
       const response = await axios.post(
         "http://localhost:5000/api/bookings",
         {
-          userInfo: { email: bookingInfo.email },
-          name: hostelName,
+          userInfo: {
+            email: bookingInfo.email, // Ensure email is passed here
+            name: bookingInfo.userName, // Pass the username
+          },
+          name: hostelDetails.name, // Hostel name
+          location: hostelDetails.location?.address, // Hostel location
         },
         {
           headers: {
@@ -116,7 +122,6 @@ const HostelBooking = () => {
 
       console.log("Booking Response:", response.data);
       alert("Booking successful!");
-      navigate("/bookingsummary", { state: { booking: response.data } });
     } catch (err) {
       alert(err.response?.data?.error || "Booking failed. Please try again.");
     } finally {
@@ -185,11 +190,11 @@ const HostelBooking = () => {
           <div>
             <p className="text-lg">Hostel Name: {hostelDetails.name}</p>
             <p className="text-lg">
-              Location: {hostelDetails.location?.address || "Not provided"}
+              Location: {hostelDetails.location?.address}
             </p>
           </div>
         ) : (
-          <p>No hostel selected.</p>
+          <p>Loading...</p>
         )}
         {bookingInfo.userName && (
           <div>

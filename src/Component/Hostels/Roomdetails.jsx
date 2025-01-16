@@ -12,7 +12,7 @@ const hostelsData = {
     {
       id: 1,
       roomType: "single",
-      images: ["/images/room.jpg", "/images/singleroom.webp"],
+      images: ["/images/room.jpg", "/images/studytable.jpg"],
       features: [
         {
           title: "Free WiFi",
@@ -35,7 +35,7 @@ const hostelsData = {
     {
       id: 2,
       roomType: "double",
-      images: ["/images/room1.jpg", "/images/doublesharing.jpg"],
+      images: ["/images/room1.jpg", "/images/twostudy.jpg"],
       features: [
         {
           title: "Free WiFi",
@@ -58,7 +58,7 @@ const hostelsData = {
     {
       id: 3,
       roomType: "triple",
-      images: ["/images/triplesharing.jpg", "/images/triplesharing.jpg"],
+      images: ["/images/triplesharing.jpg", "/images/twostudy.jpg"],
       features: [
         {
           title: "Free WiFi",
@@ -84,7 +84,7 @@ const hostelsData = {
     {
       id: 1,
       roomType: "single",
-      images: ["/images/singleroom.webp", "/images/singleroom.webp"],
+      images: ["/images/singleroom.webp", "/images/studytable.jpg"],
       features: [
         {
           title: "Free WiFi",
@@ -107,7 +107,7 @@ const hostelsData = {
     {
       id: 2,
       roomType: "double",
-      images: ["/images/doublesharing.jpg", "/images/doublesharing.jpg"],
+      images: ["/images/doublesharing.jpg", "/images/wardrobe.jpg.jpeg"],
       features: [
         {
           title: "Free WiFi",
@@ -130,7 +130,7 @@ const hostelsData = {
     {
       id: 3,
       roomType: "triple",
-      images: ["/images/triplesharing.jpg", "/images/triplesharing.jpg"],
+      images: ["/images/triplesharing.jpg", "/images/ceilingfan.jpeg"],
       features: [
         {
           title: "Free WiFi",
@@ -156,7 +156,7 @@ const hostelsData = {
     {
       id: 1,
       roomType: "single",
-      images: ["/images/singleroom.webp", "/images/singleroom.webp"],
+      images: ["/images/singleroom.webp", "/images/tablefan.jpeg"],
       features: [
         {
           title: "Free WiFi",
@@ -179,7 +179,7 @@ const hostelsData = {
     {
       id: 2,
       roomType: "double",
-      images: ["/images/doublesharing.jpg", "/images/doublesharing.jpg"],
+      images: ["/images/doublesharing.jpg", "/images/twostudy.jpg"],
       features: [
         {
           title: "Free WiFi",
@@ -202,7 +202,7 @@ const hostelsData = {
     {
       id: 3,
       roomType: "triple",
-      images: ["/images/triplesharing.jpg", "/images/triplesharing.jpg"],
+      images: ["/images/triple10.jpeg", "/images/ceilingfan.jpeg"],
       features: [
         {
           title: "Free WiFi",
@@ -228,7 +228,7 @@ const hostelsData = {
     {
       id: 1,
       roomType: "single",
-      images: ["/images/singleroom.webp", "/images/singleroom.webp"],
+      images: ["/images/singleroom.webp", "/images/studytable.jpg"],
       features: [
         {
           title: "Free WiFi",
@@ -251,7 +251,7 @@ const hostelsData = {
     {
       id: 2,
       roomType: "double",
-      images: ["/images/doublesharing.jpg", "/images/doublesharing.jpg"],
+      images: ["/images/double1.webp", "/images/doublecupboard.jpg"],
       features: [
         {
           title: "Free WiFi",
@@ -274,7 +274,7 @@ const hostelsData = {
     {
       id: 3,
       roomType: "triple",
-      images: ["/images/triplesharing.jpg", "/images/triplesharing.jpg"],
+      images: ["/images/doublecupboard.jpg", "/images/triple2.jpg"],
       features: [
         {
           title: "Free WiFi",
@@ -300,7 +300,7 @@ const hostelsData = {
     {
       id: 1,
       roomType: "single",
-      images: ["/images/singleroom.webp", "/images/singleroom.webp"],
+      images: ["/images/double2.jpg", "/images/tablefan.jpeg"],
       features: [
         {
           title: "Free WiFi",
@@ -323,7 +323,7 @@ const hostelsData = {
     {
       id: 2,
       roomType: "double",
-      images: ["/images/doublesharing.jpg", "/images/doublesharing.jpg"],
+      images: ["/images/double2.jpg", "/images/bathroom.jpeg"],
       features: [
         {
           title: "Free WiFi",
@@ -346,7 +346,7 @@ const hostelsData = {
     {
       id: 3,
       roomType: "triple",
-      images: ["/images/triplesharing.jpg", "/images/triplesharing.jpg"],
+      images: ["/images/triple3.jpg", "/images/ceilingfan.jpeg"],
       features: [
         {
           title: "Free WiFi",
@@ -372,7 +372,7 @@ const hostelsData = {
     {
       id: 1,
       roomType: "single",
-      images: ["/images/singleroom.webp", "/images/singleroom.webp"],
+      images: ["/images/single9.jpeg", "/images/download.jpeg"],
       features: [
         {
           title: "Free WiFi",
@@ -395,7 +395,7 @@ const hostelsData = {
     {
       id: 2,
       roomType: "double",
-      images: ["/images/doublesharing.jpg", "/images/doublesharing.jpg"],
+      images: ["/images/doublesharing.jpg", "/images/wardrobe.jpg"],
       features: [
         {
           title: "Free WiFi",
@@ -418,7 +418,7 @@ const hostelsData = {
     {
       id: 3,
       roomType: "triple",
-      images: ["/images/triplesharing.jpg", "/images/triplesharing.jpg"],
+      images: ["/images/triple4.jpg", "/images/ceilingfan.jpeg"],
       features: [
         {
           title: "Free WiFi",
@@ -444,7 +444,7 @@ const hostelsData = {
     {
       id: 1,
       roomType: "single",
-      images: ["/images/singleroom.webp", "/images/singleroom.webp"],
+      images: ["/images/single-bed-room.jpg", "/images/single2.jpg"],
       features: [
         {
           title: "Free WiFi",
@@ -467,7 +467,7 @@ const hostelsData = {
     {
       id: 2,
       roomType: "double",
-      images: ["/images/doublesharing.jpg", "/images/doublesharing.jpg"],
+      images: ["/images/double2.jpg", "/images/bathroom.jpeg"],
       features: [
         {
           title: "Free WiFi",
@@ -490,7 +490,7 @@ const hostelsData = {
     {
       id: 3,
       roomType: "triple",
-      images: ["/images/triplesharing.jpg", "/images/triplesharing.jpg"],
+      images: ["/images/triple5.jpeg", "/images/bathroom.jpeg"],
       features: [
         {
           title: "Free WiFi",
@@ -516,7 +516,7 @@ const hostelsData = {
     {
       id: 1,
       roomType: "single",
-      images: ["/images/singleroom.webp", "/images/singleroom.webp"],
+      images: ["/images/single-bed-room.jpg", "/images/studytable2.jpg"],
       features: [
         {
           title: "Free WiFi",
@@ -539,7 +539,7 @@ const hostelsData = {
     {
       id: 2,
       roomType: "double",
-      images: ["/images/doublesharing.jpg", "/images/doublesharing.jpg"],
+      images: ["/images/double3.jpg", "/images/studytable2.jpg"],
       features: [
         {
           title: "Free WiFi",
@@ -562,7 +562,7 @@ const hostelsData = {
     {
       id: 3,
       roomType: "triple",
-      images: ["/images/triplesharing.jpg", "/images/triplesharing.jpg"],
+      images: ["/images/triplesharing.jpg", "/images/studytable5.jpeg"],
       features: [
         {
           title: "Free WiFi",
@@ -588,7 +588,7 @@ const hostelsData = {
     {
       id: 1,
       roomType: "single",
-      images: ["/images/singleroom.webp", "/images/singleroom.webp"],
+      images: ["/images/singleroom.webp", "/images/studytable6.jpeg"],
       features: [
         {
           title: "Free WiFi",
@@ -611,7 +611,7 @@ const hostelsData = {
     {
       id: 2,
       roomType: "double",
-      images: ["/images/doublesharing.jpg", "/images/doublesharing.jpg"],
+      images: ["/images/double5.jpg", "/images/studytable3.png"],
       features: [
         {
           title: "Free WiFi",
@@ -634,7 +634,7 @@ const hostelsData = {
     {
       id: 3,
       roomType: "triple",
-      images: ["/images/triplesharing.jpg", "/images/triplesharing.jpg"],
+      images: ["/images/triple11.jpeg", "/images/studytable7.jpeg"],
       features: [
         {
           title: "Free WiFi",
@@ -660,7 +660,7 @@ const hostelsData = {
     {
       id: 1,
       roomType: "single",
-      images: ["/images/singleroom.webp", "/images/singleroom.webp"],
+      images: ["/images/single11.jpg", "/images/studytable3.jpg"],
       features: [
         {
           title: "Free WiFi",
@@ -683,7 +683,7 @@ const hostelsData = {
     {
       id: 2,
       roomType: "double",
-      images: ["/images/doublesharing.jpg", "/images/doublesharing.jpg"],
+      images: ["/images/double6.jpg", "/images/bathroom.jpeg"],
       features: [
         {
           title: "Free WiFi",
@@ -706,7 +706,7 @@ const hostelsData = {
     {
       id: 3,
       roomType: "triple",
-      images: ["/images/triplesharing.jpg", "/images/triplesharing.jpg"],
+      images: ["/images/triple5.jpeg", "/images/studytable5.jpeg"],
       features: [
         {
           title: "Free WiFi",
@@ -732,7 +732,7 @@ const hostelsData = {
     {
       id: 1,
       roomType: "single",
-      images: ["/images/singleroom.webp", "/images/singleroom.webp"],
+      images: ["/images/single3.jpg", "/images/singleroom.webp"],
       features: [
         {
           title: "Free WiFi",
@@ -755,7 +755,364 @@ const hostelsData = {
     {
       id: 2,
       roomType: "double",
-      images: ["/images/doublesharing.jpg", "/images/doublesharing.jpg"],
+      images: ["/images/doublesharing.jpg", "/images/twostudy.jpg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Double Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Two Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 3,
+      roomType: "triple",
+      images: ["/images/triplesharing.jpg", "/images/studytable5.jpeg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Triple Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Three Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+  ],
+
+  "biju-girls-hostel": [
+    {
+      id: 1,
+      roomType: "single",
+      images: ["/images/singleroom.webp", "/images/tablefan.jpeg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Single Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Study Table",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 2,
+      roomType: "double",
+      images: ["/images/double2.jpg", "/images/twostudy.jpg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Double Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Two Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 3,
+      roomType: "triple",
+      images: ["/images/wardrobe.jpg", "/images/triple3.jpg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Triple Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Three Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+  ],
+  "lagankhel-boys-hostel": [
+    {
+      id: 1,
+      roomType: "single",
+      images: ["/images/singleroom.webp", "/images/tablefan.jpeg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Single Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Study Table",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 2,
+      roomType: "double",
+      images: ["/images/double2.jpg", "/images/twostudy.jpg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Double Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Two Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 3,
+      roomType: "triple",
+      images: ["/images/wardrobe.jpg", "/images/triple3.jpg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Triple Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Three Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+  ],
+  "lalitpur-boys-hostel": [
+    {
+      id: 1,
+      roomType: "single",
+      images: ["/images/singleroom.webp", "/images/tablefan.jpeg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Single Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Study Table",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 2,
+      roomType: "double",
+      images: ["/images/double2.jpg", "/images/twostudy.jpg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Double Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Two Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 3,
+      roomType: "triple",
+      images: ["/images/wardrobe.jpg", "/images/triple3.jpg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Triple Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Three Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+  ],
+  
+  "radhe-radhe-boys-hostel": [
+    {
+      id: 1,
+      roomType: "single",
+      images: ["/images/singleroom.webp", "/images/tablefan.jpeg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Single Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Study Table",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 2,
+      roomType: "double",
+      images: ["/images/double2.jpg", "/images/twostudy.jpg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Double Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Two Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 3,
+      roomType: "triple",
+      images: ["/images/wardrobe.jpg", "/images/triple3.jpg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Triple Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Three Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+  ],
+"pathivara-boys-hostel": [
+    {
+      id: 1,
+      roomType: "single",
+      images: ["/images/room.jpg", "/images/studytable.jpg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Single Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Study Table",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 2,
+      roomType: "double",
+      images: ["/images/room1.jpg", "/images/twostudy.jpg"],
       features: [
         {
           title: "Free WiFi",
@@ -800,7 +1157,7 @@ const hostelsData = {
     },
   ],
 
-  "biju-girls-hostel": [
+  "kathmandu-unity-boys-hostel": [
     {
       id: 1,
       roomType: "single",
@@ -827,7 +1184,7 @@ const hostelsData = {
     {
       id: 2,
       roomType: "double",
-      images: ["/images/doublesharing.jpg", "/images/doublesharing.jpg"],
+      images: ["/images/doublesharing.jpg", "/images/wardrobe.jpg.jpeg"],
       features: [
         {
           title: "Free WiFi",
@@ -850,7 +1207,7 @@ const hostelsData = {
     {
       id: 3,
       roomType: "triple",
-      images: ["/images/triplesharing.jpg", "/images/triplesharing.jpg"],
+      images: ["/images/triplesharing.jpg", "/images/ceilingfan.jpeg"],
       features: [
         {
           title: "Free WiFi",
@@ -871,6 +1228,1007 @@ const hostelsData = {
       ],
     },
   ],
+
+  "dhanush-boys-hostel": [
+    {
+      id: 1,
+      roomType: "single",
+      images: ["/images/singleroom.webp", "/images/tablefan.jpeg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Single Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Study Table",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 2,
+      roomType: "double",
+      images: ["/images/doublesharing.jpg", "/images/twostudy.jpg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Double Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Two Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 3,
+      roomType: "triple",
+      images: ["/images/triplesharing.jpg", "/images/ceilingfan.jpeg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Triple Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Three Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+  ], 
+  "safe-boys-hostel": [
+    {
+      id: 1,
+      roomType: "single",
+      images: ["/images/singleroom.webp", "/images/studytable.jpg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Single Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Study Table",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 2,
+      roomType: "double",
+      images: ["/images/double1.webp", "/images/doublecupboard.jpg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Double Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Two Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 3,
+      roomType: "triple",
+      images: ["/images/doublecupboard.jpg", "/images/triple2.jpg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Triple Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Three Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+  ],
+  "nayan-boys-hostel": [
+    {
+      id: 1,
+      roomType: "single",
+      images: ["/images/double2.jpg", "/images/tablefan.jpeg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Single Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Study Table",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 2,
+      roomType: "double",
+      images: ["/images/double2.jpg", "/images/bathroom.jpeg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Double Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Two Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 3,
+      roomType: "triple",
+      images: ["/images/triple3.jpg", "/images/ceilingfan.jpeg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Triple Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Three Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+  ],
+"swastik-boys-hostel": [
+    {
+      id: 1,
+      roomType: "single",
+      images: ["/images/double2.jpg", "/images/tablefan.jpeg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Single Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Study Table",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 2,
+      roomType: "double",
+      images: ["/images/double2.jpg", "/images/bathroom.jpeg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Double Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Two Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 3,
+      roomType: "triple",
+      images: ["/images/triple3.jpg", "/images/ceilingfan.jpeg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Triple Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Three Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+  ],
+
+"the-best-boys-hostel": [
+    {
+      id: 1,
+      roomType: "single",
+      images: ["/images/singleroom.webp", "/images/download.jpeg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Single Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Study Table",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 2,
+      roomType: "double",
+      images: ["/images/doublesharing.jpg", "/images/wardrobe.jpg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Double Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Two Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 3,
+      roomType: "triple",
+      images: ["/images/triple4.jpg", "/images/ceilingfan.jpeg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Triple Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Three Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+  ],
+  "namuna-boys-hostel": [
+    {
+      id: 1,
+      roomType: "single",
+      images: ["/images/single-bed-room.jpg", "/images/single2.jpg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Single Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Study Table",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 2,
+      roomType: "double",
+      images: ["/images/double2.jpg", "/images/bathroom.jpeg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Double Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Two Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 3,
+      roomType: "triple",
+      images: ["/images/triple5.jpeg", "/images/bathroom.jpeg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Triple Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Three Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+  ],
+
+  "mid-town-boys-hostel": [
+    {
+      id: 1,
+      roomType: "single",
+      images: ["/images/single-bed-room.jpg", "/images/studytable2.jpg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Single Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Study Table",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 2,
+      roomType: "double",
+      images: ["/images/double3.jpg", "/images/studytable2.jpg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Double Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Two Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 3,
+      roomType: "triple",
+      images: ["/images/triplesharing.jpg", "/images/studytable5.jpeg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Triple Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Three Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+  ],
+   "pulchowk-boys-hostel": [
+    {
+      id: 1,
+      roomType: "single",
+      images: ["/images/single8.jpg", "/images/studytable.jpg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Single Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Study Table",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 2,
+      roomType: "double",
+      images: ["/images/double5.jpg", "/images/studytable3.png"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Double Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Two Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 3,
+      roomType: "triple",
+      images: ["/images/triple9.jpeg", "/images/triplesharing.jpg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Triple Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Three Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+  ],
+  "brave-boys-hostel": [
+    {
+      id: 1,
+      roomType: "single",
+      images: ["/images/single3.jpg", "/images/singleroom.webp"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Single Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Study Table",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 2,
+      roomType: "double",
+      images: ["/images/doublesharing.jpg", "/images/twostudy.jpg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Double Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Two Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 3,
+      roomType: "triple",
+      images: ["/images/triplesharing.jpg", "/images/studytable5.jpeg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Triple Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Three Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+  ],
+  "sarthak-boys-hostel": [
+    {
+      id: 1,
+      roomType: "single",
+      images: ["/images/single5.webp", "/images/singleroom.webp"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Single Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Study Table",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 2,
+      roomType: "double",
+      images: ["/images/double9.jpg", "/images/twostudy.jpg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Double Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Two Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 3,
+      roomType: "triple",
+      images: ["/images/triple8.jpeg", "/images/studytable5.jpeg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Triple Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Three Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+  ],
+"himalayan-boys-hostel": [
+    {
+      id: 1,
+      roomType: "single",
+      images: ["/images/single4.png", "/images/singleroom.webp"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Single Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Study Table",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 2,
+      roomType: "double",
+      images: ["/images/double7.webp", "/images/twostudy.jpg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Double Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Two Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 3,
+      roomType: "triple",
+      images: ["/images/triple7.jpg", "/images/studytable5.jpeg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Triple Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Three Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+  ],
+"gwarko-girls-hostel": [
+    {
+      id: 1,
+      roomType: "single",
+      images: ["/images/single4.png", "/images/singleroom.webp"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Single Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Study Table",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 2,
+      roomType: "double",
+      images: ["/images/double7.webp", "/images/twostudy.jpg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Double Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Two Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 3,
+      roomType: "triple",
+      images: ["/images/triple7.jpg", "/images/studytable5.jpeg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Triple Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Three Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+  ],
+  "delight-girls-hostel": [
+    {
+      id: 1,
+      roomType: "single",
+      images: ["/images/single10.jpg", "/images/studytable8.jpeg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Single Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Study Table",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 2,
+      roomType: "double",
+      images: ["/images/double11.jpg", "/images/twostudy.jpg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Double Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Two Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 3,
+      roomType: "triple",
+      images: ["/images/triple7.jpg", "/images/studytable5.jpeg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Triple Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Three Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+  ],
+  "padma-girls-hostel": [
+    {
+      id: 1,
+      roomType: "single",
+      images: ["/images/single11.jpg", "/images/singleroom.webp"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Single Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Study Table",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 2,
+      roomType: "double",
+      images: ["/images/double12.jpg", "/images/twostudy.jpg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Double Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Two Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+    {
+      id: 3,
+      roomType: "triple",
+      images: ["/images/triple7.jpg", "/images/studytable5.jpeg"],
+      features: [
+        {
+          title: "Free WiFi",
+          icon: <FaWifi className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Triple Bed",
+          icon: <FaBed className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Laundry Service",
+          icon: <GiWashingMachine className="text-[#E67E22] text-4xl" />,
+        },
+        {
+          title: "Three Study Tables",
+          icon: <FaTable className="text-[#E67E22] text-4xl" />,
+        },
+      ],
+    },
+  ],
+
+
+
+
 };
 
 const Roomdetails = () => {
@@ -894,7 +2252,7 @@ const Roomdetails = () => {
   if (!detail) {
     return (
       <div className="text-center py-16">
-        <p className="text-xl text-gray-700 font-[poppins]">Oops! Room details not found.</p>
+        <p className="text-xl text-gray-700">Oops! Room details not found.</p>
         <button
           onClick={() => navigate(-1)}
           className="mt-4 px-6 py-2 bg-[#E67E22] text-white rounded-lg hover:bg-[#D35400]"
@@ -904,7 +2262,6 @@ const Roomdetails = () => {
       </div>
     );
   }
-
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -915,7 +2272,7 @@ const Roomdetails = () => {
 
   return (
     <div className="bg-[#E8F8F5] py-12 px-8 rounded-lg shadow-lg">
-      <h1 className="text-2xl font-bold text-center mb-8 pt-12 font-[poppins]">
+      <h1 className="text-2xl font-bold text-center mb-8 pt-12">
         Details for {roomType} Room at {hostelName.replace("-", " ")}
       </h1>
       <Slider {...sliderSettings} className="mb-8">
@@ -933,18 +2290,18 @@ const Roomdetails = () => {
         ))}
       </Slider>
 
-      <div className="bg-[#2C3E50] py-6 px-6 rounded-lg shadow-md grid grid-cols-2 sm:grid-cols-5 text-center text-white font-[poppins]">
+      <div className="bg-[#2C3E50] py-6 px-6 rounded-lg shadow-md grid grid-cols-2 sm:grid-cols-5 text-center text-white">
         {detail.features.map((feature, index) => (
           <div key={index} className="flex flex-col items-center space-y-2">
             <div>{feature.icon}</div>
-            <p className="font-semibold text-sm font-[poppins]">{feature.title}</p>
+            <p className="font-semibold text-sm">{feature.title}</p>
           </div>
         ))}
       </div>
       <div className="text-center mt-8">
         <button
           onClick={() => navigate(-1)}
-          className="px-6 py-2 bg-[#2C3E50] text-white rounded-lg hover:bg-[#34495E] font-[poppins]"
+          className="px-6 py-2 bg-[#2C3E50] text-white rounded-lg hover:bg-[#34495E]"
         >
           Back to Rooms
         </button>

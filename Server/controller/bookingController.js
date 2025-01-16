@@ -1,78 +1,76 @@
 //controller/bookingcontroller.js
 const express = require("express");
 const Booking = require("../models/Booking");
-const User = require("../models/User");
-const HostelDetail = require("../models/HostelDetail");
+const jwt = require("jsonwebtoken");
 
+// Create a new booking
 const createBooking = async (req, res) => {
-  const { userInfo, name } = req.body;
-
-  // Validate input fields
-  if (!userInfo || !userInfo.email) {
-    return res.status(400).json({ error: "User email is required." });
-  }
-  if (!name || name.trim() === "") {
-    return res.status(400).json({ error: "Hostel name is required." });
-  }
-
   try {
-    console.log("Request Body:", req.body);
+    // Validate token and get user info
+    const token = req.headers.authorization.split(" ")[1];
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-    // Find the hostel by name (case-insensitive search)
-    const hostel = await HostelDetail.findOne({
-      name: { $regex: new RegExp(`^${name}$`, "i") },
-    }).select("_id name");
-    console.log("Queried Hostel Name:", name);
-    console.log("Hostel Found:", hostel);
-
-    if (!hostel) {
-      return res.status(404).json({ error: "Hostel not found" });
-    }
-
-    // Find the user by email
-    const user = await User.findOne({ email: userInfo.email }).select("_id email");
-    console.log("Queried User Email:", userInfo.email);
-    console.log("User Found:", user);
-
-    if (!user) {
-      return res.status(404).json({ error: "User not found. Please register first." });
-    }
-
-    // Check if a booking already exists for this user and hostel
-    const existingBooking = await Booking.findOne({
-      user: user._id,
-      hostel: hostel._id,
-    });
-    if (existingBooking) {
+    // Ensure the token contains the user's email
+    const userEmail = decoded.email;
+    if (!userEmail) {
       return res
         .status(400)
-        .json({ error: "You have already booked this hostel." });
+        .json({ error: "User email is missing from token" });
     }
 
-    // Create a new booking
-    const booking = new Booking({
-      user: user._id,
-      hostel: hostel._id,
-      bookingDate: new Date(),
-    });
+    const { name, location } = req.body; // Extract hostel name and location
+    const userName = req.body.userInfo?.name; // Extract username from request body
 
-    await booking.save();
-    console.log("Booking Created:", booking);
+    if (!userName) {
+      return res.status(400).json({ error: "User name is required" });
+    }
 
-    // Send success response
-    res.status(201).json({
-      message: "Booking successful",
-      booking: {
-        id: booking._id,
-        user: user.email,
-        hostel: hostel.name,
-        bookingDate: booking.bookingDate,
+    if (!name || !location) {
+      return res
+        .status(400)
+        .json({ error: "Hostel name and location are required" });
+    }
+
+    // Create new booking
+    const newBooking = new Booking({
+      userInfo: {
+        email: userEmail, // Ensure email is added here
+        name: userName,
+      },
+      hostel: {
+        name: name,
+        location: location, // Hostel location from request body
       },
     });
+
+    await newBooking.save();
+
+    res
+      .status(201)
+      .json({ message: "Booking successful", booking: newBooking });
   } catch (error) {
-    console.error("Error in createBooking:", error.message, error.stack);
-    res.status(500).json({ error: "Internal server error" });
+    console.error("Error during booking:", error);
+    res.status(500).json({ error: "Failed to create booking" });
   }
 };
 
-module.exports = { createBooking };
+// Fetch booking details for a user
+const getBookingDetails = async (req, res) => {
+  try {
+    const booking = await Booking.findOne({
+      "userInfo.email": req.params.email,
+    });
+    if (!booking) {
+      return res
+        .status(404)
+        .json({ message: "No booking found for this user." });
+    }
+
+    res.status(200).json({ booking });
+  } catch (error) {
+    console.error("Error fetching booking:", error);
+    res.status(500).json({ error: "Failed to fetch booking details" });
+  }
+};
+
+module.exports = { createBooking, getBookingDetails };

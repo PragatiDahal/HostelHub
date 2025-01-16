@@ -122,7 +122,7 @@ const DistancePath = () => {
             const { latitude, longitude } = hostel.location || {};
             const position = latitude && longitude ? [latitude, longitude] : fallbackPosition;
             return (
-              <Marker key={index} position={position} color="red">
+              <Marker key={index} position={position}>
                 <Popup>
                   {hostel.name}
                   <br />

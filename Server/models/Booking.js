@@ -2,15 +2,13 @@
 const mongoose = require("mongoose");
 
 const bookingSchema = new mongoose.Schema({
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Users",
-    required: true,
+  userInfo: {
+    email: { type: String, required: true },
+    name: { type: String, required: true }, // user name
   },
   hostel: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "HostelDetail",
-    required: true,
+    name: { type: String, required: true },
+    location: { type: String, required: true }, // optional field, can be fetched separately
   },
   bookingDate: {
     type: Date,
@@ -19,4 +17,6 @@ const bookingSchema = new mongoose.Schema({
 });
 
 const Booking = mongoose.model("Booking", bookingSchema);
+
 module.exports = Booking;
+

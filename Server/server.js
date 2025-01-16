@@ -18,7 +18,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(bodyParser.json());
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(cors());
 
 // Connect to MongoDB
 mongoose
@@ -78,7 +78,6 @@ app.get("/api/hostels", async (req, res) => {
 
     // Fetch hostels based on filters
     const hostels = await Hostel.find(cusQuery);
-
 
     // For each hostel, fetch its detailed data and calculate average sentiment score
     const hostelsWithSentiment = await Promise.all(
