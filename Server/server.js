@@ -6,6 +6,7 @@ const dotenv = require("dotenv");
 const hostelDetailRoute = require("./routes/hosteldetail");
 const distanceRoute = require("./routes/distanceRoute");
 const hostelRegisterRoutes = require("./routes/hostelregister");
+const hostelRoomRoutes = require("./routes/hostelroom")
 const signupRoute = require("./routes/signuppage");
 const loginRoute = require("./routes/loginpage");
 const bookingRoutes = require("./routes/bookingRoutes");
@@ -33,7 +34,8 @@ mongoose
 app.use("/api/hosteldetail", hostelDetailRoute);
 // app.use("/api", shortestpathRoute);
 app.use("/api", distanceRoute);
-app.use("/api", hostelRegisterRoutes);
+app.use("/api/hostelregister", hostelRegisterRoutes);
+app.use("/api/hostelroom", hostelRoomRoutes);
 app.use("/api/signup", signupRoute);
 app.use("/api/login", loginRoute);
 app.use("/api", bookingRoutes);

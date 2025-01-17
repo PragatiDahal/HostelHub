@@ -53,7 +53,7 @@ function ManagerDashboard() {
 
   const handleLogout = () => {
     localStorage.removeItem("authToken");
-    navigate("/adminsignin");
+    navigate("/managerlogin");
   };
 
   if (loading) return <p>Loading...</p>;
@@ -65,11 +65,17 @@ function ManagerDashboard() {
       <aside className="w-64 bg-[#1ABC9C] text-white flex flex-col">
         <h1 className="text-2xl font-bold p-6">Manager Dashboard</h1>
         <nav className="flex flex-col space-y-4 px-6">
-          <button className="hover:bg-[#16a085] p-2 rounded text-left">
-            Dashboard
-          </button>
           <Link to="/hostelregister" className="hover:bg-[#16a085] p-2 rounded">
             Hostel Register
+          </Link>
+          <Link to="/roomavailable" className="hover:bg-[#16a085] p-2 rounded">
+            Room Availability 
+          </Link>
+          <Link to="/hostelroom" className="hover:bg-[#16a085] p-2 rounded">
+            Add Hostel Room
+          </Link>
+          <Link to="/updateroom" className="hover:bg-[#16a085] p-2 rounded">
+            Update Hostel Room
           </Link>
           <button
             onClick={handleLogout}
