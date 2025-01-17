@@ -37,6 +37,7 @@ app.use("/api", hostelRegisterRoutes);
 app.use("/api/signup", signupRoute);
 app.use("/api/login", loginRoute);
 app.use("/api", bookingRoutes);
+app.use("/uploads", express.static("uploads"));
 
 // Hostel Schema and Model
 const hostelSchema = new mongoose.Schema({

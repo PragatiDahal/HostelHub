@@ -257,7 +257,11 @@ function Dashboard() {
                 >
                   <h2 className="text-xl font-semibold">{hostelItem.name}</h2>
                   <img
-                    src={hostelItem.image}
+                    src={
+                      hostelItem.image
+                        ? `http://localhost:5000/uploads/${hostelItem.image}`
+                        : "default-image.jpg"
+                    }
                     alt={hostelItem.name}
                     className="w-full h-32 object-cover rounded-md my-2"
                   />
