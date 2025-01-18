@@ -21,78 +21,93 @@ function Dashboard() {
 
   // Fetch all hostels
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/api/hostels")
-      .then((res) => {
-        setHostels(Array.isArray(res.data) ? res.data : []);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error(err);
+    const fetchHostels = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/api/hostels");
+        setHostels(Array.isArray(response.data) ? response.data : []);
+      } catch (error) {
         setError("Failed to load hostels");
+      } finally {
         setLoading(false);
-      });
+      }
+    };
+    fetchHostels();
   }, []);
 
   // Handle deletion of a hostel
-  const handleDelete = (id) => {
+  const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this hostel?")) {
-      axios
-        .delete(`http://localhost:5000/api/hostels/${id}`)
-        .then(() => {
-          setHostels(hostels.filter((hostel) => hostel._id !== id));
-        })
-        .catch((err) => {
-          console.error("Failed to delete hostel", err);
-          alert("Error deleting hostel.");
-        });
+      try {
+        await axios.delete(`http://localhost:5000/api/hostels/${id}`);
+        setHostels((prevHostels) =>
+          prevHostels.filter((hostel) => hostel._id !== id)
+        );
+      } catch (error) {
+        console.error("Failed to delete hostel", error);
+        alert("Error deleting hostel.");
+      }
     }
   };
 
-  // Handle form input changes for adding or editing
+  // Handle form input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setHostel({ ...hostel, [name]: value });
+    setHostel((prevHostel) => ({ ...prevHostel, [name]: value }));
   };
 
-  // Handle form submission (both add and edit)
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  // Handle image input change
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setHostel((prevHostel) => ({ ...prevHostel, image: reader.result }));
+      };
+      reader.readAsDataURL(file);
+    }
+  };
 
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     const method = hostel._id ? "put" : "post";
     const url = hostel._id
       ? `http://localhost:5000/api/hostels/${hostel._id}`
       : "http://localhost:5000/api/hostels";
 
-    axios[method](url, hostel)
-      .then((res) => {
-        alert(`${hostel._id ? "Updated" : "Added"} hostel successfully!`);
-        setHostels((prevHostels) =>
-          hostel._id
-            ? prevHostels.map((h) => (h._id === hostel._id ? res.data : h))
-            : [...prevHostels, res.data]
-        );
-        setEditingHostel(false);
-        setAddingHostel(false);
-        resetHostelForm();
-      })
-      .catch((err) => {
-        console.error("Failed to update hostel:", err.response?.data);
-        alert("Error adding or updating hostel");
-      });
-  };
+    const formData = {
+      name: hostel.name,
+      image: hostel.image,
+      location: hostel.location,
+      price: hostel.price,
+      gender: hostel.gender,
+      facilities: hostel.facilities,
+      description: hostel.description,
+    };
 
-  // Reset hostel form
-  const resetHostelForm = () => {
-    setHostel({
-      name: "",
-      image: "",
-      location: "",
-      price: "",
-      gender: "",
-      facilities: "",
-      description: "",
-    });
+    try {
+      const response = await axios[method](url, formData);
+      const updatedHostels = hostel._id
+        ? hostels.map((h) => (h._id === hostel._id ? response.data : h))
+        : [...hostels, response.data];
+
+      setHostels(updatedHostels);
+      alert(`${hostel._id ? "Updated" : "Added"} hostel successfully!`);
+      setEditingHostel(false);
+      setAddingHostel(false);
+      setHostel({
+        name: "",
+        image: "",
+        location: "",
+        price: "",
+        gender: "",
+        facilities: "",
+        description: "",
+      });
+    } catch (error) {
+      console.error("Failed to update hostel:", error.response?.data);
+      alert("Error adding or updating hostel");
+    }
   };
 
   // Handle logout
@@ -154,14 +169,19 @@ function Dashboard() {
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-700">Image URL</label>
+                <label className="block text-gray-700">Upload Image</label>
                 <input
-                  type="text"
-                  name="image"
-                  value={hostel.image}
-                  onChange={handleChange}
+                  type="file"
+                  onChange={handleImageChange}
                   className="w-full px-3 py-2 border rounded"
                 />
+                {hostel.image && (
+                  <img
+                    src={hostel.image}
+                    alt="Hostel Preview"
+                    className="mt-2 w-32 h-32 object-cover"
+                  />
+                )}
               </div>
               <div className="mb-4">
                 <label className="block text-gray-700">Location</label>
@@ -217,75 +237,67 @@ function Dashboard() {
                   value={hostel.description}
                   onChange={handleChange}
                   className="w-full px-3 py-2 border rounded"
-                  placeholder="Write a brief description of the hostel"
+                  placeholder="Write a brief description"
                   required
                 />
               </div>
               <button
                 type="submit"
-                className="bg-[#1ABC9C] text-white px-4 py-2 rounded hover:bg-[#16a085]"
+                className="w-full bg-[#16a085] text-white py-2 rounded"
               >
-                {addingHostel ? "Add Hostel" : "Save Changes"}
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  setAddingHostel(false);
-                  setEditingHostel(false);
-                  resetHostelForm();
-                }}
-                className="ml-2 bg-gray-400 text-white px-4 py-2 rounded"
-              >
-                Cancel
+                {addingHostel ? "Add Hostel" : "Update Hostel"}
               </button>
             </form>
           </div>
         ) : (
-          <>
-            <h1 className="text-3xl font-bold">Hostel Management</h1>
+          <div>
+            <h2 className="text-xl font-bold">Hostels</h2>
             <button
               onClick={() => setAddingHostel(true)}
-              className="mt-4 bg-[#1ABC9C] text-white px-4 py-2 rounded"
+              className="mt-4 bg-[#16a085] text-white py-2 px-4 rounded"
             >
-              Add New Hostel
+              Add Hostel
             </button>
-            <div className="grid grid-cols-3 gap-4 mt-6">
-              {hostels.map((hostelItem) => (
+            <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {hostels.map((hostel) => (
                 <div
-                  key={hostelItem._id}
-                  className="bg-white p-4 rounded-lg shadow-md"
+                  key={hostel._id}
+                  className="border border-gray-200 p-4 rounded shadow"
                 >
-                  <h2 className="text-xl font-semibold">{hostelItem.name}</h2>
+                  <h3 className="font-semibold text-lg">{hostel.name}</h3>
                   <img
                     src={
-                      hostelItem.image
-                        ? `http://localhost:5000/uploads/${hostelItem.image}`
-                        : "default-image.jpg"
+                      hostel.image
+                        ? `http://localhost:5000/uploads/${hostel.image}` // If the image exists, use the full path
+                        : "default-image.jpg" // If not, use the default image
                     }
-                    alt={hostelItem.name}
-                    className="w-full h-32 object-cover rounded-md my-2"
+                    alt={hostel.name}
+                    className="w-full h-40 object-cover mt-2 rounded"
                   />
-                  <p>{hostelItem.location}</p>
-                  <p>{hostelItem.price}</p>
-                  <button
-                    onClick={() => {
-                      setHostel(hostelItem);
-                      setEditingHostel(true);
-                    }}
-                    className="mt-2 bg-[#1ABC9C] text-white px-3 py-1 rounded"
-                  >
-                    Edit
-                  </button>
-                  <button
-                    onClick={() => handleDelete(hostelItem._id)}
-                    className="mt-2 ml-2 bg-[#2C3E50] text-white px-3 py-1 rounded"
-                  >
-                    Delete
-                  </button>
+                  <p>{hostel.location}</p>
+                  <p>{hostel.price}</p>
+                  <p>{hostel.gender}</p>
+                  <div className="flex justify-between mt-4">
+                    <button
+                      onClick={() => {
+                        setEditingHostel(true);
+                        setHostel(hostel);
+                      }}
+                      className="text-blue-500"
+                    >
+                      Edit
+                    </button>
+                    <button
+                      onClick={() => handleDelete(hostel._id)}
+                      className="text-red-500"
+                    >
+                      Delete
+                    </button>
+                  </div>
                 </div>
               ))}
             </div>
-          </>
+          </div>
         )}
       </main>
     </div>

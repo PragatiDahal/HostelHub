@@ -1,113 +1,116 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
-function HostelForm({ hostel = {}, onSave }) {
+function HostelForm() {
   const [formData, setFormData] = useState({
     name: "",
     location: "",
     price: "",
     gender: "",
-    facilities: "",
+    facilities: [],
     description: "",
     rating: "",
-    images: [], // For storing selected images
   });
 
-  // Populate the form with existing hostel data if provided
-  useEffect(() => {
-    if (hostel) {
-      setFormData({
-        name: hostel.name || "",
-        location: hostel.location || "",
-        price: hostel.price || "",
-        gender: hostel.gender || "",
-        facilities: hostel.facilities || "",
-        description: hostel.description || "",
-        rating: hostel.rating || "",
-        images: [], // Keep images empty for existing data
-      });
-    }
-  }, [hostel]);
+  const [imageFile, setImageFile] = useState(null);
+  const [facilityInput, setFacilityInput] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  // Handle text field changes
   const handleChange = (e) => {
     const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      if (file.size > 5 * 1024 * 1024) {
+        // File size validation (5MB limit)
+        setErrorMessage("File size should not exceed 5MB.");
+        return;
+      }
+      setImageFile(file);
+      setErrorMessage("");
+    }
+  };
+
+  const handleAddFacility = () => {
+    if (facilityInput.trim()) {
+      setFormData({
+        ...formData,
+        facilities: [...formData.facilities, facilityInput.trim()],
+      });
+      setFacilityInput(""); // Reset facility input
+    }
+  };
+
+  const handleRemoveFacility = (facility) => {
     setFormData({
       ...formData,
-      [name]: value,
+      facilities: formData.facilities.filter((f) => f !== facility),
     });
   };
 
-  // Handle image file selection
-  const handleFileChange = (e) => {
-    setFormData({
-      ...formData,
-      images: e.target.files,
-    });
-  };
-
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const method = hostel && hostel._id ? "put" : "post";
-    const url = hostel && hostel._id
-      ? `http://localhost:5000/api/hostels/${hostel._id}`
-      : "http://localhost:5000/api/hostels";
+    const formPayload = new FormData();
+    formPayload.append("name", formData.name);
+    formPayload.append("location", formData.location);
+    formPayload.append("price", formData.price);
+    formPayload.append("gender", formData.gender);
+    formPayload.append("facilities", JSON.stringify(formData.facilities));
+    formPayload.append("description", formData.description);
+    formPayload.append("rating", formData.rating);
 
-    // Use FormData to handle both text and file data
-    const data = new FormData();
-    data.append("name", formData.name);
-    data.append("location", formData.location);
-    data.append("price", formData.price);
-    data.append("gender", formData.gender);
-    data.append("facilities", formData.facilities);
-    data.append("description", formData.description);
-    data.append("rating", formData.rating);
-    for (let i = 0; i < formData.images.length; i++) {
-      data.append("images", formData.images[i]);
+    if (imageFile) {
+      formPayload.append("image", imageFile);
     }
 
-    axios({
-      method,
-      url,
-      data,
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    })
+    axios
+      .post("http://localhost:5000/api/hostels", formPayload, {
+        headers: { "Content-Type": "multipart/form-data" },
+      })
       .then((res) => {
-        console.log(res.data);
-        alert(
-          hostel && hostel._id
-            ? "Hostel updated successfully!"
-            : "New hostel added successfully!"
-        );
-        if (onSave) onSave(res.data);
+        setSuccessMessage("Hostel added successfully!");
+        setFormData({
+          name: "",
+          location: "",
+          price: "",
+          gender: "",
+          facilities: [],
+          description: "",
+          rating: "",
+        });
+        setImageFile(null);
       })
       .catch((err) => {
         console.error(err);
-        alert("An error occurred while submitting the form.");
+        setErrorMessage("Failed to add hostel. Please try again.");
       });
   };
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
+      {successMessage && <p className="text-green-500">{successMessage}</p>}
+      {errorMessage && <p className="text-red-500">{errorMessage}</p>}
+
       <input
         name="name"
         value={formData.name}
         onChange={handleChange}
         placeholder="Name"
-        className="block w-full p-2 border rounded"
         required
+        className="w-full px-3 py-2 border rounded"
       />
       <input
         name="location"
         value={formData.location}
         onChange={handleChange}
         placeholder="Location"
-        className="block w-full p-2 border rounded"
         required
+        className="w-full px-3 py-2 border rounded"
       />
       <input
         name="price"
@@ -115,37 +118,62 @@ function HostelForm({ hostel = {}, onSave }) {
         onChange={handleChange}
         placeholder="Price"
         type="number"
-        className="block w-full p-2 border rounded"
         required
+        className="w-full px-3 py-2 border rounded"
       />
       <select
         name="gender"
         value={formData.gender}
         onChange={handleChange}
-        className="block w-full p-2 border rounded"
-        required
+        className="w-full px-3 py-2 border rounded"
       >
-        <option value="" disabled>
-          Select Gender
-        </option>
         <option value="girl">Girl</option>
         <option value="boy">Boy</option>
-        <option value="co-ed">Co-ed</option>
       </select>
-      <textarea
-        name="facilities"
-        value={formData.facilities}
-        onChange={handleChange}
-        placeholder="Facilities (e.g., Wi-Fi, Gym, Laundry)"
-        className="block w-full p-2 border rounded"
-        required
-      />
+
+      <div>
+        <label>Facilities</label>
+        <div className="flex items-center gap-2">
+          <input
+            type="text"
+            value={facilityInput}
+            onChange={(e) => setFacilityInput(e.target.value)}
+            placeholder="Add a facility"
+            className="px-3 py-2 border rounded flex-grow"
+          />
+          <button
+            type="button"
+            onClick={handleAddFacility}
+            className="bg-blue-500 text-white px-4 py-2 rounded"
+          >
+            Add
+          </button>
+        </div>
+        <div className="mt-2 space-y-1">
+          {formData.facilities.map((facility, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-between bg-gray-100 px-3 py-2 rounded"
+            >
+              <span>{facility}</span>
+              <button
+                type="button"
+                onClick={() => handleRemoveFacility(facility)}
+                className="text-red-500"
+              >
+                Remove
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <textarea
         name="description"
         value={formData.description}
         onChange={handleChange}
         placeholder="Description"
-        className="block w-full p-2 border rounded"
+        className="w-full px-3 py-2 border rounded"
         required
       />
       <input
@@ -154,25 +182,28 @@ function HostelForm({ hostel = {}, onSave }) {
         onChange={handleChange}
         placeholder="Rating"
         type="number"
+        step="0.1"
         min="0"
         max="5"
-        step="0.1"
-        className="block w-full p-2 border rounded"
+        className="w-full px-3 py-2 border rounded"
         required
       />
+
+      {/* Image Upload Input */}
       <input
         type="file"
-        name="images"
-        onChange={handleFileChange}
+        id="imageUpload"
+        onChange={handleImageChange}
         accept="image/*"
-        multiple
-        className="block w-full p-2 border rounded"
+        style={{ display: "none" }}
       />
-      <button
-        type="submit"
-        className="px-4 py-2 bg-[#1ABC9C] text-white rounded"
-      >
-        {hostel && hostel._id ? "Update Hostel" : "Add Hostel"}
+      <label htmlFor="imageUpload" className="cursor-pointer text-blue-500">
+        Choose an image
+      </label>
+      {imageFile && <p>Selected File: {imageFile.name}</p>}
+
+      <button type="submit" className="bg-green-500 text-white px-4 py-2 rounded">
+        Add Hostel
       </button>
     </form>
   );

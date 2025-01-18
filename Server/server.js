@@ -1,15 +1,10 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
-const hostelDetailRoute = require("./routes/hosteldetail");
-const distanceRoute = require("./routes/distanceRoute");
-const hostelRegisterRoutes = require("./routes/hostelregister");
-const hostelRoomRoutes = require("./routes/hostelroom")
-const signupRoute = require("./routes/signuppage");
-const loginRoute = require("./routes/loginpage");
-const bookingRoutes = require("./routes/bookingRoutes");
+const fs = require("fs");
+const path = require("path");
+const multer = require("multer");
 const axios = require("axios");
 
 dotenv.config(); // Load environment variables
@@ -17,9 +12,36 @@ dotenv.config(); // Load environment variables
 const app = express();
 
 // Middleware
-app.use(express.json());
-app.use(bodyParser.json());
+app.use(express.json({ limit: '10mb' }));  // Set limit for JSON requests
 app.use(cors());
+
+// Ensure the uploads directory exists
+const uploadDir = path.join(__dirname, "uploads");
+if (!fs.existsSync(uploadDir)) {
+  fs.mkdirSync(uploadDir);
+}
+
+// Multer configuration
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, "uploads/");  // Specify the directory for uploaded files
+  },
+  filename: (req, file, cb) => {
+    const uniqueName = `${Date.now()}-${file.originalname}`;  // Create a unique filename
+    cb(null, uniqueName);
+  },
+});
+
+const upload = multer({ storage });  // Configure multer with the storage option;
+
+// Import routes
+const hostelDetailRoute = require("./routes/hosteldetail");
+const distanceRoute = require("./routes/distanceRoute");
+const hostelRegisterRoutes = require("./routes/hostelregister");
+const hostelRoomRoutes = require("./routes/hostelroom");
+const signupRoute = require("./routes/signuppage");
+const loginRoute = require("./routes/loginpage");
+const bookingRoutes = require("./routes/bookingRoutes");
 
 // Connect to MongoDB
 mongoose
@@ -32,7 +54,6 @@ mongoose
 
 // Routes
 app.use("/api/hosteldetail", hostelDetailRoute);
-// app.use("/api", shortestpathRoute);
 app.use("/api", distanceRoute);
 app.use("/api/hostelregister", hostelRegisterRoutes);
 app.use("/api/hostelroom", hostelRoomRoutes);
@@ -59,43 +80,27 @@ const Hostel = mongoose.model("Hostel", hostelSchema);
 app.get("/api/hostels", async (req, res) => {
   try {
     const { location, gender, minPrice, maxPrice } = req.query;
-
-    // Log query parameters to verify input
-    console.log("Query params:", req.query);
-
     const cusQuery = {};
 
-    if (location) {
-      cusQuery.location = { $regex: location, $options: "i" };
-    }
-
-    if (gender) {
-      cusQuery.gender = { $regex: gender, $options: "i" };
-    }
-
+    if (location) cusQuery.location = { $regex: location, $options: "i" };
+    if (gender) cusQuery.gender = { $regex: gender, $options: "i" };
     if (minPrice || maxPrice) {
       cusQuery.price = {};
       if (minPrice) cusQuery.price.$gte = parseInt(minPrice);
       if (maxPrice) cusQuery.price.$lte = parseInt(maxPrice);
     }
 
-    // Fetch hostels based on filters
     const hostels = await Hostel.find(cusQuery);
 
-    // For each hostel, fetch its detailed data and calculate average sentiment score
     const hostelsWithSentiment = await Promise.all(
       hostels.map(async (hostel) => {
         try {
-          // Fetch hostel details from the detail API
           const detailResponse = await axios.get(
             `http://localhost:5000/api/hosteldetail/${encodeURIComponent(
               hostel.name
             )}`
           );
-
           const hostelDetails = detailResponse.data;
-
-          // Calculate the average sentiment score from the reviews
           const reviews = hostelDetails.reviews || [];
           const totalSentiment = reviews.reduce(
             (sum, review) => sum + review.sentimentScore,
@@ -103,29 +108,20 @@ app.get("/api/hostels", async (req, res) => {
           );
           const averageSentimentScore =
             reviews.length > 0 ? totalSentiment / reviews.length : 0;
-
-          // Return hostel data with the calculated average sentiment score
-          return {
-            ...hostel.toObject(), // Convert Mongoose document to plain object
-            averageSentimentScore,
-          };
+          return { ...hostel.toObject(), averageSentimentScore };
         } catch (error) {
           console.error(
             `Error fetching details for hostel: ${hostel.name}`,
             error.message
           );
-          return {
-            ...hostel.toObject(),
-            averageSentimentScore: 0, // Default to 0 if detail API fails
-          };
+          return { ...hostel.toObject(), averageSentimentScore: 0 };
         }
       })
     );
-    // Sort the hostels by averageSentimentScore in descending order
+
     hostelsWithSentiment.sort(
       (a, b) => b.averageSentimentScore - a.averageSentimentScore
     );
-
     res.json(hostelsWithSentiment);
   } catch (error) {
     console.error("Error fetching hostels:", error.message);
@@ -133,10 +129,59 @@ app.get("/api/hostels", async (req, res) => {
   }
 });
 
+app.post("/api/hostels", upload.single("image"), async (req, res) => {
+  try {
+    const hostelData = req.body;
+    if (req.file) {
+      hostelData.image = `uploads/${req.file.filename}`;
+    }
+    const newHostel = new Hostel(hostelData);
+    await newHostel.save();
+    res.json(newHostel);
+  } catch (error) {
+    console.error("Error creating hostel:", error.message);
+    res.status(500).send("Server Error");
+  }
+});
+
+app.put("/api/hostels/:id", upload.single("image"), async (req, res) => {
+  try {
+    const { id } = req.params;
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      return res.status(400).send("Invalid ID");
+    }
+    const hostelData = req.body;
+    if (req.file) {
+      hostelData.image = `uploads/${req.file.filename}`;
+    }
+    const updatedHostel = await Hostel.findByIdAndUpdate(id, hostelData, {
+      new: true,
+    });
+    if (!updatedHostel) return res.status(404).send("Hostel not found");
+    res.json(updatedHostel);
+  } catch (error) {
+    console.error("Error updating hostel:", error.message);
+    res.status(500).send("Server Error");
+  }
+});
+
+app.delete("/api/hostels/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      return res.status(400).send("Invalid ID");
+    }
+    const deletedHostel = await Hostel.findByIdAndDelete(id);
+    if (!deletedHostel) return res.status(404).send("Hostel not found");
+    res.json({ message: "Hostel deleted successfully", hostel: deletedHostel });
+  } catch (error) {
+    console.error("Error deleting hostel:", error.message);
+    res.status(500).send("Server Error");
+  }
+});
+
 // Start the server
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
-  let cusQuery = {}; // Ensure cusQuery is defined
-  console.log("Constructed query:", cusQuery);
   console.log(`Server is running on port ${port}`);
 });
