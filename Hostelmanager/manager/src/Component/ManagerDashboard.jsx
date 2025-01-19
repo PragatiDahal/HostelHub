@@ -74,9 +74,12 @@ function ManagerDashboard() {
           <Link to="/hostelroom" className="hover:bg-[#16a085] p-2 rounded">
             Add Hostel Room
           </Link>
-          <Link to="/updateroom" className="hover:bg-[#16a085] p-2 rounded">
-            Update Hostel Room
+          <Link to="/booking" className="hover:bg-[#16a085] p-2 rounded">
+           Bookings
           </Link>
+          {/* <Link to="/updateroom" className="hover:bg-[#16a085] p-2 rounded">
+            Update Hostel Room
+          </Link> */}
           <button
             onClick={handleLogout}
             className="hover:bg-[#16a085] p-2 rounded text-left"

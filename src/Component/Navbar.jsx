@@ -13,9 +13,10 @@ const Navbar = () => {
   const Links = [
     { id: 1, link: "home" },
     { id: 2, link: "hostels" },
-    { id: 3, link: "about" },
-    { id: 4, link: "contact" },
-    { id: 5, link: "blog" },
+    { id: 3, link: "filteredhostel" },
+    { id: 4, link: "about" },
+    { id: 5, link: "contact" },
+    { id: 6, link: "blog" },
   ];
 
   const handleSigninClick = () => {

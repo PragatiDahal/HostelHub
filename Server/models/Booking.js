@@ -10,6 +10,13 @@ const bookingSchema = new mongoose.Schema({
     name: { type: String, required: true },
     location: { type: String, required: true }, // optional field, can be fetched separately
   },
+  roomType: [
+    {
+      type: String,
+      required: true,
+      enum: ["Single Room", "Double Room", "Triple Room"],
+    },
+  ],
   bookingDate: {
     type: Date,
     default: Date.now,
@@ -19,4 +26,3 @@ const bookingSchema = new mongoose.Schema({
 const Booking = mongoose.model("Booking", bookingSchema);
 
 module.exports = Booking;
-

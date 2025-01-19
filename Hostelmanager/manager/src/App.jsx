@@ -6,6 +6,7 @@ import Hostelregister from "./Component/Hostelregister";
 import HostelRoomAvailability from "./Component/HostelRoomAvailability";
 import HostelRoom from "./Component/HostelRoom";
 import UpdateRoomAvailability from "./Component/UpdateRoomAvailability";
+import BookingRequests from "./Component/BookingRequests";
 
 function App() {
   
@@ -19,6 +20,7 @@ function App() {
       <Route path="roomavailable" element={<HostelRoomAvailability/>}/>
       <Route path="hostelroom" element={<HostelRoom/>}/>
       <Route path="updateroom" element={<UpdateRoomAvailability/>}/>
+      <Route path="booking" element={<BookingRequests/>}/>
       </Routes>
       </BrowserRouter>
     </>

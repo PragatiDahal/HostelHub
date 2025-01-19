@@ -102,7 +102,7 @@ const HostelRoom = () => {
           <button
             type="button"
             onClick={addRoom}
-            className="mt-4 px-4 py-2 bg-green-500 text-white rounded"
+            className="mt-4 px-4 py-2 bg-[#1ABC9C] text-white rounded"
           >
             Add Another Room
           </button>
@@ -110,7 +110,7 @@ const HostelRoom = () => {
 
         <button
           type="submit"
-          className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
+          className="mt-4 px-4 py-2 bg-[#2C3E50] text-white rounded"
         >
           Add Hostel Room
         </button>

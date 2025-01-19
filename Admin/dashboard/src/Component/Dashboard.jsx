@@ -125,20 +125,14 @@ function Dashboard() {
       <aside className="w-64 bg-[#1ABC9C] text-white flex flex-col">
         <h1 className="text-2xl font-bold p-6">Admin Dashboard</h1>
         <nav className="flex flex-col space-y-4 px-6">
-          <button
-            onClick={() => {
-              setEditingHostel(false);
-              setAddingHostel(false);
-            }}
-            className="hover:bg-[#16a085] p-2 rounded text-left"
-          >
-            Dashboard
-          </button>
-          <Link to="/hostels" className="hover:bg-[#16a085] p-2 rounded">
-            Hostels
-          </Link>
           <Link to="/users" className="hover:bg-[#16a085] p-2 rounded">
             Users
+          </Link>
+          <Link to="/contacts" className="hover:bg-[#16a085] p-2 rounded">
+            Contact
+          </Link>
+          <Link to="/booking" className="hover:bg-[#16a085] p-2 rounded">
+            Bookings
           </Link>
           <button
             onClick={handleLogout}

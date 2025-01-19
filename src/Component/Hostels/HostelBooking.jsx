@@ -4,11 +4,12 @@ import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 
 const HostelBooking = () => {
-  const { token } = useAuth(); // Get token
+  const { token } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
 
   const [hostelDetails, setHostelDetails] = useState(null);
+  const [roomTypes, setRoomTypes] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState({});
   const [fetchError, setFetchError] = useState("");
@@ -18,7 +19,9 @@ const HostelBooking = () => {
     lastName: "",
     email: "",
     phoneNumber: "",
+    roomType: "",
   });
+  const [message, setMessage] = useState("");
 
   const hostelName = location.state?.selectedHostel;
 
@@ -46,6 +49,14 @@ const HostelBooking = () => {
         )}`
       );
       setHostelDetails(response.data);
+      const fetchedRoomTypes = response.data.rooms || [];
+      // Ensure the roomTypes is an array
+      if (Array.isArray(fetchedRoomTypes)) {
+        setRoomTypes(fetchedRoomTypes);
+      } else {
+        console.error("roomTypes is not an array:", fetchedRoomTypes);
+        setRoomTypes([]); // Set as empty array if it's not an array
+      }
     } catch (error) {
       setFetchError(
         error.response?.status === 404
@@ -62,7 +73,7 @@ const HostelBooking = () => {
     const { name, value } = e.target;
     setBookingInfo((prev) => ({ ...prev, [name]: value }));
     if (error[name]) {
-      setError((prev) => ({ ...prev, [name]: "" })); // Clear error on change
+      setError((prev) => ({ ...prev, [name]: "" }));
     }
   };
 
@@ -88,6 +99,8 @@ const HostelBooking = () => {
     else if (!/^\d{10}$/.test(bookingInfo.phoneNumber)) {
       formErrors.phoneNumber = "Invalid phone number.";
     }
+    if (!bookingInfo.roomType)
+      formErrors.roomType = "Please select a room type.";
     return formErrors;
   };
 
@@ -106,11 +119,12 @@ const HostelBooking = () => {
         "http://localhost:5000/api/bookings",
         {
           userInfo: {
-            email: bookingInfo.email, // Ensure email is passed here
-            name: bookingInfo.userName, // Pass the username
+            email: bookingInfo.email,
+            name: bookingInfo.userName,
           },
-          name: hostelDetails.name, // Hostel name
-          location: hostelDetails.location?.address, // Hostel location
+          name: hostelDetails.name,
+          location: hostelDetails.location?.address,
+          roomType: bookingInfo.roomType,
         },
         {
           headers: {
@@ -120,10 +134,27 @@ const HostelBooking = () => {
         }
       );
 
-      console.log("Booking Response:", response.data);
-      alert("Booking successful!");
+      console.log("Full Response:", response);
+
+      // Show success message
+      setMessage("Booking successful!");
+
+      // Show an alert
+      alert("Booking is registered successfully!");
+
+      // Clear the booking info after successful submission
+      setBookingInfo({
+        userName: "",
+        firstName: "",
+        lastName: "",
+        email: "",
+        phoneNumber: "",
+        roomType: "",
+      });
     } catch (err) {
-      alert(err.response?.data?.error || "Booking failed. Please try again.");
+      const errorMessage =
+        err.response?.data?.message || "Booking failed. Please try again.";
+      setMessage(errorMessage); // Display error (e.g., duplicate booking)
     } finally {
       setIsLoading(false);
     }
@@ -143,13 +174,7 @@ const HostelBooking = () => {
                   {field.replace(/([A-Z])/g, " $1")}
                 </label>
                 <input
-                  type={
-                    field === "email"
-                      ? "email"
-                      : field === "phoneNumber"
-                      ? "tel"
-                      : "text"
-                  }
+                  type={field === "email" ? "email" : "text"}
                   name={field}
                   value={bookingInfo[field]}
                   onChange={handleInputChange}
@@ -164,6 +189,33 @@ const HostelBooking = () => {
               </div>
             )
           )}
+          <div>
+            <label className="block font-medium text-[#2C3E50]">
+              Room Type
+            </label>
+            <select
+              name="roomType"
+              value={bookingInfo.roomType}
+              onChange={handleInputChange}
+              required
+              className={`w-full p-2 border ${
+                error.roomType ? "border-red-500" : "border-gray-300"
+              } rounded-md`}
+            >
+              <option value="">-- Select Room Type --</option>
+              <option value="Single Room">Single</option>
+              <option value="Double Room">Double</option>
+              <option value="Triple Room">Triple</option>
+              {roomTypes.map((room, index) => (
+                <option key={index} value={room.type}>
+                  {room.type}
+                </option>
+              ))}
+            </select>
+            {error.roomType && (
+              <p className="text-red-500 text-sm">{error.roomType}</p>
+            )}
+          </div>
           <button
             type="submit"
             disabled={isLoading}
@@ -176,6 +228,7 @@ const HostelBooking = () => {
             {isLoading ? "Submitting..." : "Proceed to Book"}
           </button>
         </form>
+        {message && <p className="text-green-500 mt-4">{message}</p>}
       </div>
 
       <div className="lg:w-1/2 p-6 bg-[#E8F8F5] shadow-lg rounded-lg">
@@ -192,15 +245,14 @@ const HostelBooking = () => {
             <p className="text-lg">
               Location: {hostelDetails.location?.address}
             </p>
+            <p className="text-lg">
+              Selected Room: {bookingInfo.roomType || "Not selected"}
+            </p>
           </div>
         ) : (
           <p>Loading...</p>
         )}
-        {bookingInfo.userName && (
-          <div>
-            <p>Welcome, {bookingInfo.userName}</p>
-          </div>
-        )}
+        {bookingInfo.userName && <p>Welcome, {bookingInfo.userName}</p>}
       </div>
     </div>
   );

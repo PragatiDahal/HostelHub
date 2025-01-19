@@ -15,17 +15,18 @@ export const StoreContextProvider = (props) => {
     setToken(savedToken); // Set the token in state.
   }, [token]);
 
-   // State for storing delivery information for an order.
-   const [BookingInfo, setBookingInfo] = useState({
+  // State for storing delivery information for Booking
+  const [BookingInfo, setBookingInfo] = useState({
     userName: "",
     firstName: "",
     lastName: "",
     email: "",
     phoneNumber: "",
+    roomType: "",
   });
 
   const contextValue = {
-    token, 
+    token,
     setToken,
     BookingInfo,
     setBookingInfo,
@@ -37,7 +38,6 @@ export const StoreContextProvider = (props) => {
     </StoreContext.Provider>
   );
 };
-
 
 // Custom hook to use the store context easily.
 export const useStore = () => useContext(StoreContext);

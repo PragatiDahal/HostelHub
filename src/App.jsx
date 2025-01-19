@@ -21,6 +21,7 @@ import UserSignIn from "./Component/Login/UserSignIn";
 import HostelRegister from "./Component/Login/HostelRegister";
 import DistancePath from "./Component/Hostels/DistancePath";
 import Roomdetails from "./Component/Hostels/Roomdetails";
+import Cluster from "./Component/Hostels/Cluster";
 import { AuthProvider } from "./Component/Contexts/AuthContext";
 // import { StoreContextProvider } from "./Component/Contexts/StoreContext";
 import HostelBooking from "./Component/Hostels/HostelBooking";
@@ -42,6 +43,7 @@ function App() {
             <Route path="blog" element={<Blog />} />
             <Route path="blog/:id" element={<BlogDetail />} />
             <Route path="uploadblog" element={<UploadBlog />} />
+            <Route path="filteredhostel" element={<Cluster />} />
             {/* Route for Hostel1 which handles the list and detail view */}
             <Route path="/hosteldetail/*" element={<Hostel1 />} />
             <Route
