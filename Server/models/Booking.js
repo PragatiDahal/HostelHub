@@ -21,6 +21,23 @@ const bookingSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+  booked: {
+    type: Boolean,
+    default: false,
+  },
+  PaymentMethod: {
+    type: String,
+  },
+  PaymentStatus: {
+    type: String,
+    default: "Pending",
+  },
+  paymentDetails: {
+    type: Object,
+  },
+  paymentMode: {
+    type: String,
+  },
 });
 
 const Booking = mongoose.model("Booking", bookingSchema);

@@ -67,6 +67,7 @@ const HostelBooking = () => {
     } finally {
       setIsLoading(false);
     }
+    
   };
 
   const handleInputChange = (e) => {
@@ -137,10 +138,10 @@ const HostelBooking = () => {
       console.log("Full Response:", response);
 
       // Show success message
-      setMessage("Booking successful!");
+      // setMessage("Booking successful!");
 
       // Show an alert
-      alert("Booking is registered successfully!");
+      // alert("Booking is registered successfully!");
 
       // Clear the booking info after successful submission
       setBookingInfo({
@@ -151,6 +152,9 @@ const HostelBooking = () => {
         phoneNumber: "",
         roomType: "",
       });
+      navigate("/payment", {
+        state:  bookingInfo ,
+      });
     } catch (err) {
       const errorMessage =
         err.response?.data?.message || "Booking failed. Please try again.";
@@ -158,6 +162,7 @@ const HostelBooking = () => {
     } finally {
       setIsLoading(false);
     }
+
   };
 
   return (

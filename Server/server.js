@@ -45,6 +45,7 @@ const bookingRoutes = require("./routes/bookingRoutes");
 const shortestpathRoutes = require("./routes/shortestpathRoutes");
 const userRoutes = require("./routes/userRoutes");
 const contactRoutes = require("./routes/contactRoutes");
+const  khalti = require("./routes/khalti");
 // Connect to MongoDB
 mongoose
   .connect(process.env.MONGO_URI, {
@@ -58,6 +59,7 @@ mongoose
 app.use("/api/hosteldetail", hostelDetailRoute);
 app.use("/api", distanceRoute);
 app.use("/", shortestpathRoutes);
+app.use("/api/khalti", khalti);
 app.use("/api/users", userRoutes);
 app.use("/api/contacts", contactRoutes);
 app.use("/api/hostelregister", hostelRegisterRoutes);

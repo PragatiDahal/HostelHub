@@ -27,28 +27,33 @@ const createBooking = async (req, res) => {
         });
     }
 
+    // Check for existing booking
     const existingBooking = await Booking.findOne({
       "userInfo.email": userEmail,
       "hostel.name": name,
       "hostel.location": location,
+      "roomType.name": roomType.name,
     });
 
     if (existingBooking) {
-      return res
-        .status(400)
-        .json({ error: "You have already booked this hostel." });
+      // Return a flag indicating the user already booked this room type
+      return res.status(200).json({
+        alreadyBooked: true,
+        message: `You have already booked a ${roomType.name} in this hostel.`,
+      });
     }
 
+    // Create a new booking
     const newBooking = new Booking({
       userInfo: {
         email: userEmail,
         name: userName,
       },
       hostel: {
-        name: name,
-        location: location,
+        name,
+        location,
       },
-      roomType, // Save room type directly
+      roomType,
     });
 
     await newBooking.save();

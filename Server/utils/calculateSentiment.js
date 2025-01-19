@@ -1,7 +1,7 @@
 const Sentiment = require("sentiment");
 
 /**
- * Function to calculate sentiment scores for reviews with advanced negation handling.
+ * Function to calculate sentiment scores for reviews based on keywords.
  * @param {Array} reviews - Array of review objects containing comments.
  * @returns {Object} Updated reviews with sentiment scores and total sentiment score.
  */
@@ -11,70 +11,103 @@ function calculateSentiment(reviews) {
     return { updatedReviews: [], totalScore: 0 };
   }
 
+  // Define keywords with their sentiment scores
+  const keywordSentimentScores = {
+    wonderful: 2.5,
+    wow: 2.5,
+    like: 2.5,
+    need: -1.5,
+    tidy: 2.5,
+    clean: 2.5,
+    healthy: 2.5,
+    nice: 2.5,
+    great: 2.5,
+    amazing: 2.5,
+    excellent: 2.5,
+    good: 1.5,
+    outstanding: 2.5,
+    beautiful: 2.5,
+    impressive: 2.5,
+    lovely: 2.5,
+    brilliant: 2.5,
+    awesome: 2.5,
+    delightful: 2.5,
+    exceptional: 2.0,
+    peaceful: 2.5,
+    vibrant: 2.5,
+    relaxing: 2.5,
+    enjoyable: 2.5,
+    cheerful: 2.5,
+    friendly: 2.5,
+    welcoming: 2.5,
+    inspiring: 3.0,
+    bad: -1.5,
+    poor: -1.5,
+    disgusting: -1.5,
+    dirty: -1.5,
+    unclean: -1.5,
+    disappointing: -1.5,
+    frustrating: -1.5,
+    boring: -1.5,
+    unpleasant: -1.5,
+    pathetic: -1.5,
+    dreadful: -1.5,
+    mediocre: -1.5,
+    unimpressive: -1.5,
+    useless: -1.5,
+    annoying: -1.5,
+    unacceptable: -1.5,
+    ugly: -1.5,
+    unlike: -1.5,
+    terrible: -2.5,
+    awful: -2.5,
+    improvement: 1.5,
+  };
+
   const negationWords = [
-    "not", "no", "never", "isn't", "wasn't", "aren't", "won't", "don't", "can't", "doesn't"
+    "not",
+    "no",
+    "never",
+    "isn't",
+    "wasn't",
+    "aren't",
+    "won't",
+    "don't",
+    "can't",
+    "doesn't",
   ];
   const modifiers = ["very", "so", "really", "quite", "too"];
-
-  // Define the sentiment for common keywords
-  const keywordSentimentScores = {
-    wonderful: 3, great: 3, amazing: 3, excellent: 3, clean: 2, spotless: 3, good: 2,
-    comfortable: 2, cozy: 2, friendly: 2, helpful: 2, affordable: 2, peaceful: 2, 
-    quiet: 2, secure: 2, safe: 2, spacious: 2, modern: 2, bright: 2, vibrant: 2, lovely: 3, 
-    relaxing: 2, value: 3, "value-for-money": 3, maintained: 2, "well-maintained": 3,
-    welcoming: 2, organized: 2, neat: 2, enjoyable: 2, accessible: 2,
-
-    bad: -2, terrible: -3, awful: -3, dirty: -3, unhygienic: -3, uncomfortable: -2, 
-    noisy: -2, unsafe: -3, cramped: -2, rude: -3, unpleasant: -2, smelly: -3, 
-    expensive: -2, overpriced: -3, small: -1, poor: -2, unhelpful: -2, disorganized: -2, 
-    dark: -1, cold: -2, stuffy: -2, "lack-of-security": -3, "not-worth-it": -3,
-
-    average: 0, okay: 0, decent: 0, basic: 0, standard: 0, acceptable: 0, typical: 0, 
-    simple: 0, adequate: 0, minimal: 0, "nothing-special": 0, moderate: 0, 
-    reasonable: 0, "as-expected": 0, functional: 0, "no-frills": 0
-  };
 
   let totalScore = 0;
 
   const updatedReviews = reviews.map((review) => {
-    if (!review.comment || typeof review.comment !== "string") {
+    if (!review || typeof review.comment !== "string") {
       console.warn("Invalid comment: Skipping review");
       return { ...review, sentimentScore: 0 };
     }
 
-    const words = review.comment.toLowerCase().replace(/[^\w\s]/g, "").split(" ");
+    let comment = review.comment.toLowerCase();
+    let words = comment.split(/\s+/); // Split comment into words
     let score = 0;
 
     for (let i = 0; i < words.length; i++) {
-      const word = words[i];
-      let currentScore = keywordSentimentScores[word] || 0;
+      let word = words[i];
+      let wordScore = keywordSentimentScores[word] || 0;
 
-      // Handle negations like "not", "no", etc.
-      let negationMultiplier = 1;
-
+      // Check for negation
       if (i > 0 && negationWords.includes(words[i - 1])) {
-        negationMultiplier = -1; 
-        if (i > 1 && modifiers.includes(words[i - 2])) {
-          negationMultiplier *= 0.5; 
-        }
-
-      
-        if (words[i - 1] === "not" && (words[i] === "so" || words[i] === "very")) {
-          negationMultiplier = 0; // Keep the sentiment neutral (e.g., "not so bad")
-        }
+        wordScore *= -1; // Flip the score
       }
 
-      // Adjust score with the negation multiplier and modifier effects
-      score += currentScore * negationMultiplier;
-    }
+      // Check for modifiers
+      if (i > 0 && modifiers.includes(words[i - 1])) {
+        wordScore *= 1.2; // Amplify the score
+      }
 
-    
-    if (score >= -1 && score <= 1) {
-      score = 0;  
+      score += wordScore;
     }
 
     totalScore += score;
-
     return { ...review, sentimentScore: score };
   });
 
