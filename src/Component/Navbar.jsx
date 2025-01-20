@@ -1,14 +1,14 @@
 // Navbar.jsx
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaBars, FaTimes, FaUser } from "react-icons/fa";
+import { FaBars, FaTimes, FaUserCircle } from "react-icons/fa";
 import { useAuth } from "./Contexts/AuthContext";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [dropdown, setDropdown] = useState(false);
-  const [logoutMessage, setLogoutMessage] = useState(false); // State for logout message
-  const { isLoggedIn, logout } = useAuth() || {}; // Safely destructure
+  const [logoutMessage, setLogoutMessage] = useState(false); // Logout message state
+  const { isLoggedIn, user, logout } = useAuth() || {}; // Auth context values
 
   const Links = [
     { id: 1, link: "home" },
@@ -19,10 +19,6 @@ const Navbar = () => {
     { id: 6, link: "blog" },
   ];
 
-  const handleSigninClick = () => {
-    setDropdown(!dropdown); // Toggle the dropdown on click
-  };
-
   const handleLogout = () => {
     logout();
     setDropdown(false);
@@ -30,8 +26,10 @@ const Navbar = () => {
     setTimeout(() => setLogoutMessage(false), 3000); // Hide after 3 seconds
   };
 
+  const handleDropdown = () => setDropdown(!dropdown); // Toggle dropdown
+
   return (
-    <div className="bg-[#2C3E50] text-white flex justify-between items-center w-full h-16 fixed top-0 left-0">
+    <div className="bg-[#2C3E50] text-white flex justify-between items-center w-full h-16 fixed top-0 left-0 z-50">
       {/* Logo */}
       <h1 className="text-3xl font-bold font-[poppins] px-4 mx-4">
         Hostel <span className="text-[#1ABC9C]">Hub</span>
@@ -48,20 +46,20 @@ const Navbar = () => {
           </li>
         ))}
 
-        {/* Dropdown */}
-        <li
-          className="relative px-4 cursor-pointer capitalize font-medium text-white hover:scale-105 hover:text-[#1ABC9C] duration-200 font-[poppins]"
-          onClick={handleSigninClick}
-        >
-          <div className="flex items-center space-x-2">
-            <FaUser size={20} />
-            <span>Signin</span>
-          </div>
+        {/* Profile or Sign In */}
+        <li className="relative px-4 cursor-pointer capitalize font-medium text-white hover:scale-105 hover:text-[#1ABC9C] duration-200 font-[poppins]">
+          {isLoggedIn ? (
+            <div
+              className="flex items-center space-x-2"
+              onClick={handleDropdown}
+            >
+              {/* Show user profile icon */}
+              <FaUserCircle size={24} />
+              <span>{user?.name || "User"}</span>
 
-          {dropdown && (
-            <ul className="absolute top-10 left-0 w-40 bg-[#1ABC9C] text-white rounded-lg shadow-lg">
-              {isLoggedIn ? (
-                <>
+              {/* Dropdown Menu */}
+              {dropdown && (
+                <ul className="absolute top-10 left-0 w-40 bg-[#1ABC9C] text-white rounded-lg shadow-lg">
                   <li className="px-4 py-2 hover:bg-[#2C3E50]">
                     <Link to="/profile" onClick={() => setDropdown(false)}>
                       User Profile
@@ -73,9 +71,17 @@ const Navbar = () => {
                   >
                     Logout
                   </li>
-                </>
-              ) : (
-                <>
+                </ul>
+              )}
+            </div>
+          ) : (
+            <div onClick={handleDropdown}>
+              <div className="flex items-center space-x-2">
+                <FaUserCircle size={20} />
+                <span>Sign In</span>
+              </div>
+              {dropdown && (
+                <ul className="absolute top-10 left-0 w-40 bg-[#1ABC9C] text-white rounded-lg shadow-lg">
                   <li className="px-4 py-2 hover:bg-[#2C3E50]">
                     <Link to="/usersignin" onClick={() => setDropdown(false)}>
                       User Login
@@ -89,9 +95,9 @@ const Navbar = () => {
                       Hostel Register
                     </Link>
                   </li>
-                </>
+                </ul>
               )}
-            </ul>
+            </div>
           )}
         </li>
       </ul>
@@ -125,28 +131,20 @@ const Navbar = () => {
             </li>
           ))}
 
-          {/* Mobile Dropdown */}
-          <li
-            className="px-4 cursor-pointer capitalize py-6 text-4xl hover:text-[#1ABC9C] font-[poppins]"
-            onClick={handleSigninClick}
-          >
-            <div className="flex items-center justify-center space-x-1">
-              <FaUser size={30} />
-              <span>Signin</span>
-            </div>
+          {/* Profile or Sign In */}
+          <li className="px-4 cursor-pointer capitalize py-6 text-4xl hover:text-[#1ABC9C] font-[poppins]">
+            {isLoggedIn ? (
+              <div
+                onClick={handleDropdown}
+                className="flex flex-col items-center"
+              >
+                <FaUserCircle size={40} />
+                <span>{user?.name || "User"}</span>
 
-            {dropdown && (
-              <ul className="w-full mt-4 text-center">
-                {isLoggedIn ? (
-                  <>
+                {dropdown && (
+                  <ul className="w-full mt-4 text-center">
                     <li className="px-4 py-2 hover:text-[#1ABC9C]">
-                      <Link
-                        to="/profile"
-                        onClick={() => {
-                          setNav(false);
-                          setDropdown(false);
-                        }}
-                      >
+                      <Link to="/profile" onClick={() => setNav(false)}>
                         User Profile
                       </Link>
                     </li>
@@ -159,34 +157,13 @@ const Navbar = () => {
                     >
                       Logout
                     </li>
-                  </>
-                ) : (
-                  <>
-                    <li className="px-4 py-2 hover:text-[#1ABC9C]">
-                      <Link
-                        to="/usersignin"
-                        onClick={() => {
-                          setNav(false);
-                          setDropdown(false);
-                        }}
-                      >
-                        User Login
-                      </Link>
-                    </li>
-                    <li className="px-4 py-2 hover:text-[#1ABC9C]">
-                      <Link
-                        to="/hostelregister"
-                        onClick={() => {
-                          setNav(false);
-                          setDropdown(false);
-                        }}
-                      >
-                        Hostel Register
-                      </Link>
-                    </li>
-                  </>
+                  </ul>
                 )}
-              </ul>
+              </div>
+            ) : (
+              <div onClick={() => setNav(false)}>
+                <Link to="/usersignin">Sign In</Link>
+              </div>
             )}
           </li>
         </ul>

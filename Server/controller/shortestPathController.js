@@ -40,65 +40,107 @@ function buildDistanceMatrix(data) {
   return distanceMatrix;
 }
 
+function clusterByCity(data) {
+  const cityClusters = {};
+  data.forEach((hostel) => {
+    const city = hostel.address.split(",")[1]?.trim().toLowerCase();
+    if (!cityClusters[city]) {
+      cityClusters[city] = [];
+    }
+    cityClusters[city].push(hostel);
+  });
+  return cityClusters;
+}
+
 function hierarchicalClustering(data, distanceMatrix, threshold) {
-  const clusters = data.map((_, index) => [index]);
+  const clusters = data.map((hostel) => [hostel]); // Initially, each hostel is its own cluster
 
   while (true) {
-    let minDist = Infinity;
-    let mergeA = -1,
-      mergeB = -1;
+    let minDistance = Infinity;
+    let pairToMerge = null;
 
+    // Find the closest pair of clusters
     for (let i = 0; i < clusters.length; i++) {
       for (let j = i + 1; j < clusters.length; j++) {
-        let dist = calculateClusterDistance(
+        const distance = calculateClusterDistance(
           clusters[i],
           clusters[j],
-          distanceMatrix
+          distanceMatrix,
+          data
         );
-        if (dist < minDist) {
-          minDist = dist;
-          mergeA = i;
-          mergeB = j;
+        if (distance < minDistance) {
+          minDistance = distance;
+          pairToMerge = [i, j];
         }
       }
     }
 
-    if (minDist > threshold) break;
+    // Stop if the closest distance exceeds the threshold
+    if (minDistance > threshold) break;
 
-    clusters[mergeA] = clusters[mergeA].concat(clusters[mergeB]);
-    clusters.splice(mergeB, 1);
+    // Merge the closest pair
+    const [i, j] = pairToMerge;
+    clusters[i] = clusters[i].concat(clusters[j]);
+    clusters.splice(j, 1); // Remove the merged cluster
   }
 
-  return clusters.map((cluster) => cluster.map((idx) => data[idx]));
+  return clusters;
 }
 
-function calculateClusterDistance(clusterA, clusterB, distanceMatrix) {
-  let totalDist = 0;
-  let count = 0;
+function calculateClusterDistance(clusterA, clusterB, distanceMatrix, data) {
+  let minDistance = Infinity;
 
-  for (const pointA of clusterA) {
-    for (const pointB of clusterB) {
-      totalDist += distanceMatrix[pointA][pointB];
-      count++;
-    }
-  }
+  clusterA.forEach((hostelA) => {
+    clusterB.forEach((hostelB) => {
+      const indexA = data.indexOf(hostelA);
+      const indexB = data.indexOf(hostelB);
+      const distance = distanceMatrix[indexA][indexB];
+      if (distance < minDistance) {
+        minDistance = distance;
+      }
+    });
+  });
 
-  return totalDist / count;
+  return minDistance;
 }
 
 exports.getClusters = async (req, res) => {
   try {
-    const threshold = parseFloat(req.query.threshold) || 5;
+    const threshold = parseFloat(req.query.threshold) || 1; // Default threshold = 1 km
+    const userLat = parseFloat(req.query.userLat);
+    const userLon = parseFloat(req.query.userLon);
+    const clusterBy = req.query.clusterBy || "distance"; // Can be "distance" or "address"
+
     const data = await Shortestpath.find();
 
     if (data.length === 0) {
       return res.status(404).json({ message: "No data found" });
     }
 
-    const distanceMatrix = buildDistanceMatrix(data);
-    const clusters = hierarchicalClustering(data, distanceMatrix, threshold);
+    if (clusterBy === "address") {
+      const cityClusters = clusterByCity(data);
+      return res.json({ clusters: cityClusters });
+    } else if (clusterBy === "distance" && userLat && userLon) {
+      const distanceMatrix = buildDistanceMatrix(data);
+      const clusters = hierarchicalClustering(data, distanceMatrix, threshold);
 
-    res.json({ clusters });
+      // Identify nearest hostels to the user
+      const userCluster = data
+        .map((hostel) => ({
+          hostel,
+          distance: haversine(
+            userLat,
+            userLon,
+            hostel.latitude,
+            hostel.longitude
+          ),
+        }))
+        .sort((a, b) => a.distance - b.distance);
+
+      return res.json({ clusters, userCluster });
+    }
+
+    res.status(400).json({ message: "Invalid clustering option or parameters" });
   } catch (error) {
     console.error("Error in getClusters:", error);
     res.status(500).json({ message: "Error clustering data", error });

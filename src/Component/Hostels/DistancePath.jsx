@@ -132,7 +132,7 @@ const DistancePath = () => {
             );
           })}
 
-          {distancePath.length > 1 && (
+          {/* {distancePath.length > 1 && (
             <Polyline
               positions={distancePath.map((point) => [
                 point.latitude,
@@ -140,7 +140,7 @@ const DistancePath = () => {
               ])}
               color="blue"
             />
-          )}
+          )} */}
         </MapContainer>
       </div>
     </ErrorBoundary>

@@ -64,7 +64,7 @@ const Contact = () => {
                   </div>
                   <button
                     onClick={() => deleteContact(contact._id)}
-                    className="ml-4 bg-red-500 text-white p-2 rounded-md hover:bg-red-600 flex items-center justify-center"
+                    className="ml-4 bg-[#2C3E50] text-white p-2 rounded-md  flex items-center justify-center"
                     title="Delete Contact"
                   >
                     <FaTrashAlt />

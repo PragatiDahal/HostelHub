@@ -113,7 +113,7 @@ function Dashboard() {
   // Handle logout
   const handleLogout = () => {
     localStorage.removeItem("authToken");
-    navigate("/adminsignin");
+    navigate("/");
   };
 
   if (loading) return <p>Loading...</p>;
@@ -125,6 +125,9 @@ function Dashboard() {
       <aside className="w-64 bg-[#1ABC9C] text-white flex flex-col">
         <h1 className="text-2xl font-bold p-6">Admin Dashboard</h1>
         <nav className="flex flex-col space-y-4 px-6">
+        <Link to="/dashboard" className="hover:bg-[#16a085] p-2 rounded">
+            Dashboard
+          </Link>
           <Link to="/users" className="hover:bg-[#16a085] p-2 rounded">
             Users
           </Link>
@@ -133,6 +136,15 @@ function Dashboard() {
           </Link>
           <Link to="/booking" className="hover:bg-[#16a085] p-2 rounded">
             Bookings
+          </Link>
+          <Link to="/hostelregister" className="hover:bg-[#16a085] p-2 rounded">
+            Hostel Register
+          </Link>
+          <Link to="/hostelroom" className="hover:bg-[#16a085] p-2 rounded">
+            Add Hostel Room
+          </Link>
+          <Link to="/hostelroomavailable" className="hover:bg-[#16a085] p-2 rounded">
+            Hostel Room Available
           </Link>
           <button
             onClick={handleLogout}
@@ -209,8 +221,8 @@ function Dashboard() {
                   required
                 >
                   <option value="">Select Gender</option>
-                  <option value="Male">Male</option>
-                  <option value="Female">Female</option>
+                  <option value="Male">Boy</option>
+                  <option value="Female">Girl</option>
                 </select>
               </div>
               <div className="mb-4">
@@ -277,13 +289,13 @@ function Dashboard() {
                         setEditingHostel(true);
                         setHostel(hostel);
                       }}
-                      className="text-blue-500"
+                      className="text-[#16a085]"
                     >
                       Edit
                     </button>
                     <button
                       onClick={() => handleDelete(hostel._id)}
-                      className="text-red-500"
+                      className="text-[#2C3E50]"
                     >
                       Delete
                     </button>

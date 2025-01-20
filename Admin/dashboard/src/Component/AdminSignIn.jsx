@@ -77,23 +77,6 @@ const AdminSignIn = () => {
               />
             </div>
 
-            {/* Remember Me and Forgot Password */}
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <input
-                  type="checkbox"
-                  id="remember-me"
-                  className="w-4 h-4 text-teal-500 focus:ring-teal-400 border-gray-300 rounded"
-                />
-                <label htmlFor="remember-me" className="ml-2 text-[#2C3E50]">
-                  Remember me
-                </label>
-              </div>
-              <a href="#" className="text-[#E67E22] hover:underline text-sm">
-                Forgot Password?
-              </a>
-            </div>
-
             {/* Submit Button */}
             <button
               type="submit"

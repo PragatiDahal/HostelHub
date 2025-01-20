@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import image from "../assets/hostelhub.png";
-import Featured from "./Hostels/Featured";
+// import Featured from "./Hostels/Featured";
 import Offer from "./Offer";
 import Booking from "./Booking";
 import Testimonials from "./Testimonials";
@@ -41,7 +41,7 @@ const Home = () => {
         </div>
       </div>
     </div>
-    <Featured/>
+    {/* <Featured/> */}
     
     <Offer/>
 
