@@ -24,3 +24,4 @@ router.put("/bookings/reject/:id", rejectBooking);
 
 module.exports = router;
 
+

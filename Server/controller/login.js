@@ -35,7 +35,7 @@ const loginpage = async (req, res) => {
             email: result.email, // Include email in the token payload
           },
           secretKey,
-          { expiresIn: "1h" } // Set expiration time for the token (1 hour in this case)
+          { expiresIn: "24h" } // Set expiration time for the token (1 hour in this case)
         );
 
         console.log("Login Successful");

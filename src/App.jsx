@@ -25,7 +25,8 @@ import Cluster from "./Component/Hostels/Cluster";
 import { AuthProvider } from "./Component/Contexts/AuthContext";
 // import { StoreContextProvider } from "./Component/Contexts/StoreContext";
 import HostelBooking from "./Component/Hostels/HostelBooking";
-import { Payment } from "./Component/Payment";
+import { Payment }from "./Component/Payment";
+import { PaymentSuccess } from "./Component/PaymentSuccess";
 function App() {
   return (
     <>
@@ -39,7 +40,7 @@ function App() {
             <Route path="usersignup" element={<UserSignUp />} />
             <Route path="hostelregister" element={<HostelRegister />} />
             <Route path="payment" element={<Payment />}/>
-            {/* <Route path="paymentsuccess" element={<PaymentSuccess />}/> */}
+            <Route path="paymentsuccess" element={<PaymentSuccess />}/>
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
             <Route path="hostels" element={<Hostels />} />

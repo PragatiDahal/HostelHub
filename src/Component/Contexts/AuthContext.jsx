@@ -33,11 +33,12 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ isLoggedIn, login, logout, token }}>
-      {children}
-    </AuthContext.Provider>
-  );
+      <AuthContext.Provider
+        value={{ isLoggedIn, login, logout, token }}
+      >
+        {children}
+      </AuthContext.Provider>
+    );
 };
 
 export const useAuth = () => React.useContext(AuthContext);
-

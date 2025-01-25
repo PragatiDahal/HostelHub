@@ -8,7 +8,7 @@ import BookingRequest from "./Component/BookingRequest";
 import HostelRegister from "./Component/HostelRegister";
 import HostelRoom from "./Component/HostelRoom";
 import HostelRoomAvailability from "./Component/HostelRoomAvailability";
-// import UpdateRoomAvailability from "./Component/UpdateRoomAvailability";
+import UpdateRoomAvailability from "./Component/UpdateRoomAvailability";
 
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
       <Route path="hostelregister" element={<HostelRegister/>}/>
       <Route path="hostelroom" element={<HostelRoom/>}/>
       <Route path="hostelroomavailable" element={<HostelRoomAvailability/>}/>
-      {/* <Route path="updateroomavailable" element={<UpdateRoomAvailability/>}/> */}
+      <Route path="updateroomavailable" element={<UpdateRoomAvailability/>}/>
       </Routes>
       </BrowserRouter>
     </>

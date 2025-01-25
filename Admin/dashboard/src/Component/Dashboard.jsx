@@ -221,8 +221,8 @@ function Dashboard() {
                   required
                 >
                   <option value="">Select Gender</option>
-                  <option value="Male">Boy</option>
-                  <option value="Female">Girl</option>
+                  <option value="Boy">Boy</option>
+                  <option value="Girl">Girl</option>
                 </select>
               </div>
               <div className="mb-4">

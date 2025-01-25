@@ -1,17 +1,21 @@
-.payment_container{
-    margin-top: 13vh;
+.payment_container {
+    margin-top: 0; /* Remove margin-top */
     width: 100%;
+    height: 100vh; /* Make the container full height */
     background-color: #EEF1F5;
-    display: flex; 
-    justify-content: space-between;
-    gap: 3vh;
-    padding: 5vh 10vh;
-}
-.payment_wrapper{
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 0; /* Remove extra padding */
+  }
+  
+  .payment_wrapper {
     display: flex;
     flex-direction: column;
     gap: 5vh;
-}
+    align-items: center; /* Center items within the wrapper */
+    text-align: center; /* Center text */
+  }
 .payment_options{
     display: flex;
     gap: 5vh;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-// import UpdateRoomAvailability from "./UpdateRoomAvailability";
+import UpdateRoomAvailability from "./UpdateRoomAvailability";
 
 const HostelRoomAvailability = () => {
   const [hostels, setHostels] = useState([]);
@@ -44,14 +44,14 @@ const HostelRoomAvailability = () => {
                     <span className="font-bold">
                       {room.available} Available
                     </span>
-                    {/* <UpdateRoomAvailability
-                      hostelId={hostel._id}
-                      roomType={room.type}
-                      currentAvailable={room.available}
-                    /> */}
                   </li>
                 ))}
               </ul>
+              <UpdateRoomAvailability
+                hostelId={hostel._id}
+                hostelName={hostel.name}
+                rooms={hostel.rooms}
+              />
             </div>
           </div>
         ))}

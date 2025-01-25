@@ -55,16 +55,16 @@ const Navbar = () => {
             >
               {/* Show user profile icon */}
               <FaUserCircle size={24} />
-              <span>{user?.name || "User"}</span>
+              {/* <span>{user?.name || "User"}</span> */}
 
               {/* Dropdown Menu */}
               {dropdown && (
                 <ul className="absolute top-10 left-0 w-40 bg-[#1ABC9C] text-white rounded-lg shadow-lg">
-                  <li className="px-4 py-2 hover:bg-[#2C3E50]">
+                  {/* <li className="px-4 py-2 hover:bg-[#2C3E50]">
                     <Link to="/profile" onClick={() => setDropdown(false)}>
                       User Profile
                     </Link>
-                  </li>
+                  </li> */}
                   <li
                     className="px-4 py-2 hover:bg-[#2C3E50]"
                     onClick={handleLogout}
@@ -139,15 +139,15 @@ const Navbar = () => {
                 className="flex flex-col items-center"
               >
                 <FaUserCircle size={40} />
-                <span>{user?.name || "User"}</span>
+                {/* <span>{user?.name || "User"}</span> */}
 
                 {dropdown && (
                   <ul className="w-full mt-4 text-center">
-                    <li className="px-4 py-2 hover:text-[#1ABC9C]">
+                    {/* <li className="px-4 py-2 hover:text-[#1ABC9C]">
                       <Link to="/profile" onClick={() => setNav(false)}>
                         User Profile
                       </Link>
-                    </li>
+                    </li> */}
                     <li
                       className="px-4 py-2 hover:text-[#1ABC9C]"
                       onClick={() => {

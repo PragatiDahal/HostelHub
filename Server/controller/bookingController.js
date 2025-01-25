@@ -15,12 +15,7 @@ const transporter = nodemailer.createTransport({
   port: 465, // Port for secure connection (TLS)
 });
 
-// Defines recipients
-const maillist = [
-  "pragatikdhl123@gmail.com",
-  "pragatidahal001@gmail.com",
-  "pragatidahal.077@kathford.edu.np",
-];
+
 
 // Create a new booking
 const createBooking = async (req, res) => {
@@ -77,7 +72,7 @@ const createBooking = async (req, res) => {
     // Send booking confirmation email
     const emailOptions = {
       from: "hostelhub2024@gmail.com",
-      to: maillist,
+      to: "pragatikdhl123@gmail.com",
       subject: "Booking Confirmation",
       html: `
         <h1>Booking Confirmed</h1>
@@ -99,7 +94,7 @@ const createBooking = async (req, res) => {
     if (req.body.userInfo?.email) {
       await transporter.sendMail({
         from: "hostelhub2024@gmail.com",
-        to: maillist,
+        to: "pragatikdhl123@gmail.com",
         subject: "Booking Error",
         html: `
           <h1>Booking Failed</h1>
@@ -146,7 +141,7 @@ const acceptBooking = async (req, res) => {
     // Send acceptance email
     await transporter.sendMail({
       from: "hostelhub2024@gmail.com",
-      to: maillist,
+      to: "pragatikdhl123@gmail.com",
       subject: "Booking Accepted",
       html: `
         <h1>Booking Accepted</h1>
@@ -180,7 +175,7 @@ const rejectBooking = async (req, res) => {
     // Send rejection email
     await transporter.sendMail({
       from: "hostelhub2024@gmail.com",
-      to: maillist,
+      to: "pragatikdhl123@gmail.com",
       subject: "Booking Rejected",
       html: `
         <h1>Booking Rejected</h1>

@@ -58,7 +58,7 @@ mongoose
 // Routes
 app.use("/api/hosteldetail", hostelDetailRoute);
 app.use("/api", distanceRoute);
-app.use("/api/shortestpath", shortestpathRoutes);
+app.use('/api/shortestpath', shortestpathRoutes);
 app.use("/api/khalti", khalti);
 app.use("/api/users", userRoutes);
 app.use("/api/contacts", contactRoutes);

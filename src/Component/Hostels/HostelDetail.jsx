@@ -1,7 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Link, useParams } from "react-router-dom";
-import reviewImage from "../../assets/bug2.png"; // Import your default review image
+import React, { useState, useEffect, useRef, useContext } from "react";
+import { Link, useParams, useNavigate } from "react-router-dom";
+
+import reviewImage from "../../assets/bug2.png";
 import axios from "axios";
+import { useAuth } from "../../Component/Contexts/AuthContext";
 
 const HostelDetail = () => {
   const { hostelName } = useParams(); // Get hostel name from URL
@@ -13,6 +15,8 @@ const HostelDetail = () => {
   const [loading, setLoading] = useState(true);
   const reviewsRef = useRef();
   const nameInputRef = useRef(null);
+  const { isLoggedIn } = useAuth();
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -34,6 +38,11 @@ const HostelDetail = () => {
 
   const handleSubmitReview = (e) => {
     e.preventDefault();
+
+    if (!isLoggedIn) {
+      navigate("/usersignin");
+      return;
+    }
 
     if (!newReview.name || !newReview.comment) {
       setError("Please fill in all fields");
@@ -191,59 +200,63 @@ const HostelDetail = () => {
               ))}
             </div>
           )}
-
-          <div className="p-6">
-            {/* Reviews Tab */}
-            {activeTab === "reviews" && (
-              <div>
-                <h3 className="font-bold text-lg text-[#2C3E50] font-[poppins]">
-                  {hostelData?.name} Reviews
-                </h3>
-                {successMessage && (
-                  <p className="text-green-500 font-[poppins]">
-                    {successMessage}
-                  </p>
-                )}
-                <form onSubmit={handleSubmitReview} className="space-y-4 mt-4">
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name"
-                    value={newReview.name}
-                    onChange={handleInputChange}
-                    className="w-full p-2 border rounded"
-                    required
-                  />
-                  <textarea
-                    name="comment"
-                    placeholder="Your Review"
-                    value={newReview.comment}
-                    onChange={handleInputChange}
-                    className="w-full p-2 border rounded"
-                    required
-                  />
-                  <button
-                    type="submit"
-                    className="px-4 py-2 bg-[#1ABC9C] text-white rounded-lg hover:bg-[#16A085]"
+          {isLoggedIn && (
+            <div className="p-6">
+              {/* Reviews Tab */}
+              {activeTab === "reviews" && (
+                <div>
+                  <h3 className="font-bold text-lg text-[#2C3E50] font-[poppins]">
+                    {hostelData?.name} Reviews
+                  </h3>
+                  {successMessage && (
+                    <p className="text-green-500 font-[poppins]">
+                      {successMessage}
+                    </p>
+                  )}
+                  <form
+                    onSubmit={handleSubmitReview}
+                    className="space-y-4 mt-4"
                   >
-                    Submit Review
-                  </button>
-                </form>
-                <div className="space-y-4 mt-6">
-                  {/* Render existing reviews */}
-                  {hostelData.reviews.map((review, index) => (
-                    <div key={index} className="border p-4 rounded shadow">
-                      <h4 className="font-bold">{review.name}</h4>
-                      <p>{review.comment}</p>
-                      <p className="text-sm text-gray-500">
-                        Sentiment Score: {review.sentimentScore}
-                      </p>
-                    </div>
-                  ))}
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Your Name"
+                      value={newReview.name}
+                      onChange={handleInputChange}
+                      className="w-full p-2 border rounded"
+                      required
+                    />
+                    <textarea
+                      name="comment"
+                      placeholder="Your Review"
+                      value={newReview.comment}
+                      onChange={handleInputChange}
+                      className="w-full p-2 border rounded"
+                      required
+                    />
+                    <button
+                      type="submit"
+                      className="px-4 py-2 bg-[#1ABC9C] text-white rounded-lg hover:bg-[#16A085]"
+                    >
+                      Submit Review
+                    </button>
+                  </form>
+                  <div className="space-y-4 mt-6">
+                    {/* Render existing reviews */}
+                    {hostelData.reviews.map((review, index) => (
+                      <div key={index} className="border p-4 rounded shadow">
+                        <h4 className="font-bold">{review.name}</h4>
+                        <p>{review.comment}</p>
+                        <p className="text-sm text-gray-500">
+                          Sentiment Score: {review.sentimentScore}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            )}
-          </div>
+              )}
+            </div>
+          )}
 
           {/* Events Tab */}
           {activeTab === "events" && hostelData.events && (

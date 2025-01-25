@@ -41,6 +41,7 @@ const createCustomIcon = (color) => {
 const Cluster = () => {
   const [clusters, setClusters] = useState([]);
   const [threshold, setThreshold] = useState(1); // Default threshold = 1km
+  const [range, setRange] = useState(5); // Default range = 5km
   const [clusterBy, setClusterBy] = useState("distance"); // Default clustering by distance
   const [userLocation, setUserLocation] = useState(null);
   const [error, setError] = useState("");
@@ -56,7 +57,7 @@ const Cluster = () => {
 
         const queryParams =
           clusterBy === "distance"
-            ? `threshold=${threshold}&userLat=${userLat}&userLon=${userLon}`
+            ? `threshold=${threshold}&userLat=${userLat}&userLon=${userLon}&range=${range}`
             : `clusterBy=address`;
 
         const response = await axios.get(
@@ -90,80 +91,87 @@ const Cluster = () => {
     } else {
       fetchClusters(); // Fetch clusters immediately if clustering by address
     }
-  }, [threshold, clusterBy, userLocation]); // Dependency on userLocation ensures the location is available
+  }, [threshold, clusterBy, userLocation, range]); // Dependency on range to fetch new clusters on range change
 
-  return (
-    <div className="min-h-screen bg-gray-100 p-4 flex">
-      {/* Map and Legend side by side */}
-      <div className="w-full lg:w-3/4">
-        <h1 className="text-3xl font-bold text-center mb-4">Hostel Clusters</h1>
-
-        {/* Cluster Options */}
-        <div className="flex justify-center mb-4">
-          <select
-            value={clusterBy}
-            onChange={(e) => setClusterBy(e.target.value)}
-            className="border rounded-lg p-2 mr-2"
-          >
-            <option value="distance"> Distance</option>
-            <option value="address">  Address</option>
-          </select>
-          {clusterBy === "distance" && (
-            <input
-              type="number"
-              className="border rounded-lg p-2"
-              placeholder="Set Threshold (km)"
-              value={threshold}
-              onChange={(e) => setThreshold(e.target.value)}
-            />
-          )}
-        </div>
-
-        {/* Error Message */}
-        {error && <p className="text-red-500 text-center">{error}</p>}
-
-        {/* Map */}
-        <MapContainer
-          center={[27.7, 85.4]} // Default map center (Kathmandu area)
-          zoom={12}
-          className="h-[calc(100vh-120px)] w-full rounded-lg shadow-lg" // Adjust the height based on the viewport height
-        >
-          <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          />
-          {userLocation && (
-            <Marker
-              position={[userLocation.latitude, userLocation.longitude]}
-              icon={createCustomIcon("black")}
+    return (
+      <div className="min-h-screen bg-gray-100 p-4 flex items-center justify-center">
+        {/* Map and Legend side by side */}
+        <div className="w-full lg:w-3/4">
+          <h1 className="text-3xl font-bold text-center mb-4">Hostel Clusters</h1>
+  
+          {/* Cluster Options */}
+          <div className="flex justify-center mb-4">
+            <select
+              value={clusterBy}
+              onChange={(e) => setClusterBy(e.target.value)}
+              className="border rounded-lg p-2 mr-2"
             >
-              <Popup>You are here</Popup>
-            </Marker>
-          )}
-
-          {/* Render Clusters */}
-          {Object.entries(clusters).map(([clusterKey, cluster], clusterIndex) => (
-            <React.Fragment key={clusterKey}>
-              {cluster.map((hostel, hostelIndex) => (
-                <Marker
-                  key={hostelIndex}
-                  position={[hostel.latitude, hostel.longitude]}
-                  icon={createCustomIcon(getClusterColor(clusterIndex))}
-                >
-                  <Popup>
-                    <h2 className="font-bold">{hostel.name}</h2>
-                    <p>{hostel.address}</p>
-                  </Popup>
-                </Marker>
-              ))}
-            </React.Fragment>
-          ))}
-        </MapContainer>
+              <option value="distance"> Distance</option>
+              <option value="address"> Address</option>
+            </select>
+            {clusterBy === "distance" && (
+              <>
+                <input
+                  type="number"
+                  className="border rounded-lg p-2 mr-2"
+                  placeholder="Set Threshold (km)"
+                  value={threshold}
+                  onChange={(e) => setThreshold(e.target.value)}
+                />
+                <input
+                  type="number"
+                  className="border rounded-lg p-2"
+                  placeholder="Set Range (km)"
+                  value={range}
+                  onChange={(e) => setRange(e.target.value)}
+                />
+              </>
+            )}
+          </div>
+  
+          {/* Error Message */}
+          {error && <p className="text-red-500 text-center">{error}</p>}
+  
+          {/* Map */}
+          <MapContainer
+            center={[27.7, 85.4]} // Default map center (Kathmandu area)
+            zoom={12}
+            className="h-[calc(100vh-120px)] w-full rounded-lg shadow-lg" // Adjust the height based on the viewport height
+          >
+            <TileLayer
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            />
+            {userLocation && (
+              <Marker
+                position={[userLocation.latitude, userLocation.longitude]}
+                icon={createCustomIcon("black")}
+              >
+                <Popup>You are here</Popup>
+              </Marker>
+            )}
+  
+            {/* Render Clusters */}
+            {Object.entries(clusters).map(([clusterKey, cluster], clusterIndex) => (
+              <React.Fragment key={clusterKey}>
+                {cluster.map((hostel, hostelIndex) => (
+                  <Marker
+                    key={hostelIndex}
+                    position={[hostel.latitude, hostel.longitude]}
+                    icon={createCustomIcon(getClusterColor(clusterIndex))}
+                  >
+                    <Popup>
+                      <h2 className="font-bold">{hostel.name}</h2>
+                      <p>{hostel.address}</p>
+                    </Popup>
+                  </Marker>
+                ))}
+              </React.Fragment>
+            ))}
+          </MapContainer>
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  };
 
 export default Cluster;
-
-

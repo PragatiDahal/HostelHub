@@ -6,12 +6,11 @@ const BookingRequests = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Fetch booking requests
   useEffect(() => {
     axios
       .get("http://localhost:5000/api/bookings")
       .then((res) => {
-        setBookingRequests(res.data.bookings); // Set the fetched data
+        setBookingRequests(res.data.bookings || []);
         setLoading(false);
       })
       .catch((err) => {
@@ -21,40 +20,31 @@ const BookingRequests = () => {
       });
   }, []);
 
-  // Handle Accept button click
-  const handleAccept = (id) => {
-    axios
-      .put(`http://localhost:5000/api/bookings/accept/${id}`)
-      .then((res) => {
-        alert("Booking accepted successfully!");
-        setBookingRequests((prevRequests) =>
-          prevRequests.filter((request) => request._id !== id)
-        );
-      })
-      .catch((err) => {
-        console.error("Error accepting booking:", err);
-        alert("Error accepting booking.");
-      });
-  };
+  const handleAction = (id, action) => {
+    if (
+      !window.confirm(`Are you sure you want to ${action.toLowerCase()} this booking?`)
+    ) {
+      return;
+    }
 
-  // Handle Reject button click
-  const handleReject = (id) => {
+    const url = `http://localhost:5000/api/bookings/${action.toLowerCase()}/${id}`;
     axios
-      .put(`http://localhost:5000/api/bookings/reject/${id}`)
-      .then((res) => {
-        alert("Booking rejected successfully!");
-        setBookingRequests((prevRequests) =>
-          prevRequests.filter((request) => request._id !== id)
-        );
+      .put(url)
+      .then(() => {
+        alert(`Booking ${action.toLowerCase()}ed successfully!`);
+        setBookingRequests((prev) => prev.filter((req) => req._id !== id));
       })
       .catch((err) => {
-        console.error("Error rejecting booking:", err);
-        alert("Error rejecting booking.");
+        console.error(`Error ${action.toLowerCase()}ing booking:`, err);
+        alert(`Error ${action.toLowerCase()}ing booking.`);
       });
   };
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p className="text-red-500">{error}</p>;
+
+  if (bookingRequests.length === 0)
+    return <p>No booking requests available.</p>;
 
   return (
     <div className="container mx-auto p-6 bg-[#E8F8F5] pm-12">
@@ -79,18 +69,26 @@ const BookingRequests = () => {
               <td className="px-4 py-2">{request.userInfo.email}</td>
               <td className="px-4 py-2">{request.hostel.name}</td>
               <td className="px-4 py-2">{request.hostel.location}</td>
-              <td className="px-4 py-2">{request.roomType.join(", ")}</td>
-              <td className="px-4 py-2">{new Date(request.bookingDate).toLocaleDateString()}</td>
+              <td className="px-4 py-2">
+                {Array.isArray(request.roomType)
+                  ? request.roomType.join(", ")
+                  : request.roomType}
+              </td>
+              <td className="px-4 py-2">
+                {request.bookingDate
+                  ? new Date(request.bookingDate).toLocaleDateString()
+                  : "N/A"}
+              </td>
               <td className="px-4 py-2 flex gap-4">
                 <button
-                  onClick={() => handleAccept(request._id)}
-                  className="bg-[#1ABC9C] text-white px-4 py-2 rounded"
+                  onClick={() => handleAction(request._id, "Accept")}
+                  className="bg-[#1ABC9C] text-white px-4 py-2 rounded hover:bg-[#16A085]"
                 >
                   Accept
                 </button>
                 <button
-                  onClick={() => handleReject(request._id)}
-                  className="bg-[#2C3E50] text-white px-4 py-2 rounded"
+                  onClick={() => handleAction(request._id, "Reject")}
+                  className="bg-[#2C3E50] text-white px-4 py-2 rounded hover:bg-[#34495E]"
                 >
                   Reject
                 </button>

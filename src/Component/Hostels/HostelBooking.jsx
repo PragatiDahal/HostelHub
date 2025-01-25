@@ -95,10 +95,10 @@ const HostelBooking = () => {
     ) {
       formErrors.email = "Invalid email format.";
     }
-    if (!bookingInfo.phoneNumber.trim())
+    if (!bookingInfo.phoneNumber.trim()) {
       formErrors.phoneNumber = "Phone number is required.";
-    else if (!/^\d{10}$/.test(bookingInfo.phoneNumber)) {
-      formErrors.phoneNumber = "Invalid phone number.";
+    } else if (!/^98\d{8}$/.test(bookingInfo.phoneNumber)) {
+      formErrors.phoneNumber = "Phone number must start with '98' and be 10 digits long.";
     }
     if (!bookingInfo.roomType)
       formErrors.roomType = "Please select a room type.";
@@ -264,3 +264,4 @@ const HostelBooking = () => {
 };
 
 export default HostelBooking;
+

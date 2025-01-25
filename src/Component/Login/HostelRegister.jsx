@@ -33,9 +33,9 @@ const HostelRegister = () => {
     }
 
     if (!formData.phone.trim()) {
-      newErrors.phone = "Phone number is required";
-    } else if (!/^\d{10}$/.test(formData.phone)) {
-      newErrors.phone = "Phone number must be 10 digits";
+      formErrors.phoneNumber = "Phone number is required.";
+    } else if (!/^98\d{8}$/.test(bookingInfo.phoneNumber)) {
+      formErrors.phoneNumber = "Phone number must start with '98' and be 10 digits long.";
     }
 
     if (!formData.hostelName.trim()) {
@@ -44,8 +44,10 @@ const HostelRegister = () => {
 
     if (!formData.panNumber.trim()) {
       newErrors.panNumber = "PAN number is required";
-    } else if (!/^\d+$/.test(formData.panNumber)) {
-      newErrors.panNumber = "PAN number must be numeric";
+    } else if (!/^\d{9}$/.test(formData.panNumber)) {
+      newErrors.panNumber = "PAN number must be exactly 9 numeric digits";
+    } else if (formData.panNumber.startsWith("0")) {
+      newErrors.panNumber = "PAN number cannot start with 0";
     }
 
     setErrors(newErrors);

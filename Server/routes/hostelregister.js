@@ -15,18 +15,13 @@ const transporter = nodemailer.createTransport({
   port: 465, // Port for secure connection (TLS)
 });
 
-// Defines recipients
-const maillist = [
-  "pragatikdhl@gmail.com",
-  "pragatidahal001@gmail.com",
-  "pragatidahal077.kathford.edu.np",
-];
+
 
 // Function to send email
 const sendEmail = (email, subject, message) => {
   const mailOptions = {
     from: "hostelhub2024@gmail.com",
-    to: maillist, // Send to the array of recipients
+    to: "pragatidahal001@gmail.com", // Send to the array of recipients
     subject: "Information about Hostel Registration",
     html: `<h1>Hello there</h1><p>${message}</p>`,
   };
@@ -121,7 +116,7 @@ router.put("/decline/:id", async (req, res) => {
 });
 
 // DELETE route for deleting a hostel by ID
-router.delete("/:id", async (req, res) => {
+router.delete("/delete/:id", async (req, res) => {
   try {
     const deletedHostel = await HostelRegister.findByIdAndDelete(req.params.id);
     if (!deletedHostel) {
